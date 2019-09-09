@@ -191,7 +191,7 @@ if __name__ == "__main__":
 
     agent = Agent(env)
     #
-    agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
+    #agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
     #
     if train:
         agent, scores = cem(agent)
