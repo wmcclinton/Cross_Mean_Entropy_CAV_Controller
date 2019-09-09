@@ -1,0 +1,265 @@
+Long Eval: Average Score: -69.60        SE Score: 11.84
+Long Eval: Median Score: -50.93
+300
+Episode 0       Best Average Score: -69.60
+Episode 0       All Average Score: -91.51       All SE Score: 24.53
+Long Eval: Average Score: -72.84        SE Score: 21.09
+Long Eval: Median Score: -50.19
+300
+Episode 1       Best Average Score: -71.22
+Episode 1       All Average Score: -177.51      All SE Score: 60.62
+Long Eval: Average Score: -144.77       SE Score: 74.78
+Long Eval: Median Score: -51.36
+300
+Episode 2       Best Average Score: -95.74
+Episode 2       All Average Score: -81.28       All SE Score: 22.10
+Long Eval: Average Score: -51.09        SE Score: 0.26
+Long Eval: Median Score: -50.68
+300
+Episode 3       Best Average Score: -84.57
+Episode 3       All Average Score: -156.01      All SE Score: 51.40
+Long Eval: Average Score: -133.82       SE Score: 71.92
+Long Eval: Median Score: -50.61
+300
+Episode 4       Best Average Score: -94.42
+Episode 4       All Average Score: -119.29      All SE Score: 34.66
+Long Eval: Average Score: -201.64       SE Score: 100.55
+Long Eval: Median Score: -45.06
+300
+Episode 5       Best Average Score: -112.29
+Episode 5       All Average Score: -139.54      All SE Score: 49.71
+Long Eval: Average Score: -97.47        SE Score: 65.15
+Long Eval: Median Score: -40.22
+300
+Episode 6       Best Average Score: -110.18
+Episode 6       All Average Score: -252.31      All SE Score: 81.03
+Long Eval: Average Score: -76.61        SE Score: 68.40
+Long Eval: Median Score: -8.49
+300
+Episode 7       Best Average Score: -105.98
+Episode 7       All Average Score: -260.06      All SE Score: 81.18
+Long Eval: Average Score: -98.73        SE Score: 73.63
+Long Eval: Median Score: -8.49
+300
+Episode 8       Best Average Score: -105.17
+Episode 8       All Average Score: -105.76      All SE Score: 40.96
+Long Eval: Average Score: -55.75        SE Score: 37.00
+Long Eval: Median Score: -12.00
+300
+Episode 9       Best Average Score: -100.23
+Episode 9       All Average Score: -59.65       All SE Score: 13.95
+Long Eval: Average Score: -69.94        SE Score: 55.71
+Long Eval: Median Score: -16.81
+300
+Episode 10      Best Average Score: -100.27
+Episode 10      All Average Score: -166.40      All SE Score: 62.63
+Long Eval: Average Score: -90.19        SE Score: 72.16
+Long Eval: Median Score: -3.99
+300
+Episode 11      Best Average Score: -102.00
+Episode 11      All Average Score: -88.06       All SE Score: 38.31
+Long Eval: Average Score: -119.52       SE Score: 76.68
+Long Eval: Median Score: -3.76
+300
+Episode 12      Best Average Score: -99.48
+Episode 12      All Average Score: -93.24       All SE Score: 46.25
+Long Eval: Average Score: -39.78        SE Score: 34.84
+Long Eval: Median Score: 1.56
+300
+Episode 13      Best Average Score: -98.34
+Episode 13      All Average Score: -115.53      All SE Score: 52.85
+Long Eval: Average Score: -6.99 SE Score: 2.39
+Long Eval: Median Score: -2.83
+300
+Episode 14      Best Average Score: -85.66
+Episode 14      All Average Score: -148.45      All SE Score: 57.36
+Long Eval: Average Score: -149.21       SE Score: 91.86
+Long Eval: Median Score: -4.49
+300
+Episode 15      Best Average Score: -80.42
+Episode 15      All Average Score: -101.03      All SE Score: 52.70
+Long Eval: Average Score: -57.44        SE Score: 51.72
+Long Eval: Median Score: -5.29
+300
+Episode 16      Best Average Score: -76.42
+Episode 16      All Average Score: -61.14       All SE Score: 41.08
+Long Eval: Average Score: -113.64       SE Score: 76.55
+Long Eval: Median Score: -1.60
+300
+Episode 17      Best Average Score: -80.12
+Episode 17      All Average Score: -57.37       All SE Score: 23.67
+Long Eval: Average Score: -40.12        SE Score: 25.76
+Long Eval: Median Score: -3.95
+300
+Episode 18      Best Average Score: -74.26
+Episode 18      All Average Score: -24.35       All SE Score: 8.70
+Long Eval: Average Score: -24.59        SE Score: 21.53
+Long Eval: Median Score: 1.57
+300
+Episode 19      Best Average Score: -71.14
+Episode 19      All Average Score: -90.03       All SE Score: 52.44
+Long Eval: Average Score: -219.99       SE Score: 123.34
+Long Eval: Median Score: -2.38
+300
+Episode 20      Best Average Score: -86.15
+Episode 20      All Average Score: -44.74       All SE Score: 19.57
+Long Eval: Average Score: -12.87        SE Score: 14.23
+Long Eval: Median Score: 3.68
+300
+Episode 21      Best Average Score: -78.42
+Episode 21      All Average Score: -71.46       All SE Score: 39.08
+Long Eval: Average Score: -194.82       SE Score: 113.80
+Long Eval: Median Score: 4.12
+300
+Episode 22      Best Average Score: -85.95
+Episode 22      All Average Score: -53.51       All SE Score: 29.16
+Long Eval: Average Score: -47.91        SE Score: 51.73
+Long Eval: Median Score: 4.49
+300
+Episode 23      Best Average Score: -86.76
+Episode 23      All Average Score: -91.15       All SE Score: 53.66
+Long Eval: Average Score: -11.67        SE Score: 14.29
+Long Eval: Median Score: 4.14
+300
+Episode 24      Best Average Score: -87.23
+Episode 24      All Average Score: -59.28       All SE Score: 30.41
+Long Eval: Average Score: -163.51       SE Score: 98.08
+Long Eval: Median Score: 4.32
+300
+Episode 25      Best Average Score: -88.66
+Episode 25      All Average Score: -168.86      All SE Score: 68.63
+Long Eval: Average Score: -118.61       SE Score: 79.91
+Long Eval: Median Score: 4.24
+300
+Episode 26      Best Average Score: -94.77
+Episode 26      All Average Score: -25.86       All SE Score: 20.17
+Long Eval: Average Score: -21.64        SE Score: 17.75
+Long Eval: Median Score: 4.19
+300
+Episode 27      Best Average Score: -85.57
+Episode 27      All Average Score: -94.10       All SE Score: 45.50
+Long Eval: Average Score: 2.93  SE Score: 0.79
+Long Eval: Median Score: 4.36
+300
+Episode 28      Best Average Score: -81.27
+Episode 28      All Average Score: -116.98      All SE Score: 61.39
+Long Eval: Average Score: -83.62        SE Score: 68.50
+Long Eval: Median Score: 3.83
+300
+Episode 29      Best Average Score: -87.17
+Episode 29      All Average Score: -178.11      All SE Score: 76.62
+Long Eval: Average Score: -17.43        SE Score: 21.42
+Long Eval: Median Score: 4.42
+300
+Episode 30      Best Average Score: -66.91
+Episode 30      All Average Score: -64.49       All SE Score: 46.76
+Long Eval: Average Score: -89.42        SE Score: 72.49
+Long Eval: Median Score: 3.98
+300
+Episode 31      Best Average Score: -74.57
+Episode 31      All Average Score: -34.78       All SE Score: 34.36
+Long Eval: Average Score: -53.98        SE Score: 39.74
+Long Eval: Median Score: 3.99
+300
+Episode 32      Best Average Score: -60.49
+Episode 32      All Average Score: -91.80       All SE Score: 47.80
+Long Eval: Average Score: -17.96        SE Score: 21.50
+Long Eval: Median Score: 4.45
+300
+Episode 33      Best Average Score: -57.49
+Episode 33      All Average Score: -44.73       All SE Score: 32.98
+Long Eval: Average Score: 0.39  SE Score: 2.06
+Long Eval: Median Score: 4.16
+300
+Episode 34      Best Average Score: -56.29
+Episode 34      All Average Score: -139.86      All SE Score: 57.82
+Long Eval: Average Score: 1.85  SE Score: 1.80
+Long Eval: Median Score: 4.43
+300
+Episode 35      Best Average Score: -39.75
+Episode 35      All Average Score: -45.46       All SE Score: 33.94
+Long Eval: Average Score: -193.69       SE Score: 113.59
+Long Eval: Median Score: 4.14
+300
+Episode 36      Best Average Score: -47.26
+Episode 36      All Average Score: -194.15      All SE Score: 79.72
+Long Eval: Average Score: -30.68        SE Score: 34.16
+Long Eval: Median Score: 3.82
+300
+Episode 37      Best Average Score: -48.16
+Episode 37      All Average Score: -48.16       All SE Score: 41.96
+Long Eval: Average Score: -130.48       SE Score: 90.42
+Long Eval: Median Score: 4.62
+300
+Episode 38      Best Average Score: -61.50
+Episode 38      All Average Score: -36.59       All SE Score: 30.11
+Long Eval: Average Score: -119.82       SE Score: 78.97
+Long Eval: Median Score: 3.96
+300
+Episode 39      Best Average Score: -65.12
+Episode 39      All Average Score: -84.79       All SE Score: 47.15
+Long Eval: Average Score: -72.07        SE Score: 54.93
+Long Eval: Median Score: 4.29
+300
+Episode 40      Best Average Score: -70.59
+Episode 40      All Average Score: -73.90       All SE Score: 45.23
+Long Eval: Average Score: -85.19        SE Score: 57.59
+Long Eval: Median Score: 4.18
+300
+Episode 41      Best Average Score: -70.16
+Episode 41      All Average Score: -18.80       All SE Score: 11.34
+Long Eval: Average Score: -133.90       SE Score: 96.79
+Long Eval: Median Score: 4.31
+300
+Episode 42      Best Average Score: -78.16
+Episode 42      All Average Score: -50.58       All SE Score: 35.37
+Long Eval: Average Score: -68.37        SE Score: 71.87
+Long Eval: Median Score: 4.38
+300
+Episode 43      Best Average Score: -83.20
+Episode 43      All Average Score: -103.66      All SE Score: 58.38
+Long Eval: Average Score: -67.60        SE Score: 71.13
+Long Eval: Median Score: 4.64
+300
+Episode 44      Best Average Score: -90.00
+Episode 44      All Average Score: -81.88       All SE Score: 45.84
+Long Eval: Average Score: -154.09       SE Score: 98.51
+Long Eval: Median Score: 4.02
+300
+Episode 45      Best Average Score: -105.59
+Episode 45      All Average Score: -24.02       All SE Score: 12.91
+Long Eval: Average Score: 2.94  SE Score: 0.89
+Long Eval: Median Score: 4.21
+300
+Episode 46      Best Average Score: -85.93
+Episode 46      All Average Score: -14.35       All SE Score: 7.00
+Long Eval: Average Score: -121.93       SE Score: 89.39
+Long Eval: Median Score: 4.29
+300
+Episode 47      Best Average Score: -95.05
+Episode 47      All Average Score: -85.60       All SE Score: 51.98
+Long Eval: Average Score: -145.00       SE Score: 91.90
+Long Eval: Median Score: 4.02
+300
+Episode 48      Best Average Score: -96.50
+Episode 48      All Average Score: -104.23      All SE Score: 58.32
+Long Eval: Average Score: 2.23  SE Score: 1.79
+Long Eval: Median Score: 4.60
+300
+Episode 49      Best Average Score: -84.30
+Episode 49      All Average Score: -186.41      All SE Score: 93.97
+Long Eval: Average Score: -54.38        SE Score: 30.05
+Long Eval: Median Score: 4.45
+300
+Episode 50      Best Average Score: -82.53
+Episode 50      All Average Score: -99.57       All SE Score: 51.06
+Long Eval: Average Score: -59.15        SE Score: 51.98
+Long Eval: Median Score: 4.32
+300
+Episode 51      Best Average Score: -79.92
+Episode 51      All Average Score: -87.13       All SE Score: 63.88
+Long Eval: Average Score: -70.70        SE Score: 71.89
+Long Eval: Median Score: 4.52
+300
+Episode 52      Best Average Score: -73.60
+Episode 52      All Average Score: -81.89       All SE Score: 40.54
