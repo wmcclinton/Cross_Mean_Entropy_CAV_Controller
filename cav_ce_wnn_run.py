@@ -10,6 +10,15 @@ from CAVSimulator0728 import Simulator
 
 from collections import deque
 
+# Controller HYPERPARAMETERS FOR TUNING
+
+
+
+print("Controller Hyperparameters")
+print()
+print("#"*30)
+#
+
 window_size = 1
 window = deque(maxlen=window_size)
 for i in range(window_size):

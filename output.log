@@ -1,0 +1,27 @@
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+##############################
+Environment Hyperparameters
+
+##############################
+Controller Hyperparameters
+
+##############################
+Initializing Environment...
+observation space: <CAVSimulator0728.observation_space object at 0x10a8def60>
+action space: <CAVSimulator0728.action_space object at 0x111414b38>
+Long Eval: Average Score: -683838861.96	SE Score: 24693627.99
+Long Eval: Median Score: -647676855.12
+300
+Episode 0	Best Average Score: -683838861.96
+Episode 0	All Average Score: -715676759.43	All SE Score: 20149772.07
+Long Eval: Average Score: -710557884.06	SE Score: 28510805.13
+Long Eval: Median Score: -645276820.93
+300
+Episode 1	Best Average Score: -697198373.01
+Episode 1	All Average Score: -662541372.15	All SE Score: 21368725.94
+Long Eval: Average Score: -687413546.64	SE Score: 26282511.41
+Long Eval: Median Score: -623976965.10
+300
+Episode 2	Best Average Score: -693936764.22
+Episode 2	All Average Score: -657040377.02	All SE Score: 24435378.16

@@ -7,6 +7,16 @@ import math
 from statistics import median
 pygame.init()
 
+# Environment HYPERPARAMETERS FOR TUNING
+
+
+print("#"*30)
+print("Environment Hyperparameters")
+print()
+print("#"*30)
+#
+
+
 ### update on 07/28:
 ### convex function for reward (nonlinearity), similar to the function of IDM
 ### previous safety constraint should prevent this situation: leading vehicle decelerate at minimum acceleration
