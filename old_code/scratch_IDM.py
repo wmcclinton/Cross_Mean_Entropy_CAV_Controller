@@ -56,7 +56,7 @@ for i in range(num_episodes):
         # For graph
         add2loc_map(env)
         #print(s)
-        v, x, a = env.CACC(s,env.num_leading_cars)
+        v, x, a = env.IDM(s,env.num_leading_cars,???)
         #print(v)
         #a = min(-2,max(a,2))
         s, reward, done, info = env.step(a)
@@ -67,7 +67,7 @@ for i in range(num_episodes):
     print(reward)
     rewards.append(reward)
     print(i)
-print("CACC")
+print("IDM")
 print("Average Reward:",np.mean(rewards))
 print("Median Reward:",np.median(rewards))
 print("SE Reward:",np.std(rewards)/(len(rewards))**0.5)

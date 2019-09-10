@@ -8,13 +8,25 @@ import torch.nn as nn
 
 import random
 
-from CAVSimulator import Simulator
+from CAVSimulator0728 import Simulator
 
 from collections import deque
 
 import torch.optim as optim
 
 import torch.nn.functional as F
+
+##### Controller HYPERPARAMETERS FOR TUNING
+
+start_from_init = True
+num_leading_vehicle = 3
+num_following_vehicle = 3
+
+
+print("Controller Hyperparameters")
+print()
+print("#"*30)
+######
 
 def moving_average(interval, window_size):
     window = np.ones(int(window_size))/float(window_size)
@@ -187,7 +199,7 @@ def mimic_optimize(env,agent,Replay_Buffer,buffer_size):
     return loss.detach().numpy(), acc
 
 if __name__ == "__main__":
-    env = Simulator(3,3)
+    env = Simulator(num_leading_vehicle,num_following_vehicle)
 
     print('observation space:', env.observation_space)
     print('action space:', env.action_space)

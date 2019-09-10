@@ -1,4 +1,4 @@
-from CAVSimulator import Simulator
+from CAVSimulator0728 import Simulator
 import numpy as np
 from copy import deepcopy
 import matplotlib.pyplot as plt
@@ -125,7 +125,7 @@ def create_loc_map(env):
 env = Simulator(3,3)
 env.normalize = False
 env.verbose = True
-num_episodes = 1000
+num_episodes = 100
 rewards = []
 
 for i in range(num_episodes):

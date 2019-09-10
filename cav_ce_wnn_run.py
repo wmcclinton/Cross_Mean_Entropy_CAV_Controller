@@ -10,14 +10,17 @@ from CAVSimulator0728 import Simulator
 
 from collections import deque
 
-# Controller HYPERPARAMETERS FOR TUNING
+##### Controller HYPERPARAMETERS FOR TUNING
 
+start_from_init = True
+num_leading_vehicle = 3
+num_following_vehicle = 3
 
 
 print("Controller Hyperparameters")
 print()
 print("#"*30)
-#
+######
 
 window_size = 1
 window = deque(maxlen=window_size)
@@ -193,14 +196,16 @@ if __name__ == "__main__":
     # Variable to designate train or just load from path and test
     train = True
     #
-    env = Simulator(3,3)
+    env = Simulator(num_leading_vehicle,num_following_vehicle)
 
     print('observation space:', env.observation_space)
     print('action space:', env.action_space)
 
     agent = Agent(env)
     #
-    #agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
+    if start_from_init:
+        print("Started from CACC initialization")
+        agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
     #
     if train:
         agent, scores = cem(agent)

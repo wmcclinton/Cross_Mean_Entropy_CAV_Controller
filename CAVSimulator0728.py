@@ -9,6 +9,7 @@ pygame.init()
 
 # Environment HYPERPARAMETERS FOR TUNING
 
+rew_scale_val = -10
 
 print("#"*30)
 print("Environment Hyperparameters")
@@ -32,7 +33,7 @@ data = loadmat('veh_combined.mat')['veh_combined']
 
 a_min_hv = min([item for sublist in data[:,:,5] for item in sublist]) ### leading vehicle may decelerate at HV's minimum deceleration
 large_gap_threshold = (median([item for sublist in data[:,:,2] for item in sublist])+max([item for sublist in data[:,:,2] for item in sublist]))/2 #can we find the threshold satisfy 90% of distribution?
-a_min_hv = -2
+#a_min_hv = -2
 
 class observation_space:
     def __init__(self, num_leading_cars, num_following_cars):
@@ -88,8 +89,8 @@ class Simulator():
 
 
         # Max and Min Vel and Acc
-        self.a_max = 2.0 #2.0
-        self.a_min = -2.0 #-2.0
+        self.a_max = 2.3 #2.0
+        self.a_min = -2.0
         self.dt = 0.1 # time interval
         self.v_max = 16 #16
         self.v_min = 0 #0
@@ -142,54 +143,63 @@ class Simulator():
         # or def CACC
         # DRL controller
         ### change penalty
-        pn_a_max = -1000
-        pn_a_min = -1000
-        pn_a_max_power = 4
-        pn_a_min_power = 4
+        pn_a_max = rew_scale_val
+        pn_a_min = rew_scale_val
+        pn_a_max_power = 2
+        pn_a_min_power = 2
         # penalty for violating constraint for acceleration
         if a > self.a_max: # or use rectify function
             rew = rew + pn_a_max*(a/self.a_max)**pn_a_max_power ###change penalty: continuous
-            a_ = self.a_max
+            if not human:
+                a_ = self.a_max
             if(self.verbose):
                 print("Violates Max Acceleration")
-                #print(a)
+                print(a)
                 #quit()
         elif a < self.a_min:
             rew = rew + pn_a_min*(a/self.a_min)**pn_a_min_power ###change penalty: continuous
-            a_ = self.a_min
+            if not human:
+                a_ = self.a_min
             if(self.verbose):
                 print("Violates Min Acceleration")
-                #print(a)
+                print(a)
                 #quit()
         else:
             a_ = a
 
-        v_ = v + a1*self.dt
-        v3 = v_ + a_*self.dt #using a_
         if human:
             v_ = self.get_state(self.t_start+self.t+1)[self.num_leading_cars*3+0]
             v3 = self.get_state(self.t_start+self.t+2)[self.num_leading_cars*3+0]
+            a_ = a
+        else:
+            v_ = v + a1*self.dt #current
+            v3 = v_ + a_*self.dt #using a_, next
+
         self.v_max = 16
         self.v_min = 0
         ###change penalty: continuous
-        pn_v_max = -1000
-        pn_v_min = -1000
+        pn_v_max = rew_scale_val
+        pn_v_min = rew_scale_val
         pn_v_max_power = 2
         pn_v_min_power = 2
         # penalty for violating constraint for velocity
         if v3 > self.v_max:
             rew = rew + pn_v_max*(v3-self.v_max)**pn_v_max_power###change penalty: continuous
-            v3 = self.v_max
-            a_ = (v3-v_) / self.dt
+            if not human:
+                v3 = self.v_max
+                a_ = (v3-v_) / self.dt
             if(self.verbose):
                 print("Violates Max Vel")
+                print(a_)
                 #quit()
         elif v3 < self.v_min:
             rew = rew + pn_v_min*(self.v_min-v3)**pn_v_max_power ###change penalty: continuous
-            v3 = self.v_min
-            a_ = (v3-v_) / self.dt
+            if not human:
+                v3 = self.v_min
+                a_ = (v3-v_) / self.dt
             if(self.verbose):
                 print("Violates Min Vel")
+                print(a_)
                 #quit()
 
         x_ = x + v*self.dt + (1/2)*a1*self.dt**2 #x2
@@ -213,27 +223,40 @@ class Simulator():
         #print(gap)
         #print("GAP")
         ### change penalty: continuous
-        pn_safe = -1000
-        pn_safe_power = 2
+        pn_safe = rew_scale_val
+        pn_safe_power = 1
         # penalty for violating constraint for safety
         #print(gap)
         if gap < -1e-10:
-            rew = rew + pn_safe * gap ** pn_safe_power ### change penalty: continuous
+            rew = rew + pn_safe * abs(gap) ** pn_safe_power ### change penalty: continuous
             if(self.verbose):
                 print("#")
                 print(gap)
                 print("Warning Within Gap")
                 #quit()
-            x3 = xl_3 - l - min_s ### change safety constraints
-            a_ = (x3 - x_ - v_*self.dt)*2/(self.dt**2)
+                print(x3) 
+                print(a_) 
+                print(x_)
+                print(xl_)  
+
+            if not human:
+                x3 = xl_3 - l - min_s ### change safety constraints
+                a_ = (x3 - x_ - v_*self.dt)*2/(self.dt**2)
             if a_<self.a_min or a_>self.a_max:
                 if(self.verbose):
+                    print(xl_3)
+                    print(x3)
+                    print(x_)
+                    print(v_)
+                    print(a_)
                     print("safety wrong acc")
                     # TODO
                     #quit()
-            v3 = v_ + a_*self.dt
+            if not human:
+                v3 = v_ + a_*self.dt
             if v3<self.v_min or v3>self.v_max:
                 if(self.verbose):
+                    print(v_)
                     print("safety wrong vel")
                     # TODO
                     #quit()
@@ -246,12 +269,14 @@ class Simulator():
                 print("Crashed")
             print("%")
             print(s)
-            quit()
+            #quit()
             self.is_crashed = True
-            rew = rew + -100000
+            #rew = rew + -100000
 
         if gap > large_gap_threshold: ### change penalty: continuous
             rew = rew + pn_safe * (gap-large_gap_threshold) ** pn_safe_power
+            print("BADBADBAD")
+            #quit()
             if(self.verbose):
                 print("Warning Gap Too Large")
 
@@ -345,13 +370,15 @@ class Simulator():
                     print("FC safety wrong acc")
                     #print(a_temp)
                     #input()
+                    #quit()
             v_temp = vf + af*self.dt
             v3_temp = v_temp + a_temp*self.dt
             if v3_temp<self.v_min or v3_temp>self.v_max:
                 if(self.verbose):
                     print("FC safety wrong vel")
-                    #print(a_temp)
+                    #print(v3_temp)
                     #input()
+                    #quit()
         ######## update end here
         # Add penalty for too large gap?
         ######
@@ -406,6 +433,7 @@ class Simulator():
         # extract from data since CACC replaces controller, the leading vehicle is fixed
         vp_ = self.get_state(self.t_start+self.t+1)[(n-1)*3+0]
         xp_3 = xp_ + vp_ * self.dt + (1 / 2) * a_min_hv * self.dt ** 2  ### when the leading car break at its maximum deceleration
+        #l = 0
         gap = xp_3 - x3 - l - min_s  ### change safety constraints: guarantee no crash even when
 
         if gap < -1e-10:
@@ -447,7 +475,7 @@ class Simulator():
                 #print(n)
                 accels.append((n,state[self.num_leading_cars + n][2]))
                 #if(state[self.num_leading_cars + n][2] > 10 or state[self.num_leading_cars + n][2] < -10):
-                    #print(accels)
+                    #print(accels[-1])
                     #print(self.t_start)
                     #print(len(accels)/(self.num_vehicles - self.num_leading_cars))
                     #input()
@@ -456,20 +484,21 @@ class Simulator():
         sum_car_disp = sum([(1**i)*disps[self.num_leading_cars:][i] for i in range(self.num_vehicles - self.num_leading_cars)])
 
         reward = sum_car_disp - self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size))
-        #if(reward < -100):
-            #print("$$$$")
-            #print(sum_car_disp)
-            #print(sum_squared_acc)
-            #print(self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size)))
-            #print(self.LAMBDA * ((self.num_vehicles - self.num_leading_cars)*size)/(sum_squared_acc + self.EPSILON) )
-            #print(sum(self.neg_rewards))
-            #print(reward)
-            #print((reward + sum(self.neg_rewards)))
-            #print((reward + sum(self.neg_rewards))/self.rew_normalize)
-            #print("$$$$")
+        if((reward + sum(self.neg_rewards))/self.rew_normalize < -100):
+            print("$$$$")
+            print(sum_car_disp)
+            print(sum_squared_acc)
+            print(self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size)))
+            print(self.LAMBDA * ((self.num_vehicles - self.num_leading_cars)*size)/(sum_squared_acc + self.EPSILON) )
+            print(self.neg_rewards)
+            print(sum(self.neg_rewards))
+            print(reward)
+            print((reward + sum(self.neg_rewards)))
+            print((reward + sum(self.neg_rewards))/self.rew_normalize)
+            print("$$$$")
             #print(accels)
             #input()
-            #quit()
+            # quit()
 
         #return (reward)/self.rew_normalize
         #TODO #play with reward penalties in update state #Try DDPG

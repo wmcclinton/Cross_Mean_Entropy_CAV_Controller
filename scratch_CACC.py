@@ -1,7 +1,19 @@
-from CAVSimulator import Simulator
+from CAVSimulator0728 import Simulator
 import numpy as np
 from copy import deepcopy
 import matplotlib.pyplot as plt
+
+##### Controller HYPERPARAMETERS FOR TUNING
+
+start_from_init = True
+num_leading_vehicle = 3
+num_following_vehicle = 3
+num_eps = 100
+
+print("Controller Hyperparameters")
+print()
+print("#"*30)
+######
 
 data_t = []
 data_d = []
@@ -28,10 +40,10 @@ def create_loc_map(env):
     plt.show()
 
 # CAV Simulator (Generates Fake Data now)
-env = Simulator(3,3)
+env = Simulator(num_leading_vehicle,num_following_vehicle)
 env.normalize = False
 #env.verbose = True
-num_episodes = 100
+num_episodes = num_eps
 rewards = []
 
 for i in range(num_episodes):
@@ -56,15 +68,10 @@ for i in range(num_episodes):
         # For graph
         add2loc_map(env)
         #print(s)
-        s_ = env.get_state(env.t_start + i + 1)
-        v = s_[env.num_leading_cars*3+0]
-        x = s_[env.num_leading_cars*3+1]
-        a = s_[env.num_leading_cars*3+2]
-        #print(s_)
+        v, x, a = env.CACC(s,env.num_leading_cars)
         #print(v)
-        #print(a)
-        s, reward, done, info = env.step(a,human=True)
-        #print(s)
+        #a = min(-2,max(a,2))
+        s, reward, done, info = env.step(a)
         #print(reward)
         #print()
         i = i + 1
@@ -72,7 +79,7 @@ for i in range(num_episodes):
     print(reward)
     rewards.append(reward)
     print(i)
-print("HUMAN")
+print("CACC")
 print("Average Reward:",np.mean(rewards))
 print("Median Reward:",np.median(rewards))
 print("SE Reward:",np.std(rewards)/(len(rewards))**0.5)
@@ -89,16 +96,4 @@ plt.ylabel("Reward")
 plt.xlabel("Episode")
 plt.show()
 quit()
-#-759874.2689289242 1,1 100
-#-3092599.9404430203 3,3 100
-#-18945850.40532393 3,3 2000
-#-3804.086092265367 3,3 100
-#-72983.58234821797 3,3 2000
-#$$$$
-#148.92242153042025
-#1.772965201233505
-#-190355.0
-#150.69538673165377
-#-190204.30461326835
-#$$$$
 

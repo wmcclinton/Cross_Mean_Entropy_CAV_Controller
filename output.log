@@ -4,24 +4,2021 @@ Hello from the pygame community. https://www.pygame.org/contribute.html
 Environment Hyperparameters
 
 ##############################
-Controller Hyperparameters
-
-##############################
 Initializing Environment...
-observation space: <CAVSimulator0728.observation_space object at 0x10a8def60>
-action space: <CAVSimulator0728.action_space object at 0x111414b38>
-Long Eval: Average Score: -683838861.96	SE Score: 24693627.99
-Long Eval: Median Score: -647676855.12
-300
-Episode 0	Best Average Score: -683838861.96
-Episode 0	All Average Score: -715676759.43	All SE Score: 20149772.07
-Long Eval: Average Score: -710557884.06	SE Score: 28510805.13
-Long Eval: Median Score: -645276820.93
-300
-Episode 1	Best Average Score: -697198373.01
-Episode 1	All Average Score: -662541372.15	All SE Score: 21368725.94
-Long Eval: Average Score: -687413546.64	SE Score: 26282511.41
-Long Eval: Median Score: -623976965.10
-300
-Episode 2	Best Average Score: -693936764.22
-Episode 2	All Average Score: -657040377.02	All SE Score: 24435378.16
+observation space: <CAVSimulator0728.observation_space object at 0x10318c208>
+action space: <CAVSimulator0728.action_space object at 0x107c28cc0>
+Loss tensor(0.7844, grad_fn=<MseLossBackward>)
+Accuracy 0.390625%
+Loss tensor(0.7177, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.6945, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8427, grad_fn=<MseLossBackward>)
+Accuracy 1.5625%
+Loss tensor(0.9219, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8936, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.8505, grad_fn=<MseLossBackward>)
+Accuracy 0.390625%
+Loss tensor(0.8553, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.7992, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8341, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8270, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.9255, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8725, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8728, grad_fn=<MseLossBackward>)
+Accuracy 0.390625%
+Loss tensor(0.8159, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8228, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.7006, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.7604, grad_fn=<MseLossBackward>)
+Accuracy 0.390625%
+Loss tensor(0.8968, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8916, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.9315, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.8334, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8656, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.9168, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8662, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8783, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8700, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8004, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8348, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.7692, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8291, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.9058, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.7216, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8916, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.7760, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.9106, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8889, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.9080, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8686, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8747, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.9017, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8463, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8218, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8379, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8503, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.7514, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8572, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8207, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(1.0826, grad_fn=<MseLossBackward>)
+Accuracy 1.7578125%
+Loss tensor(0.8591, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.8861, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(1.0720, grad_fn=<MseLossBackward>)
+Accuracy 2.24609375%
+Loss tensor(0.8252, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.7659, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.6692, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.9010, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8559, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8398, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.9039, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.8374, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8029, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.9176, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.7554, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8179, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8437, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.9152, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8431, grad_fn=<MseLossBackward>)
+Accuracy 2.24609375%
+Loss tensor(0.8570, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.9005, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.9047, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.8879, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8645, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.7925, grad_fn=<MseLossBackward>)
+Accuracy 0.390625%
+Loss tensor(0.8062, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8265, grad_fn=<MseLossBackward>)
+Accuracy 0.48828125%
+Loss tensor(0.7890, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8794, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8261, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.7554, grad_fn=<MseLossBackward>)
+Accuracy 0.390625%
+Loss tensor(0.8916, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8301, grad_fn=<MseLossBackward>)
+Accuracy 0.09765625%
+Loss tensor(0.8186, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8128, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8131, grad_fn=<MseLossBackward>)
+Accuracy 0.29296875%
+Loss tensor(0.7090, grad_fn=<MseLossBackward>)
+Accuracy 0.390625%
+Loss tensor(0.8186, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.8339, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.8093, grad_fn=<MseLossBackward>)
+Accuracy 0.1953125%
+Loss tensor(0.9865, grad_fn=<MseLossBackward>)
+Accuracy 1.7578125%
+Loss tensor(0.8005, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.8060, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.8455, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.8961, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.9368, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.7965, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.8292, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.8293, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.9070, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.8974, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.7032, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.7344, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.6506, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.8307, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.7822, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.7737, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.8545, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.8276, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.8991, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.8409, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.7783, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.7853, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.8652, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.7832, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.7788, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.7103, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.7916, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.8066, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.9440, grad_fn=<MseLossBackward>)
+Accuracy 84.765625%
+Loss tensor(0.9192, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.8693, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.8700, grad_fn=<MseLossBackward>)
+Accuracy 85.05859375%
+Loss tensor(0.8809, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.8946, grad_fn=<MseLossBackward>)
+Accuracy 84.66796875%
+Loss tensor(0.8154, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.9207, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.8673, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.8643, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.8654, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.9334, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.8427, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.8397, grad_fn=<MseLossBackward>)
+Accuracy 86.42578125%
+Loss tensor(0.7751, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.7503, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.8058, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.8463, grad_fn=<MseLossBackward>)
+Accuracy 85.64453125%
+Loss tensor(0.9088, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.8587, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.7818, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.7999, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.7087, grad_fn=<MseLossBackward>)
+Accuracy 83.984375%
+Loss tensor(0.7860, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.7675, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.7399, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.7817, grad_fn=<MseLossBackward>)
+Accuracy 84.66796875%
+Loss tensor(0.7150, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.9092, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.8044, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.8148, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.7498, grad_fn=<MseLossBackward>)
+Accuracy 86.9140625%
+Loss tensor(0.8272, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.8017, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.7442, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.6737, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.8316, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.6966, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.8181, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.7920, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.8574, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.6600, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.7107, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.8640, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.8408, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.8527, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.7790, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.7015, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.7846, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.8377, grad_fn=<MseLossBackward>)
+Accuracy 86.9140625%
+Loss tensor(0.7526, grad_fn=<MseLossBackward>)
+Accuracy 85.64453125%
+Loss tensor(0.8973, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.9289, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.9090, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.8869, grad_fn=<MseLossBackward>)
+Accuracy 86.9140625%
+Loss tensor(0.7244, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.7544, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.8707, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.8328, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.8503, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.8306, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.8417, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.8190, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.8628, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.8360, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.9072, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.7967, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.7460, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.6960, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.8428, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.7938, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.6928, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.7855, grad_fn=<MseLossBackward>)
+Accuracy 86.42578125%
+Loss tensor(0.7416, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.8165, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.7637, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.7139, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.8351, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.8047, grad_fn=<MseLossBackward>)
+Accuracy 90.625%
+Loss tensor(0.8122, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.7920, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.7120, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.7871, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.6744, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.7271, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.6592, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.6973, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.7838, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.7779, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.7200, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.8027, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.7175, grad_fn=<MseLossBackward>)
+Accuracy 90.91796875%
+Loss tensor(0.7305, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.8296, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.6403, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.7190, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.6467, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.6691, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.6957, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.7283, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.7055, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.7058, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.7575, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.6079, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.6915, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.7126, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.7640, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.6790, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.8791, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.6964, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.6161, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.4875, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.6686, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.4944, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.5149, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.4058, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.4462, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.4785, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.6090, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.3927, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.4715, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.4284, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.4460, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.6314, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.5064, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.5518, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.7104, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.6057, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.4627, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.3284, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.4602, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.2868, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.3081, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.4542, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.3663, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.4853, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.3779, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.5212, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.5463, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.3766, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.2752, grad_fn=<MseLossBackward>)
+Accuracy 91.6015625%
+Loss tensor(0.3898, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.6306, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.3924, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.3703, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.3560, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.3912, grad_fn=<MseLossBackward>)
+Accuracy 91.6015625%
+Loss tensor(0.4225, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.4178, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.3361, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.2202, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.4224, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.3869, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.2383, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.3210, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.4700, grad_fn=<MseLossBackward>)
+Accuracy 92.08984375%
+Loss tensor(0.3461, grad_fn=<MseLossBackward>)
+Accuracy 91.2109375%
+Loss tensor(0.3203, grad_fn=<MseLossBackward>)
+Accuracy 91.6015625%
+Loss tensor(0.2635, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.5289, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.6165, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.5694, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.3892, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.5050, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.4003, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.2878, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.9019, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.5310, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.3442, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.2918, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.2604, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.2713, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.2520, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.5142, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.4727, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.2835, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.3212, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.3562, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.4329, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.2867, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.3024, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.1848, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.2557, grad_fn=<MseLossBackward>)
+Accuracy 90.625%
+Loss tensor(0.1490, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.2693, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.3978, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.2703, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.4348, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.5990, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.7618, grad_fn=<MseLossBackward>)
+Accuracy 85.44921875%
+Loss tensor(0.4714, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.3232, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.2235, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.3468, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.4114, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.3005, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.7757, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.3689, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.2711, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.3937, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.4126, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.2256, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.4537, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.3416, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.2117, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.2987, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.2723, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.4166, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.2390, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.2690, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.3714, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.4447, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.5039, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.2295, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.3528, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.4014, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.2372, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.3054, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.2854, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.1657, grad_fn=<MseLossBackward>)
+Accuracy 86.42578125%
+Loss tensor(0.2267, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.2563, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.7672, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.3092, grad_fn=<MseLossBackward>)
+Accuracy 90.625%
+Loss tensor(0.0992, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.0819, grad_fn=<MseLossBackward>)
+Accuracy 91.2109375%
+Loss tensor(0.1143, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.1583, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.1218, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0728, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0950, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.1185, grad_fn=<MseLossBackward>)
+Accuracy 91.89453125%
+Loss tensor(0.2128, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0632, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.1509, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.1355, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.1404, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0594, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.1125, grad_fn=<MseLossBackward>)
+Accuracy 91.11328125%
+Loss tensor(0.0753, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.1192, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0699, grad_fn=<MseLossBackward>)
+Accuracy 90.91796875%
+Loss tensor(0.0679, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0912, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.0883, grad_fn=<MseLossBackward>)
+Accuracy 91.89453125%
+Loss tensor(0.0651, grad_fn=<MseLossBackward>)
+Accuracy 92.3828125%
+Loss tensor(0.1106, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.1808, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.0749, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.0941, grad_fn=<MseLossBackward>)
+Accuracy 91.50390625%
+Loss tensor(0.0949, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.1472, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.1176, grad_fn=<MseLossBackward>)
+Accuracy 91.2109375%
+Loss tensor(0.7328, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.1410, grad_fn=<MseLossBackward>)
+Accuracy 90.91796875%
+Loss tensor(0.0937, grad_fn=<MseLossBackward>)
+Accuracy 90.625%
+Loss tensor(0.0615, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.0401, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.1008, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.1036, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.1410, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0598, grad_fn=<MseLossBackward>)
+Accuracy 91.40625%
+Loss tensor(0.2097, grad_fn=<MseLossBackward>)
+Accuracy 91.50390625%
+Loss tensor(0.1726, grad_fn=<MseLossBackward>)
+Accuracy 90.91796875%
+Loss tensor(0.0861, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.2444, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0877, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.0594, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.0521, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.0448, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.0728, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.3062, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.3023, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.0932, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.0707, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0457, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0546, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0893, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0848, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.0924, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0426, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0335, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.0746, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.1001, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.0572, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.0591, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.2598, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.1084, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.8206, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0796, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0718, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.0533, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.0344, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0711, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0646, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.1715, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.1395, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.1468, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0406, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.0628, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0347, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0821, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.1821, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0794, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0704, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0755, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0654, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0560, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0461, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0232, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0764, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0461, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.0345, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0437, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0494, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.0352, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.0470, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.1331, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0716, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0466, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0885, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0671, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.0415, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.0308, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0685, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.1209, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0949, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.0363, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0628, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.0585, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0357, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.2915, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0560, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0481, grad_fn=<MseLossBackward>)
+Accuracy 85.44921875%
+Loss tensor(0.0645, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0418, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0615, grad_fn=<MseLossBackward>)
+Accuracy 82.91015625%
+Loss tensor(0.0857, grad_fn=<MseLossBackward>)
+Accuracy 84.1796875%
+Loss tensor(0.0599, grad_fn=<MseLossBackward>)
+Accuracy 84.47265625%
+Loss tensor(0.0469, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0435, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0328, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.4505, grad_fn=<MseLossBackward>)
+Accuracy 84.47265625%
+Loss tensor(0.1987, grad_fn=<MseLossBackward>)
+Accuracy 83.984375%
+Loss tensor(0.0492, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.1297, grad_fn=<MseLossBackward>)
+Accuracy 85.44921875%
+Loss tensor(0.0689, grad_fn=<MseLossBackward>)
+Accuracy 83.69140625%
+Loss tensor(0.0377, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0679, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.0522, grad_fn=<MseLossBackward>)
+Accuracy 82.2265625%
+Loss tensor(0.0393, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0628, grad_fn=<MseLossBackward>)
+Accuracy 84.375%
+Loss tensor(0.0336, grad_fn=<MseLossBackward>)
+Accuracy 83.69140625%
+Loss tensor(0.1558, grad_fn=<MseLossBackward>)
+Accuracy 83.984375%
+Loss tensor(0.1247, grad_fn=<MseLossBackward>)
+Accuracy 83.10546875%
+Loss tensor(0.7554, grad_fn=<MseLossBackward>)
+Accuracy 2.9296875%
+Loss tensor(0.0343, grad_fn=<MseLossBackward>)
+Accuracy 84.765625%
+Loss tensor(0.0474, grad_fn=<MseLossBackward>)
+Accuracy 84.765625%
+Loss tensor(0.0413, grad_fn=<MseLossBackward>)
+Accuracy 83.7890625%
+Loss tensor(0.0245, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.0334, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.0668, grad_fn=<MseLossBackward>)
+Accuracy 83.59375%
+Loss tensor(0.0250, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0511, grad_fn=<MseLossBackward>)
+Accuracy 84.08203125%
+Loss tensor(0.0423, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0515, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0318, grad_fn=<MseLossBackward>)
+Accuracy 84.5703125%
+Loss tensor(0.0255, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0260, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0445, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0481, grad_fn=<MseLossBackward>)
+Accuracy 84.08203125%
+Loss tensor(0.0360, grad_fn=<MseLossBackward>)
+Accuracy 83.984375%
+Loss tensor(0.0324, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.0421, grad_fn=<MseLossBackward>)
+Accuracy 85.64453125%
+Loss tensor(0.0360, grad_fn=<MseLossBackward>)
+Accuracy 83.49609375%
+Loss tensor(0.0460, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0239, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0385, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.0375, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0263, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0415, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0445, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.0532, grad_fn=<MseLossBackward>)
+Accuracy 83.7890625%
+Loss tensor(0.0429, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0377, grad_fn=<MseLossBackward>)
+Accuracy 83.49609375%
+Loss tensor(0.0455, grad_fn=<MseLossBackward>)
+Accuracy 84.1796875%
+Loss tensor(0.0378, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.0395, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0571, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0312, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.0360, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.0392, grad_fn=<MseLossBackward>)
+Accuracy 84.1796875%
+Loss tensor(0.0859, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.0569, grad_fn=<MseLossBackward>)
+Accuracy 83.69140625%
+Loss tensor(0.0368, grad_fn=<MseLossBackward>)
+Accuracy 84.5703125%
+Loss tensor(0.0336, grad_fn=<MseLossBackward>)
+Accuracy 83.3984375%
+Loss tensor(0.0309, grad_fn=<MseLossBackward>)
+Accuracy 81.93359375%
+Loss tensor(0.0430, grad_fn=<MseLossBackward>)
+Accuracy 82.6171875%
+Loss tensor(0.0398, grad_fn=<MseLossBackward>)
+Accuracy 83.7890625%
+Loss tensor(0.0294, grad_fn=<MseLossBackward>)
+Accuracy 84.9609375%
+Loss tensor(0.0379, grad_fn=<MseLossBackward>)
+Accuracy 83.49609375%
+Loss tensor(0.0348, grad_fn=<MseLossBackward>)
+Accuracy 84.47265625%
+Loss tensor(0.0336, grad_fn=<MseLossBackward>)
+Accuracy 84.1796875%
+Loss tensor(0.0347, grad_fn=<MseLossBackward>)
+Accuracy 84.47265625%
+Loss tensor(0.0304, grad_fn=<MseLossBackward>)
+Accuracy 80.95703125%
+Loss tensor(0.0405, grad_fn=<MseLossBackward>)
+Accuracy 84.08203125%
+Loss tensor(0.0346, grad_fn=<MseLossBackward>)
+Accuracy 84.1796875%
+Loss tensor(0.0429, grad_fn=<MseLossBackward>)
+Accuracy 83.88671875%
+Loss tensor(0.0584, grad_fn=<MseLossBackward>)
+Accuracy 83.984375%
+Loss tensor(0.0498, grad_fn=<MseLossBackward>)
+Accuracy 82.51953125%
+Loss tensor(0.0404, grad_fn=<MseLossBackward>)
+Accuracy 83.49609375%
+Loss tensor(0.1989, grad_fn=<MseLossBackward>)
+Accuracy 84.47265625%
+Loss tensor(0.0308, grad_fn=<MseLossBackward>)
+Accuracy 84.08203125%
+Loss tensor(0.0334, grad_fn=<MseLossBackward>)
+Accuracy 84.66796875%
+Loss tensor(0.0345, grad_fn=<MseLossBackward>)
+Accuracy 83.984375%
+Loss tensor(0.0323, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0214, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0306, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0230, grad_fn=<MseLossBackward>)
+Accuracy 84.9609375%
+Loss tensor(0.0294, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0482, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0354, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.0396, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0284, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0219, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0291, grad_fn=<MseLossBackward>)
+Accuracy 86.9140625%
+Loss tensor(0.0202, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.0683, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0196, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.0247, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0209, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.0212, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0318, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0189, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0308, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.0242, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.0173, grad_fn=<MseLossBackward>)
+Accuracy 91.796875%
+Loss tensor(0.0246, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.0189, grad_fn=<MseLossBackward>)
+Accuracy 92.48046875%
+Loss tensor(0.0283, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0179, grad_fn=<MseLossBackward>)
+Accuracy 91.69921875%
+Loss tensor(0.0204, grad_fn=<MseLossBackward>)
+Accuracy 92.28515625%
+Loss tensor(0.0168, grad_fn=<MseLossBackward>)
+Accuracy 92.48046875%
+Loss tensor(0.0173, grad_fn=<MseLossBackward>)
+Accuracy 91.89453125%
+Loss tensor(0.0259, grad_fn=<MseLossBackward>)
+Accuracy 91.9921875%
+Loss tensor(0.0192, grad_fn=<MseLossBackward>)
+Accuracy 91.89453125%
+Loss tensor(0.0250, grad_fn=<MseLossBackward>)
+Accuracy 91.796875%
+Loss tensor(0.5566, grad_fn=<MseLossBackward>)
+Accuracy 91.30859375%
+Loss tensor(0.0201, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.0210, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.0326, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.0187, grad_fn=<MseLossBackward>)
+Accuracy 91.11328125%
+Loss tensor(0.0200, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.0139, grad_fn=<MseLossBackward>)
+Accuracy 91.796875%
+Loss tensor(0.0233, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.0257, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.7365, grad_fn=<MseLossBackward>)
+Accuracy 0.0%
+Loss tensor(0.0168, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.0192, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.0236, grad_fn=<MseLossBackward>)
+Accuracy 91.40625%
+Loss tensor(0.0209, grad_fn=<MseLossBackward>)
+Accuracy 91.69921875%
+Loss tensor(0.0205, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.0286, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.0360, grad_fn=<MseLossBackward>)
+Accuracy 91.015625%
+Loss tensor(0.0431, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.4060, grad_fn=<MseLossBackward>)
+Accuracy 0.5859375%
+Loss tensor(0.0277, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0324, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.0249, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0309, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0200, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.5623, grad_fn=<MseLossBackward>)
+Accuracy 0.5859375%
+Loss tensor(0.0199, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0229, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0415, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0433, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0410, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0202, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0241, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0280, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0208, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.0188, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0218, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0487, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0278, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0396, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0183, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.0887, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0172, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.0616, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0270, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0305, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0222, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0537, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0211, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0234, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.0933, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.5199, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0406, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0238, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0458, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0262, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0242, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0207, grad_fn=<MseLossBackward>)
+Accuracy 86.42578125%
+Loss tensor(0.0288, grad_fn=<MseLossBackward>)
+Accuracy 86.42578125%
+Loss tensor(0.0260, grad_fn=<MseLossBackward>)
+Accuracy 86.42578125%
+Loss tensor(0.0283, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0253, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0310, grad_fn=<MseLossBackward>)
+Accuracy 85.64453125%
+Loss tensor(0.0224, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0195, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0282, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0404, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0343, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0223, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0397, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0300, grad_fn=<MseLossBackward>)
+Accuracy 81.4453125%
+Loss tensor(0.0299, grad_fn=<MseLossBackward>)
+Accuracy 83.69140625%
+Loss tensor(0.0212, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.0262, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.5131, grad_fn=<MseLossBackward>)
+Accuracy 83.69140625%
+Loss tensor(0.0731, grad_fn=<MseLossBackward>)
+Accuracy 84.27734375%
+Loss tensor(0.0765, grad_fn=<MseLossBackward>)
+Accuracy 82.91015625%
+Loss tensor(0.0309, grad_fn=<MseLossBackward>)
+Accuracy 83.10546875%
+Loss tensor(0.0242, grad_fn=<MseLossBackward>)
+Accuracy 84.66796875%
+Loss tensor(0.0290, grad_fn=<MseLossBackward>)
+Accuracy 81.640625%
+Loss tensor(0.0248, grad_fn=<MseLossBackward>)
+Accuracy 84.765625%
+Loss tensor(0.0808, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0227, grad_fn=<MseLossBackward>)
+Accuracy 83.59375%
+Loss tensor(0.0264, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0254, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0317, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0299, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.0311, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.0327, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0345, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0389, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0275, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0310, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0231, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0218, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.0207, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0230, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0274, grad_fn=<MseLossBackward>)
+Accuracy 86.9140625%
+Loss tensor(0.0267, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0355, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0368, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.6166, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.0279, grad_fn=<MseLossBackward>)
+Accuracy 84.27734375%
+Loss tensor(0.0259, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0220, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0202, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0188, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0210, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0184, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.2428, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0277, grad_fn=<MseLossBackward>)
+Accuracy 85.64453125%
+Loss tensor(0.0498, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0272, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0215, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.0171, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.0220, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0184, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0247, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0233, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0209, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0184, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0284, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0197, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0199, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0254, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0165, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0263, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0216, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0183, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0169, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.0278, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0967, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0868, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0746, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0195, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0370, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.0287, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0226, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0193, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0188, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.1119, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0309, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0225, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.0368, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0289, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.0178, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0330, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0258, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0214, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0233, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.0237, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0287, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0636, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0250, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0255, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0363, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0432, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0193, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0223, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0208, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0286, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0170, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0196, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.0190, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0207, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0197, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0277, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0215, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.0190, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.0167, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0205, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0173, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0194, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0213, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0218, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0196, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0210, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0179, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.0204, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.0194, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0194, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0393, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0206, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0224, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0249, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0190, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0211, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0442, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.0243, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.0213, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0227, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0228, grad_fn=<MseLossBackward>)
+Accuracy 84.66796875%
+Loss tensor(0.0211, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.0183, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0193, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0194, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0314, grad_fn=<MseLossBackward>)
+Accuracy 85.44921875%
+Loss tensor(0.0184, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0226, grad_fn=<MseLossBackward>)
+Accuracy 83.7890625%
+Loss tensor(0.0218, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0208, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0270, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0233, grad_fn=<MseLossBackward>)
+Accuracy 84.5703125%
+Loss tensor(0.0210, grad_fn=<MseLossBackward>)
+Accuracy 84.27734375%
+Loss tensor(0.0180, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.1637, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0276, grad_fn=<MseLossBackward>)
+Accuracy 85.44921875%
+Loss tensor(0.0431, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0301, grad_fn=<MseLossBackward>)
+Accuracy 85.44921875%
+Loss tensor(0.0268, grad_fn=<MseLossBackward>)
+Accuracy 84.765625%
+Loss tensor(0.0322, grad_fn=<MseLossBackward>)
+Accuracy 84.9609375%
+Loss tensor(0.0213, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.0227, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0210, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0227, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0750, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.0263, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0213, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.0238, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0167, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0474, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0442, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.0162, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0242, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0192, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0193, grad_fn=<MseLossBackward>)
+Accuracy 91.11328125%
+Loss tensor(0.0163, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0227, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0169, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0151, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0176, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0179, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0150, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0154, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0211, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.0143, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.0163, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.0135, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.9198, grad_fn=<MseLossBackward>)
+Accuracy 0.87890625%
+Loss tensor(0.0453, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0712, grad_fn=<MseLossBackward>)
+Accuracy 90.8203125%
+Loss tensor(0.0159, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0186, grad_fn=<MseLossBackward>)
+Accuracy 90.91796875%
+Loss tensor(0.0160, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0251, grad_fn=<MseLossBackward>)
+Accuracy 91.11328125%
+Loss tensor(0.0617, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.0274, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.0159, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0416, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.3202, grad_fn=<MseLossBackward>)
+Accuracy 89.6484375%
+Loss tensor(0.0286, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0321, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0166, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.0218, grad_fn=<MseLossBackward>)
+Accuracy 86.9140625%
+Loss tensor(0.0179, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0209, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0136, grad_fn=<MseLossBackward>)
+Accuracy 90.72265625%
+Loss tensor(0.0233, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0161, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0168, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0174, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0199, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0176, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0353, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.0180, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0203, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0197, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0162, grad_fn=<MseLossBackward>)
+Accuracy 88.671875%
+Loss tensor(0.0218, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0301, grad_fn=<MseLossBackward>)
+Accuracy 86.328125%
+Loss tensor(0.0154, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0287, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0169, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0191, grad_fn=<MseLossBackward>)
+Accuracy 90.0390625%
+Loss tensor(0.0145, grad_fn=<MseLossBackward>)
+Accuracy 90.234375%
+Loss tensor(0.0196, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0179, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.0192, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0167, grad_fn=<MseLossBackward>)
+Accuracy 91.69921875%
+Loss tensor(0.0164, grad_fn=<MseLossBackward>)
+Accuracy 90.625%
+Loss tensor(0.0130, grad_fn=<MseLossBackward>)
+Accuracy 91.40625%
+Loss tensor(0.0162, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.0149, grad_fn=<MseLossBackward>)
+Accuracy 90.625%
+Loss tensor(0.0350, grad_fn=<MseLossBackward>)
+Accuracy 91.796875%
+Loss tensor(0.0157, grad_fn=<MseLossBackward>)
+Accuracy 92.28515625%
+Loss tensor(0.0140, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0188, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.0148, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0150, grad_fn=<MseLossBackward>)
+Accuracy 91.89453125%
+Loss tensor(0.0148, grad_fn=<MseLossBackward>)
+Accuracy 91.89453125%
+Loss tensor(0.0125, grad_fn=<MseLossBackward>)
+Accuracy 91.11328125%
+Loss tensor(0.0144, grad_fn=<MseLossBackward>)
+Accuracy 91.796875%
+Loss tensor(0.4884, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.0102, grad_fn=<MseLossBackward>)
+Accuracy 93.5546875%
+Loss tensor(0.1801, grad_fn=<MseLossBackward>)
+Accuracy 91.9921875%
+Loss tensor(0.0371, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0266, grad_fn=<MseLossBackward>)
+Accuracy 90.4296875%
+Loss tensor(0.0167, grad_fn=<MseLossBackward>)
+Accuracy 91.9921875%
+Loss tensor(0.0144, grad_fn=<MseLossBackward>)
+Accuracy 90.13671875%
+Loss tensor(0.0155, grad_fn=<MseLossBackward>)
+Accuracy 89.35546875%
+Loss tensor(0.0157, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0274, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0217, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0177, grad_fn=<MseLossBackward>)
+Accuracy 89.94140625%
+Loss tensor(0.0158, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0175, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.0166, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.0160, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.0193, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0138, grad_fn=<MseLossBackward>)
+Accuracy 90.91796875%
+Loss tensor(0.0373, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0171, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0167, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0161, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0333, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.2787, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0158, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0152, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.0215, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0173, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0174, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0169, grad_fn=<MseLossBackward>)
+Accuracy 89.16015625%
+Loss tensor(0.0158, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0328, grad_fn=<MseLossBackward>)
+Accuracy 87.890625%
+Loss tensor(0.0210, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.0160, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.1031, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.7485, grad_fn=<MseLossBackward>)
+Accuracy 1.171875%
+Loss tensor(0.0248, grad_fn=<MseLossBackward>)
+Accuracy 88.28125%
+Loss tensor(0.0206, grad_fn=<MseLossBackward>)
+Accuracy 88.37890625%
+Loss tensor(0.0274, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0156, grad_fn=<MseLossBackward>)
+Accuracy 89.84375%
+Loss tensor(0.0193, grad_fn=<MseLossBackward>)
+Accuracy 90.625%
+Loss tensor(0.0172, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0152, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0174, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0144, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0412, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.0198, grad_fn=<MseLossBackward>)
+Accuracy 89.2578125%
+Loss tensor(0.0213, grad_fn=<MseLossBackward>)
+Accuracy 85.64453125%
+Loss tensor(0.0192, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.0202, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0193, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0158, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0146, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0192, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0176, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0168, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.0178, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.5313, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0190, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0178, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0699, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0351, grad_fn=<MseLossBackward>)
+Accuracy 84.66796875%
+Loss tensor(0.0330, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0216, grad_fn=<MseLossBackward>)
+Accuracy 86.23046875%
+Loss tensor(0.0216, grad_fn=<MseLossBackward>)
+Accuracy 83.7890625%
+Loss tensor(0.0215, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.0165, grad_fn=<MseLossBackward>)
+Accuracy 88.57421875%
+Loss tensor(0.0249, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.0205, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0190, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.0182, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.0177, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0194, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.0245, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.0235, grad_fn=<MseLossBackward>)
+Accuracy 85.15625%
+Loss tensor(0.0200, grad_fn=<MseLossBackward>)
+Accuracy 84.86328125%
+Loss tensor(0.0209, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0191, grad_fn=<MseLossBackward>)
+Accuracy 85.83984375%
+Loss tensor(0.0178, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0163, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.0323, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0214, grad_fn=<MseLossBackward>)
+Accuracy 86.71875%
+Loss tensor(0.2617, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0195, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0234, grad_fn=<MseLossBackward>)
+Accuracy 86.03515625%
+Loss tensor(0.0186, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.0179, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0208, grad_fn=<MseLossBackward>)
+Accuracy 87.40234375%
+Loss tensor(0.0176, grad_fn=<MseLossBackward>)
+Accuracy 86.62109375%
+Loss tensor(0.0187, grad_fn=<MseLossBackward>)
+Accuracy 85.3515625%
+Loss tensor(0.0179, grad_fn=<MseLossBackward>)
+Accuracy 87.6953125%
+Loss tensor(0.0182, grad_fn=<MseLossBackward>)
+Accuracy 86.5234375%
+Loss tensor(0.0154, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0160, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0163, grad_fn=<MseLossBackward>)
+Accuracy 87.3046875%
+Loss tensor(0.0135, grad_fn=<MseLossBackward>)
+Accuracy 89.74609375%
+Loss tensor(0.0142, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0146, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0141, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.0125, grad_fn=<MseLossBackward>)
+Accuracy 90.52734375%
+Loss tensor(0.0164, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0145, grad_fn=<MseLossBackward>)
+Accuracy 88.8671875%
+Loss tensor(0.0159, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0187, grad_fn=<MseLossBackward>)
+Accuracy 88.76953125%
+Loss tensor(0.0156, grad_fn=<MseLossBackward>)
+Accuracy 88.18359375%
+Loss tensor(0.0166, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.3269, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0535, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.0337, grad_fn=<MseLossBackward>)
+Accuracy 85.546875%
+Loss tensor(0.0172, grad_fn=<MseLossBackward>)
+Accuracy 87.109375%
+Loss tensor(0.0246, grad_fn=<MseLossBackward>)
+Accuracy 86.42578125%
+Loss tensor(0.0210, grad_fn=<MseLossBackward>)
+Accuracy 85.25390625%
+Loss tensor(0.0199, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0228, grad_fn=<MseLossBackward>)
+Accuracy 86.81640625%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0188, grad_fn=<MseLossBackward>)
+Accuracy 87.01171875%
+Loss tensor(0.0498, grad_fn=<MseLossBackward>)
+Accuracy 85.7421875%
+Loss tensor(0.1702, grad_fn=<MseLossBackward>)
+Accuracy 87.59765625%
+Loss tensor(0.0184, grad_fn=<MseLossBackward>)
+Accuracy 87.20703125%
+Loss tensor(0.0207, grad_fn=<MseLossBackward>)
+Accuracy 86.9140625%
+Loss tensor(0.0191, grad_fn=<MseLossBackward>)
+Accuracy 85.44921875%
+Loss tensor(0.0185, grad_fn=<MseLossBackward>)
+Accuracy 86.1328125%
+Loss tensor(0.0276, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0205, grad_fn=<MseLossBackward>)
+Accuracy 87.79296875%
+Loss tensor(0.0168, grad_fn=<MseLossBackward>)
+Accuracy 89.55078125%
+Loss tensor(0.0188, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+Loss tensor(0.0176, grad_fn=<MseLossBackward>)
+Accuracy 88.4765625%
+Loss tensor(0.0144, grad_fn=<MseLossBackward>)
+Accuracy 89.0625%
+Loss tensor(0.0190, grad_fn=<MseLossBackward>)
+Accuracy 85.9375%
+Loss tensor(0.0194, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0194, grad_fn=<MseLossBackward>)
+Accuracy 87.5%
+Loss tensor(0.0152, grad_fn=<MseLossBackward>)
+Accuracy 89.453125%
+Loss tensor(0.0145, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Loss tensor(0.0155, grad_fn=<MseLossBackward>)
+Accuracy 87.98828125%
+Loss tensor(0.0132, grad_fn=<MseLossBackward>)
+Accuracy 90.33203125%
+Loss tensor(0.0163, grad_fn=<MseLossBackward>)
+Accuracy 88.0859375%
+DONE
+Loss tensor(0.0148, grad_fn=<MseLossBackward>)
+Accuracy 88.96484375%
+Epoch 1
+Loss 0.01483188  Accuracy 88.96484375%
+
+Loss tensor(0.0147, grad_fn=<MseLossBackward>)
+Accuracy 88.916015625%
+Epoch 2
+Loss 0.014674433  Accuracy 88.916015625%
+
+Loss tensor(0.0149, grad_fn=<MseLossBackward>)
+Accuracy 88.623046875%
+Epoch 3
+Loss 0.01487532  Accuracy 88.623046875%
+
+Loss tensor(0.0124, grad_fn=<MseLossBackward>)
+Accuracy 90.478515625%
+Epoch 4
+Loss 0.0124039715  Accuracy 90.478515625%
+
