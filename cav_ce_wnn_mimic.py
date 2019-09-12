@@ -24,7 +24,7 @@ num_following_vehicle = 3
 
 
 print("Controller Hyperparameters")
-print()
+print(start_from_init, num_leading_vehicle, num_following_vehicle)
 print("#"*30)
 ######
 

@@ -184,9 +184,9 @@ agent = Agent(env)
 
 # evaluate
 # load the weights from file
-#agent.load_state_dict(torch.load('./cem_cartpole.pth'))
+agent.load_state_dict(torch.load('./cem_cartpole.pth'))
 #agent.load_state_dict(torch.load('./cem_cartpole_5.pth')) # Path to load model from
-agent.load_state_dict(torch.load('./cem_cartpole_BEST500.pth'))
+#agent.load_state_dict(torch.load('./cem_cartpole_learned.pth'))
 
 for i in range(num_episodes):
     #
@@ -208,7 +208,7 @@ for i in range(num_episodes):
             # For Graph
             add2loc_map(env)
             #
-            #env.render()
+            env.render()
             window.appendleft(torch.Tensor(state))
             action_probs = agent(deque2state(env)).detach().numpy()
             action = np.argmax(action_probs)

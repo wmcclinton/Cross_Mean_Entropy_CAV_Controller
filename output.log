@@ -2,2023 +2,3113 @@ pygame 1.9.4
 Hello from the pygame community. https://www.pygame.org/contribute.html
 ##############################
 Environment Hyperparameters
+-10
+##############################
+Controller Hyperparameters
 
 ##############################
 Initializing Environment...
-observation space: <CAVSimulator0728.observation_space object at 0x10318c208>
-action space: <CAVSimulator0728.action_space object at 0x107c28cc0>
-Loss tensor(0.7844, grad_fn=<MseLossBackward>)
-Accuracy 0.390625%
-Loss tensor(0.7177, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.6945, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8427, grad_fn=<MseLossBackward>)
-Accuracy 1.5625%
-Loss tensor(0.9219, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8936, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.8505, grad_fn=<MseLossBackward>)
-Accuracy 0.390625%
-Loss tensor(0.8553, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.7992, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8341, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8270, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.9255, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8725, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8728, grad_fn=<MseLossBackward>)
-Accuracy 0.390625%
-Loss tensor(0.8159, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8228, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.7006, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.7604, grad_fn=<MseLossBackward>)
-Accuracy 0.390625%
-Loss tensor(0.8968, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8916, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.9315, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.8334, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8656, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.9168, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8662, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8783, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8700, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8004, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8348, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.7692, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8291, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.9058, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.7216, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8916, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.7760, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.9106, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8889, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.9080, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8686, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8747, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.9017, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8463, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8218, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8379, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8503, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.7514, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8572, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8207, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(1.0826, grad_fn=<MseLossBackward>)
-Accuracy 1.7578125%
-Loss tensor(0.8591, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.8861, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(1.0720, grad_fn=<MseLossBackward>)
-Accuracy 2.24609375%
-Loss tensor(0.8252, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.7659, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.6692, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.9010, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8559, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8398, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.9039, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.8374, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8029, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.9176, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.7554, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8179, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8437, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.9152, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8431, grad_fn=<MseLossBackward>)
-Accuracy 2.24609375%
-Loss tensor(0.8570, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.9005, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.9047, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.8879, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8645, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.7925, grad_fn=<MseLossBackward>)
-Accuracy 0.390625%
-Loss tensor(0.8062, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8265, grad_fn=<MseLossBackward>)
-Accuracy 0.48828125%
-Loss tensor(0.7890, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8794, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8261, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.7554, grad_fn=<MseLossBackward>)
-Accuracy 0.390625%
-Loss tensor(0.8916, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8301, grad_fn=<MseLossBackward>)
-Accuracy 0.09765625%
-Loss tensor(0.8186, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8128, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8131, grad_fn=<MseLossBackward>)
-Accuracy 0.29296875%
-Loss tensor(0.7090, grad_fn=<MseLossBackward>)
-Accuracy 0.390625%
-Loss tensor(0.8186, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.8339, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.8093, grad_fn=<MseLossBackward>)
-Accuracy 0.1953125%
-Loss tensor(0.9865, grad_fn=<MseLossBackward>)
-Accuracy 1.7578125%
-Loss tensor(0.8005, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.8060, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.8455, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.8961, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.9368, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.7965, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.8292, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.8293, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.9070, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.8974, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.7032, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.7344, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.6506, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.8307, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.7822, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.7737, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.8545, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.8276, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.8991, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.8409, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.7783, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.7853, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.8652, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.7832, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.7788, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.7103, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.7916, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.8066, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.9440, grad_fn=<MseLossBackward>)
-Accuracy 84.765625%
-Loss tensor(0.9192, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.8693, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.8700, grad_fn=<MseLossBackward>)
-Accuracy 85.05859375%
-Loss tensor(0.8809, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.8946, grad_fn=<MseLossBackward>)
-Accuracy 84.66796875%
-Loss tensor(0.8154, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.9207, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.8673, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.8643, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.8654, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.9334, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.8427, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.8397, grad_fn=<MseLossBackward>)
-Accuracy 86.42578125%
-Loss tensor(0.7751, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.7503, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.8058, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.8463, grad_fn=<MseLossBackward>)
-Accuracy 85.64453125%
-Loss tensor(0.9088, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.8587, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.7818, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.7999, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.7087, grad_fn=<MseLossBackward>)
-Accuracy 83.984375%
-Loss tensor(0.7860, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.7675, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.7399, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.7817, grad_fn=<MseLossBackward>)
-Accuracy 84.66796875%
-Loss tensor(0.7150, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.9092, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.8044, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.8148, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.7498, grad_fn=<MseLossBackward>)
-Accuracy 86.9140625%
-Loss tensor(0.8272, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.8017, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.7442, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.6737, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.8316, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.6966, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.8181, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.7920, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.8574, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.6600, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.7107, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.8640, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.8408, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.8527, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.7790, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.7015, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.7846, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.8377, grad_fn=<MseLossBackward>)
-Accuracy 86.9140625%
-Loss tensor(0.7526, grad_fn=<MseLossBackward>)
-Accuracy 85.64453125%
-Loss tensor(0.8973, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.9289, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.9090, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.8869, grad_fn=<MseLossBackward>)
-Accuracy 86.9140625%
-Loss tensor(0.7244, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.7544, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.8707, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.8328, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.8503, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.8306, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.8417, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.8190, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.8628, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.8360, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.9072, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.7967, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.7460, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.6960, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.8428, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.7938, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.6928, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.7855, grad_fn=<MseLossBackward>)
-Accuracy 86.42578125%
-Loss tensor(0.7416, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.8165, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.7637, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.7139, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.8351, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.8047, grad_fn=<MseLossBackward>)
-Accuracy 90.625%
-Loss tensor(0.8122, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.7920, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.7120, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.7871, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.6744, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.7271, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.6592, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.6973, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.7838, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.7779, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.7200, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.8027, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.7175, grad_fn=<MseLossBackward>)
-Accuracy 90.91796875%
-Loss tensor(0.7305, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.8296, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.6403, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.7190, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.6467, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.6691, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.6957, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.7283, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.7055, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.7058, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.7575, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.6079, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.6915, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.7126, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.7640, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.6790, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.8791, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.6964, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.6161, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.4875, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.6686, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.4944, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.5149, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.4058, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.4462, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.4785, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.6090, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.3927, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.4715, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.4284, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.4460, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.6314, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.5064, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.5518, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.7104, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.6057, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.4627, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.3284, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.4602, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.2868, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.3081, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.4542, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.3663, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.4853, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.3779, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.5212, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.5463, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.3766, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.2752, grad_fn=<MseLossBackward>)
-Accuracy 91.6015625%
-Loss tensor(0.3898, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.6306, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.3924, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.3703, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.3560, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.3912, grad_fn=<MseLossBackward>)
-Accuracy 91.6015625%
-Loss tensor(0.4225, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.4178, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.3361, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.2202, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.4224, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.3869, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.2383, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.3210, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.4700, grad_fn=<MseLossBackward>)
-Accuracy 92.08984375%
-Loss tensor(0.3461, grad_fn=<MseLossBackward>)
-Accuracy 91.2109375%
-Loss tensor(0.3203, grad_fn=<MseLossBackward>)
-Accuracy 91.6015625%
-Loss tensor(0.2635, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.5289, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.6165, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.5694, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.3892, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.5050, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.4003, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.2878, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.9019, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.5310, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.3442, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.2918, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.2604, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.2713, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.2520, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.5142, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.4727, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.2835, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.3212, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.3562, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.4329, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.2867, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.3024, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.1848, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.2557, grad_fn=<MseLossBackward>)
-Accuracy 90.625%
-Loss tensor(0.1490, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.2693, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.3978, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.2703, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.4348, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.5990, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.7618, grad_fn=<MseLossBackward>)
-Accuracy 85.44921875%
-Loss tensor(0.4714, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.3232, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.2235, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.3468, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.4114, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.3005, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.7757, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.3689, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.2711, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.3937, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.4126, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.2256, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.4537, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.3416, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.2117, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.2987, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.2723, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.4166, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.2390, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.2690, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.3714, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.4447, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.5039, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.2295, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.3528, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.4014, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.2372, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.3054, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.2854, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.1657, grad_fn=<MseLossBackward>)
-Accuracy 86.42578125%
-Loss tensor(0.2267, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.2563, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.7672, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.3092, grad_fn=<MseLossBackward>)
-Accuracy 90.625%
-Loss tensor(0.0992, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.0819, grad_fn=<MseLossBackward>)
-Accuracy 91.2109375%
-Loss tensor(0.1143, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.1583, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.1218, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0728, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0950, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.1185, grad_fn=<MseLossBackward>)
-Accuracy 91.89453125%
-Loss tensor(0.2128, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0632, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.1509, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.1355, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.1404, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0594, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.1125, grad_fn=<MseLossBackward>)
-Accuracy 91.11328125%
-Loss tensor(0.0753, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.1192, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0699, grad_fn=<MseLossBackward>)
-Accuracy 90.91796875%
-Loss tensor(0.0679, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0912, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.0883, grad_fn=<MseLossBackward>)
-Accuracy 91.89453125%
-Loss tensor(0.0651, grad_fn=<MseLossBackward>)
-Accuracy 92.3828125%
-Loss tensor(0.1106, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.1808, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.0749, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.0941, grad_fn=<MseLossBackward>)
-Accuracy 91.50390625%
-Loss tensor(0.0949, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.1472, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.1176, grad_fn=<MseLossBackward>)
-Accuracy 91.2109375%
-Loss tensor(0.7328, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.1410, grad_fn=<MseLossBackward>)
-Accuracy 90.91796875%
-Loss tensor(0.0937, grad_fn=<MseLossBackward>)
-Accuracy 90.625%
-Loss tensor(0.0615, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.0401, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.1008, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.1036, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.1410, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0598, grad_fn=<MseLossBackward>)
-Accuracy 91.40625%
-Loss tensor(0.2097, grad_fn=<MseLossBackward>)
-Accuracy 91.50390625%
-Loss tensor(0.1726, grad_fn=<MseLossBackward>)
-Accuracy 90.91796875%
-Loss tensor(0.0861, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.2444, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0877, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.0594, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.0521, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.0448, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.0728, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.3062, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.3023, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.0932, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.0707, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0457, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0546, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0893, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0848, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.0924, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0426, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0335, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.0746, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.1001, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.0572, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.0591, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.2598, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.1084, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.8206, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0796, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0718, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.0533, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.0344, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0711, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0646, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.1715, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.1395, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.1468, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0406, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.0628, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0347, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0821, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.1821, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0794, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0704, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0755, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0654, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0560, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0461, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0232, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0764, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0461, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.0345, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0437, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0494, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.0352, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.0470, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.1331, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0716, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0466, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0885, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0671, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.0415, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.0308, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0685, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.1209, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0949, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.0363, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0628, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.0585, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0357, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.2915, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0560, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0481, grad_fn=<MseLossBackward>)
-Accuracy 85.44921875%
-Loss tensor(0.0645, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0418, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0615, grad_fn=<MseLossBackward>)
-Accuracy 82.91015625%
-Loss tensor(0.0857, grad_fn=<MseLossBackward>)
-Accuracy 84.1796875%
-Loss tensor(0.0599, grad_fn=<MseLossBackward>)
-Accuracy 84.47265625%
-Loss tensor(0.0469, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0435, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0328, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.4505, grad_fn=<MseLossBackward>)
-Accuracy 84.47265625%
-Loss tensor(0.1987, grad_fn=<MseLossBackward>)
-Accuracy 83.984375%
-Loss tensor(0.0492, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.1297, grad_fn=<MseLossBackward>)
-Accuracy 85.44921875%
-Loss tensor(0.0689, grad_fn=<MseLossBackward>)
-Accuracy 83.69140625%
-Loss tensor(0.0377, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0679, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.0522, grad_fn=<MseLossBackward>)
-Accuracy 82.2265625%
-Loss tensor(0.0393, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0628, grad_fn=<MseLossBackward>)
-Accuracy 84.375%
-Loss tensor(0.0336, grad_fn=<MseLossBackward>)
-Accuracy 83.69140625%
-Loss tensor(0.1558, grad_fn=<MseLossBackward>)
-Accuracy 83.984375%
-Loss tensor(0.1247, grad_fn=<MseLossBackward>)
-Accuracy 83.10546875%
-Loss tensor(0.7554, grad_fn=<MseLossBackward>)
-Accuracy 2.9296875%
-Loss tensor(0.0343, grad_fn=<MseLossBackward>)
-Accuracy 84.765625%
-Loss tensor(0.0474, grad_fn=<MseLossBackward>)
-Accuracy 84.765625%
-Loss tensor(0.0413, grad_fn=<MseLossBackward>)
-Accuracy 83.7890625%
-Loss tensor(0.0245, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.0334, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.0668, grad_fn=<MseLossBackward>)
-Accuracy 83.59375%
-Loss tensor(0.0250, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0511, grad_fn=<MseLossBackward>)
-Accuracy 84.08203125%
-Loss tensor(0.0423, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0515, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0318, grad_fn=<MseLossBackward>)
-Accuracy 84.5703125%
-Loss tensor(0.0255, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0260, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0445, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0481, grad_fn=<MseLossBackward>)
-Accuracy 84.08203125%
-Loss tensor(0.0360, grad_fn=<MseLossBackward>)
-Accuracy 83.984375%
-Loss tensor(0.0324, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.0421, grad_fn=<MseLossBackward>)
-Accuracy 85.64453125%
-Loss tensor(0.0360, grad_fn=<MseLossBackward>)
-Accuracy 83.49609375%
-Loss tensor(0.0460, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0239, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0385, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.0375, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0263, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0415, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0445, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.0532, grad_fn=<MseLossBackward>)
-Accuracy 83.7890625%
-Loss tensor(0.0429, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0377, grad_fn=<MseLossBackward>)
-Accuracy 83.49609375%
-Loss tensor(0.0455, grad_fn=<MseLossBackward>)
-Accuracy 84.1796875%
-Loss tensor(0.0378, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.0395, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0571, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0312, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.0360, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.0392, grad_fn=<MseLossBackward>)
-Accuracy 84.1796875%
-Loss tensor(0.0859, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.0569, grad_fn=<MseLossBackward>)
-Accuracy 83.69140625%
-Loss tensor(0.0368, grad_fn=<MseLossBackward>)
-Accuracy 84.5703125%
-Loss tensor(0.0336, grad_fn=<MseLossBackward>)
-Accuracy 83.3984375%
-Loss tensor(0.0309, grad_fn=<MseLossBackward>)
-Accuracy 81.93359375%
-Loss tensor(0.0430, grad_fn=<MseLossBackward>)
-Accuracy 82.6171875%
-Loss tensor(0.0398, grad_fn=<MseLossBackward>)
-Accuracy 83.7890625%
-Loss tensor(0.0294, grad_fn=<MseLossBackward>)
-Accuracy 84.9609375%
-Loss tensor(0.0379, grad_fn=<MseLossBackward>)
-Accuracy 83.49609375%
-Loss tensor(0.0348, grad_fn=<MseLossBackward>)
-Accuracy 84.47265625%
-Loss tensor(0.0336, grad_fn=<MseLossBackward>)
-Accuracy 84.1796875%
-Loss tensor(0.0347, grad_fn=<MseLossBackward>)
-Accuracy 84.47265625%
-Loss tensor(0.0304, grad_fn=<MseLossBackward>)
-Accuracy 80.95703125%
-Loss tensor(0.0405, grad_fn=<MseLossBackward>)
-Accuracy 84.08203125%
-Loss tensor(0.0346, grad_fn=<MseLossBackward>)
-Accuracy 84.1796875%
-Loss tensor(0.0429, grad_fn=<MseLossBackward>)
-Accuracy 83.88671875%
-Loss tensor(0.0584, grad_fn=<MseLossBackward>)
-Accuracy 83.984375%
-Loss tensor(0.0498, grad_fn=<MseLossBackward>)
-Accuracy 82.51953125%
-Loss tensor(0.0404, grad_fn=<MseLossBackward>)
-Accuracy 83.49609375%
-Loss tensor(0.1989, grad_fn=<MseLossBackward>)
-Accuracy 84.47265625%
-Loss tensor(0.0308, grad_fn=<MseLossBackward>)
-Accuracy 84.08203125%
-Loss tensor(0.0334, grad_fn=<MseLossBackward>)
-Accuracy 84.66796875%
-Loss tensor(0.0345, grad_fn=<MseLossBackward>)
-Accuracy 83.984375%
-Loss tensor(0.0323, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0214, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0306, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0230, grad_fn=<MseLossBackward>)
-Accuracy 84.9609375%
-Loss tensor(0.0294, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0482, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0354, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.0396, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0284, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0219, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0291, grad_fn=<MseLossBackward>)
-Accuracy 86.9140625%
-Loss tensor(0.0202, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.0683, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0196, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.0247, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0209, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.0212, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0318, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0189, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0308, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.0242, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.0173, grad_fn=<MseLossBackward>)
-Accuracy 91.796875%
-Loss tensor(0.0246, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.0189, grad_fn=<MseLossBackward>)
-Accuracy 92.48046875%
-Loss tensor(0.0283, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0179, grad_fn=<MseLossBackward>)
-Accuracy 91.69921875%
-Loss tensor(0.0204, grad_fn=<MseLossBackward>)
-Accuracy 92.28515625%
-Loss tensor(0.0168, grad_fn=<MseLossBackward>)
-Accuracy 92.48046875%
-Loss tensor(0.0173, grad_fn=<MseLossBackward>)
-Accuracy 91.89453125%
-Loss tensor(0.0259, grad_fn=<MseLossBackward>)
-Accuracy 91.9921875%
-Loss tensor(0.0192, grad_fn=<MseLossBackward>)
-Accuracy 91.89453125%
-Loss tensor(0.0250, grad_fn=<MseLossBackward>)
-Accuracy 91.796875%
-Loss tensor(0.5566, grad_fn=<MseLossBackward>)
-Accuracy 91.30859375%
-Loss tensor(0.0201, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.0210, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.0326, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.0187, grad_fn=<MseLossBackward>)
-Accuracy 91.11328125%
-Loss tensor(0.0200, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.0139, grad_fn=<MseLossBackward>)
-Accuracy 91.796875%
-Loss tensor(0.0233, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.0257, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.7365, grad_fn=<MseLossBackward>)
-Accuracy 0.0%
-Loss tensor(0.0168, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.0192, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.0236, grad_fn=<MseLossBackward>)
-Accuracy 91.40625%
-Loss tensor(0.0209, grad_fn=<MseLossBackward>)
-Accuracy 91.69921875%
-Loss tensor(0.0205, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.0286, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.0360, grad_fn=<MseLossBackward>)
-Accuracy 91.015625%
-Loss tensor(0.0431, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.4060, grad_fn=<MseLossBackward>)
-Accuracy 0.5859375%
-Loss tensor(0.0277, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0324, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.0249, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0309, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0200, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.5623, grad_fn=<MseLossBackward>)
-Accuracy 0.5859375%
-Loss tensor(0.0199, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0229, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0415, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0433, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0410, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0202, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0241, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0280, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0208, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.0188, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0218, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0487, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0278, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0396, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0183, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.0887, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0172, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.0616, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0270, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0305, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0222, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0537, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0211, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0234, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.0933, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.5199, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0406, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0238, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0458, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0262, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0242, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0207, grad_fn=<MseLossBackward>)
-Accuracy 86.42578125%
-Loss tensor(0.0288, grad_fn=<MseLossBackward>)
-Accuracy 86.42578125%
-Loss tensor(0.0260, grad_fn=<MseLossBackward>)
-Accuracy 86.42578125%
-Loss tensor(0.0283, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0253, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0310, grad_fn=<MseLossBackward>)
-Accuracy 85.64453125%
-Loss tensor(0.0224, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0195, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0282, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0404, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0343, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0223, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0397, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0300, grad_fn=<MseLossBackward>)
-Accuracy 81.4453125%
-Loss tensor(0.0299, grad_fn=<MseLossBackward>)
-Accuracy 83.69140625%
-Loss tensor(0.0212, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.0262, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.5131, grad_fn=<MseLossBackward>)
-Accuracy 83.69140625%
-Loss tensor(0.0731, grad_fn=<MseLossBackward>)
-Accuracy 84.27734375%
-Loss tensor(0.0765, grad_fn=<MseLossBackward>)
-Accuracy 82.91015625%
-Loss tensor(0.0309, grad_fn=<MseLossBackward>)
-Accuracy 83.10546875%
-Loss tensor(0.0242, grad_fn=<MseLossBackward>)
-Accuracy 84.66796875%
-Loss tensor(0.0290, grad_fn=<MseLossBackward>)
-Accuracy 81.640625%
-Loss tensor(0.0248, grad_fn=<MseLossBackward>)
-Accuracy 84.765625%
-Loss tensor(0.0808, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0227, grad_fn=<MseLossBackward>)
-Accuracy 83.59375%
-Loss tensor(0.0264, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0254, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0317, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0299, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.0311, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.0327, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0345, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0389, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0275, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0310, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0231, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0218, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.0207, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0230, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0274, grad_fn=<MseLossBackward>)
-Accuracy 86.9140625%
-Loss tensor(0.0267, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0355, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0368, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.6166, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.0279, grad_fn=<MseLossBackward>)
-Accuracy 84.27734375%
-Loss tensor(0.0259, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0220, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0202, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0188, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0210, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0184, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.2428, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0277, grad_fn=<MseLossBackward>)
-Accuracy 85.64453125%
-Loss tensor(0.0498, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0272, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0215, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.0171, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.0220, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0184, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0247, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0233, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0209, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0184, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0284, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0197, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0199, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0254, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0165, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0263, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0216, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0183, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0169, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.0278, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0967, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0868, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0746, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0195, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0370, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.0287, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0226, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0193, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0188, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.1119, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0309, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0225, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.0368, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0289, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.0178, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0330, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0258, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0214, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0233, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.0237, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0287, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0636, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0250, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0255, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0363, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0432, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0193, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0223, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0208, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0286, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0170, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0196, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.0190, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0207, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0197, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0277, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0215, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.0190, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.0167, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0205, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0173, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0194, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0213, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0218, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0196, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0210, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0179, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.0204, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.0194, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0194, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0393, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0206, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0224, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0249, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0190, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0211, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0442, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.0243, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.0213, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0227, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0228, grad_fn=<MseLossBackward>)
-Accuracy 84.66796875%
-Loss tensor(0.0211, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.0183, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0193, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0194, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0314, grad_fn=<MseLossBackward>)
-Accuracy 85.44921875%
-Loss tensor(0.0184, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0226, grad_fn=<MseLossBackward>)
-Accuracy 83.7890625%
-Loss tensor(0.0218, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0208, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0270, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0233, grad_fn=<MseLossBackward>)
-Accuracy 84.5703125%
-Loss tensor(0.0210, grad_fn=<MseLossBackward>)
-Accuracy 84.27734375%
-Loss tensor(0.0180, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.1637, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0276, grad_fn=<MseLossBackward>)
-Accuracy 85.44921875%
-Loss tensor(0.0431, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0301, grad_fn=<MseLossBackward>)
-Accuracy 85.44921875%
-Loss tensor(0.0268, grad_fn=<MseLossBackward>)
-Accuracy 84.765625%
-Loss tensor(0.0322, grad_fn=<MseLossBackward>)
-Accuracy 84.9609375%
-Loss tensor(0.0213, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.0227, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0210, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0227, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0750, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.0263, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0213, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.0238, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0167, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0474, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0442, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.0162, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0242, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0192, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0193, grad_fn=<MseLossBackward>)
-Accuracy 91.11328125%
-Loss tensor(0.0163, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0227, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0169, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0151, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0176, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0179, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0150, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0154, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0211, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.0143, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.0163, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.0135, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.9198, grad_fn=<MseLossBackward>)
-Accuracy 0.87890625%
-Loss tensor(0.0453, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0712, grad_fn=<MseLossBackward>)
-Accuracy 90.8203125%
-Loss tensor(0.0159, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0186, grad_fn=<MseLossBackward>)
-Accuracy 90.91796875%
-Loss tensor(0.0160, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0251, grad_fn=<MseLossBackward>)
-Accuracy 91.11328125%
-Loss tensor(0.0617, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.0274, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.0159, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0416, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.3202, grad_fn=<MseLossBackward>)
-Accuracy 89.6484375%
-Loss tensor(0.0286, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0321, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0166, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.0218, grad_fn=<MseLossBackward>)
-Accuracy 86.9140625%
-Loss tensor(0.0179, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0209, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0136, grad_fn=<MseLossBackward>)
-Accuracy 90.72265625%
-Loss tensor(0.0233, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0161, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0168, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0174, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0199, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0176, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0353, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.0180, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0203, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0197, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0162, grad_fn=<MseLossBackward>)
-Accuracy 88.671875%
-Loss tensor(0.0218, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0301, grad_fn=<MseLossBackward>)
-Accuracy 86.328125%
-Loss tensor(0.0154, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0287, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0169, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0191, grad_fn=<MseLossBackward>)
-Accuracy 90.0390625%
-Loss tensor(0.0145, grad_fn=<MseLossBackward>)
-Accuracy 90.234375%
-Loss tensor(0.0196, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0179, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.0192, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0167, grad_fn=<MseLossBackward>)
-Accuracy 91.69921875%
-Loss tensor(0.0164, grad_fn=<MseLossBackward>)
-Accuracy 90.625%
-Loss tensor(0.0130, grad_fn=<MseLossBackward>)
-Accuracy 91.40625%
-Loss tensor(0.0162, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.0149, grad_fn=<MseLossBackward>)
-Accuracy 90.625%
-Loss tensor(0.0350, grad_fn=<MseLossBackward>)
-Accuracy 91.796875%
-Loss tensor(0.0157, grad_fn=<MseLossBackward>)
-Accuracy 92.28515625%
-Loss tensor(0.0140, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0188, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.0148, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0150, grad_fn=<MseLossBackward>)
-Accuracy 91.89453125%
-Loss tensor(0.0148, grad_fn=<MseLossBackward>)
-Accuracy 91.89453125%
-Loss tensor(0.0125, grad_fn=<MseLossBackward>)
-Accuracy 91.11328125%
-Loss tensor(0.0144, grad_fn=<MseLossBackward>)
-Accuracy 91.796875%
-Loss tensor(0.4884, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.0102, grad_fn=<MseLossBackward>)
-Accuracy 93.5546875%
-Loss tensor(0.1801, grad_fn=<MseLossBackward>)
-Accuracy 91.9921875%
-Loss tensor(0.0371, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0266, grad_fn=<MseLossBackward>)
-Accuracy 90.4296875%
-Loss tensor(0.0167, grad_fn=<MseLossBackward>)
-Accuracy 91.9921875%
-Loss tensor(0.0144, grad_fn=<MseLossBackward>)
-Accuracy 90.13671875%
-Loss tensor(0.0155, grad_fn=<MseLossBackward>)
-Accuracy 89.35546875%
-Loss tensor(0.0157, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0274, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0217, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0177, grad_fn=<MseLossBackward>)
-Accuracy 89.94140625%
-Loss tensor(0.0158, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0175, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.0166, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.0160, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.0193, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0138, grad_fn=<MseLossBackward>)
-Accuracy 90.91796875%
-Loss tensor(0.0373, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0171, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0167, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0161, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0333, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.2787, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0158, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0152, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.0215, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0173, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0174, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0169, grad_fn=<MseLossBackward>)
-Accuracy 89.16015625%
-Loss tensor(0.0158, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0328, grad_fn=<MseLossBackward>)
-Accuracy 87.890625%
-Loss tensor(0.0210, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.0160, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.1031, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.7485, grad_fn=<MseLossBackward>)
-Accuracy 1.171875%
-Loss tensor(0.0248, grad_fn=<MseLossBackward>)
-Accuracy 88.28125%
-Loss tensor(0.0206, grad_fn=<MseLossBackward>)
-Accuracy 88.37890625%
-Loss tensor(0.0274, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0156, grad_fn=<MseLossBackward>)
-Accuracy 89.84375%
-Loss tensor(0.0193, grad_fn=<MseLossBackward>)
-Accuracy 90.625%
-Loss tensor(0.0172, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0152, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0174, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0144, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0412, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.0198, grad_fn=<MseLossBackward>)
-Accuracy 89.2578125%
-Loss tensor(0.0213, grad_fn=<MseLossBackward>)
-Accuracy 85.64453125%
-Loss tensor(0.0192, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.0202, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0193, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0158, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0146, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0192, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0176, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0168, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.0178, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.5313, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0190, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0178, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0699, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0351, grad_fn=<MseLossBackward>)
-Accuracy 84.66796875%
-Loss tensor(0.0330, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0216, grad_fn=<MseLossBackward>)
-Accuracy 86.23046875%
-Loss tensor(0.0216, grad_fn=<MseLossBackward>)
-Accuracy 83.7890625%
-Loss tensor(0.0215, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.0165, grad_fn=<MseLossBackward>)
-Accuracy 88.57421875%
-Loss tensor(0.0249, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.0205, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0190, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.0182, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.0177, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0194, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.0245, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.0235, grad_fn=<MseLossBackward>)
-Accuracy 85.15625%
-Loss tensor(0.0200, grad_fn=<MseLossBackward>)
-Accuracy 84.86328125%
-Loss tensor(0.0209, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0191, grad_fn=<MseLossBackward>)
-Accuracy 85.83984375%
-Loss tensor(0.0178, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0163, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.0323, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0214, grad_fn=<MseLossBackward>)
-Accuracy 86.71875%
-Loss tensor(0.2617, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0195, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0234, grad_fn=<MseLossBackward>)
-Accuracy 86.03515625%
-Loss tensor(0.0186, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.0179, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0208, grad_fn=<MseLossBackward>)
-Accuracy 87.40234375%
-Loss tensor(0.0176, grad_fn=<MseLossBackward>)
-Accuracy 86.62109375%
-Loss tensor(0.0187, grad_fn=<MseLossBackward>)
-Accuracy 85.3515625%
-Loss tensor(0.0179, grad_fn=<MseLossBackward>)
-Accuracy 87.6953125%
-Loss tensor(0.0182, grad_fn=<MseLossBackward>)
-Accuracy 86.5234375%
-Loss tensor(0.0154, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0160, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0163, grad_fn=<MseLossBackward>)
-Accuracy 87.3046875%
-Loss tensor(0.0135, grad_fn=<MseLossBackward>)
-Accuracy 89.74609375%
-Loss tensor(0.0142, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0146, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0141, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.0125, grad_fn=<MseLossBackward>)
-Accuracy 90.52734375%
-Loss tensor(0.0164, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0145, grad_fn=<MseLossBackward>)
-Accuracy 88.8671875%
-Loss tensor(0.0159, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0187, grad_fn=<MseLossBackward>)
-Accuracy 88.76953125%
-Loss tensor(0.0156, grad_fn=<MseLossBackward>)
-Accuracy 88.18359375%
-Loss tensor(0.0166, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.3269, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0535, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.0337, grad_fn=<MseLossBackward>)
-Accuracy 85.546875%
-Loss tensor(0.0172, grad_fn=<MseLossBackward>)
-Accuracy 87.109375%
-Loss tensor(0.0246, grad_fn=<MseLossBackward>)
-Accuracy 86.42578125%
-Loss tensor(0.0210, grad_fn=<MseLossBackward>)
-Accuracy 85.25390625%
-Loss tensor(0.0199, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0228, grad_fn=<MseLossBackward>)
-Accuracy 86.81640625%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0188, grad_fn=<MseLossBackward>)
-Accuracy 87.01171875%
-Loss tensor(0.0498, grad_fn=<MseLossBackward>)
-Accuracy 85.7421875%
-Loss tensor(0.1702, grad_fn=<MseLossBackward>)
-Accuracy 87.59765625%
-Loss tensor(0.0184, grad_fn=<MseLossBackward>)
-Accuracy 87.20703125%
-Loss tensor(0.0207, grad_fn=<MseLossBackward>)
-Accuracy 86.9140625%
-Loss tensor(0.0191, grad_fn=<MseLossBackward>)
-Accuracy 85.44921875%
-Loss tensor(0.0185, grad_fn=<MseLossBackward>)
-Accuracy 86.1328125%
-Loss tensor(0.0276, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0205, grad_fn=<MseLossBackward>)
-Accuracy 87.79296875%
-Loss tensor(0.0168, grad_fn=<MseLossBackward>)
-Accuracy 89.55078125%
-Loss tensor(0.0188, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-Loss tensor(0.0176, grad_fn=<MseLossBackward>)
-Accuracy 88.4765625%
-Loss tensor(0.0144, grad_fn=<MseLossBackward>)
-Accuracy 89.0625%
-Loss tensor(0.0190, grad_fn=<MseLossBackward>)
-Accuracy 85.9375%
-Loss tensor(0.0194, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0194, grad_fn=<MseLossBackward>)
-Accuracy 87.5%
-Loss tensor(0.0152, grad_fn=<MseLossBackward>)
-Accuracy 89.453125%
-Loss tensor(0.0145, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Loss tensor(0.0155, grad_fn=<MseLossBackward>)
-Accuracy 87.98828125%
-Loss tensor(0.0132, grad_fn=<MseLossBackward>)
-Accuracy 90.33203125%
-Loss tensor(0.0163, grad_fn=<MseLossBackward>)
-Accuracy 88.0859375%
-DONE
-Loss tensor(0.0148, grad_fn=<MseLossBackward>)
-Accuracy 88.96484375%
-Epoch 1
-Loss 0.01483188  Accuracy 88.96484375%
-
-Loss tensor(0.0147, grad_fn=<MseLossBackward>)
-Accuracy 88.916015625%
-Epoch 2
-Loss 0.014674433  Accuracy 88.916015625%
-
-Loss tensor(0.0149, grad_fn=<MseLossBackward>)
-Accuracy 88.623046875%
-Epoch 3
-Loss 0.01487532  Accuracy 88.623046875%
-
-Loss tensor(0.0124, grad_fn=<MseLossBackward>)
-Accuracy 90.478515625%
-Epoch 4
-Loss 0.0124039715  Accuracy 90.478515625%
-
+observation space: <CAVSimulator0728.observation_space object at 0x10fe2bf28>
+action space: <CAVSimulator0728.action_space object at 0x116961b70>
+Long Eval: Average Score: -90348.12	SE Score: 2136.17
+Long Eval: Median Score: -88478.86
+300
+Episode 0	Best Average Score: -90348.12
+Episode 0	All Average Score: -94927.81	All SE Score: 1717.79
+Long Eval: Average Score: -89625.29	SE Score: 2028.42
+Long Eval: Median Score: -85612.27
+300
+Episode 1	Best Average Score: -89986.71
+Episode 1	All Average Score: -93043.71	All SE Score: 2097.07
+Long Eval: Average Score: -89103.09	SE Score: 2070.59
+Long Eval: Median Score: -87497.45
+300
+Episode 2	Best Average Score: -89692.17
+Episode 2	All Average Score: -89290.64	All SE Score: 1925.42
+Long Eval: Average Score: -20885.31	SE Score: 1563.91
+Long Eval: Median Score: -12772.47
+300
+Episode 3	Best Average Score: -72490.45
+Episode 3	All Average Score: -76323.58	All SE Score: 3705.43
+Long Eval: Average Score: -86658.60	SE Score: 2166.96
+Long Eval: Median Score: -82589.02
+300
+Episode 4	Best Average Score: -75324.08
+Episode 4	All Average Score: -75747.94	All SE Score: 4186.82
+Long Eval: Average Score: -2843.01	SE Score: 512.65
+Long Eval: Median Score: 521.21
+300
+Episode 5	Best Average Score: -63243.90
+Episode 5	All Average Score: -65857.41	All SE Score: 4604.44
+Long Eval: Average Score: -54.89	SE Score: 148.55
+Long Eval: Median Score: 554.78
+300
+Episode 6	Best Average Score: -54216.90
+Episode 6	All Average Score: -64968.03	All SE Score: 4990.33
+Long Eval: Average Score: -91.97	SE Score: 146.84
+Long Eval: Median Score: 517.43
+300
+Episode 7	Best Average Score: -47451.29
+Episode 7	All Average Score: -53163.32	All SE Score: 5392.26
+Long Eval: Average Score: 291.08	SE Score: 73.35
+Long Eval: Median Score: 538.58
+300
+Episode 8	Best Average Score: -42146.58
+Episode 8	All Average Score: -44253.44	All SE Score: 5087.43
+Long Eval: Average Score: 246.26	SE Score: 80.71
+Long Eval: Median Score: 550.73
+300
+Episode 9	Best Average Score: -37907.30
+Episode 9	All Average Score: -38842.40	All SE Score: 5368.46
+Long Eval: Average Score: 194.23	SE Score: 101.75
+Long Eval: Median Score: 549.28
+300
+Episode 10	Best Average Score: -28853.06
+Episode 10	All Average Score: -26640.62	All SE Score: 4959.12
+Long Eval: Average Score: 326.27	SE Score: 73.89
+Long Eval: Median Score: 556.06
+300
+Episode 11	Best Average Score: -19857.90
+Episode 11	All Average Score: -17179.34	All SE Score: 4165.39
+Long Eval: Average Score: 51.28	SE Score: 113.73
+Long Eval: Median Score: 543.91
+300
+Episode 12	Best Average Score: -10942.47
+Episode 12	All Average Score: -31030.13	All SE Score: 5410.12
+Long Eval: Average Score: 151.26	SE Score: 113.82
+Long Eval: Median Score: 553.83
+300
+Episode 13	Best Average Score: -8838.81
+Episode 13	All Average Score: -27489.62	All SE Score: 5049.41
+Long Eval: Average Score: 181.70	SE Score: 91.08
+Long Eval: Median Score: 535.69
+300
+Episode 14	Best Average Score: -154.78
+Episode 14	All Average Score: -21740.81	All SE Score: 4821.61
+Long Eval: Average Score: 217.89	SE Score: 97.47
+Long Eval: Median Score: 545.12
+300
+Episode 15	Best Average Score: 151.31
+Episode 15	All Average Score: -22101.03	All SE Score: 5248.73
+Long Eval: Average Score: 296.98	SE Score: 76.08
+Long Eval: Median Score: 551.96
+300
+Episode 16	Best Average Score: 186.50
+Episode 16	All Average Score: -10083.60	All SE Score: 3679.44
+Long Eval: Average Score: 359.93	SE Score: 58.77
+Long Eval: Median Score: 550.72
+300
+Episode 17	Best Average Score: 231.69
+Episode 17	All Average Score: -14237.03	All SE Score: 4226.22
+Long Eval: Average Score: 323.62	SE Score: 63.75
+Long Eval: Median Score: 548.61
+300
+Episode 18	Best Average Score: 234.94
+Episode 18	All Average Score: -12506.44	All SE Score: 3224.04
+Long Eval: Average Score: 234.37	SE Score: 80.42
+Long Eval: Median Score: 546.35
+300
+Episode 19	Best Average Score: 233.75
+Episode 19	All Average Score: -18402.70	All SE Score: 4260.68
+Long Eval: Average Score: 361.47	SE Score: 51.65
+Long Eval: Median Score: 552.08
+300
+Episode 20	Best Average Score: 250.48
+Episode 20	All Average Score: -13041.35	All SE Score: 3870.72
+Long Eval: Average Score: 172.27	SE Score: 87.78
+Long Eval: Median Score: 540.38
+300
+Episode 21	Best Average Score: 235.08
+Episode 21	All Average Score: -7453.46	All SE Score: 2950.38
+Long Eval: Average Score: 318.47	SE Score: 68.18
+Long Eval: Median Score: 539.69
+300
+Episode 22	Best Average Score: 261.80
+Episode 22	All Average Score: -9495.24	All SE Score: 2890.08
+Long Eval: Average Score: 270.46	SE Score: 79.20
+Long Eval: Median Score: 547.43
+300
+Episode 23	Best Average Score: 273.72
+Episode 23	All Average Score: -12118.64	All SE Score: 3494.95
+Long Eval: Average Score: 143.80	SE Score: 111.96
+Long Eval: Median Score: 550.40
+300
+Episode 24	Best Average Score: 269.93
+Episode 24	All Average Score: -12175.52	All SE Score: 4026.07
+Long Eval: Average Score: 219.48	SE Score: 75.56
+Long Eval: Median Score: 543.20
+300
+Episode 25	Best Average Score: 270.08
+Episode 25	All Average Score: -13611.66	All SE Score: 3968.49
+Long Eval: Average Score: 305.33	SE Score: 73.68
+Long Eval: Median Score: 550.86
+300
+Episode 26	Best Average Score: 270.92
+Episode 26	All Average Score: -10850.83	All SE Score: 3072.74
+Long Eval: Average Score: 150.18	SE Score: 121.40
+Long Eval: Median Score: 545.91
+300
+Episode 27	Best Average Score: 249.95
+Episode 27	All Average Score: -16035.75	All SE Score: 4347.20
+Long Eval: Average Score: 222.46	SE Score: 100.16
+Long Eval: Median Score: 543.07
+300
+Episode 28	Best Average Score: 239.83
+Episode 28	All Average Score: -8427.80	All SE Score: 2835.02
+Long Eval: Average Score: 252.03	SE Score: 77.91
+Long Eval: Median Score: 545.40
+300
+Episode 29	Best Average Score: 241.60
+Episode 29	All Average Score: -12005.30	All SE Score: 3663.95
+Long Eval: Average Score: 319.64	SE Score: 69.27
+Long Eval: Median Score: 547.41
+300
+Episode 30	Best Average Score: 237.41
+Episode 30	All Average Score: -11212.08	All SE Score: 3492.58
+Long Eval: Average Score: 276.51	SE Score: 76.24
+Long Eval: Median Score: 553.27
+300
+Episode 31	Best Average Score: 247.84
+Episode 31	All Average Score: -2504.51	All SE Score: 1634.88
+Long Eval: Average Score: 122.73	SE Score: 91.85
+Long Eval: Median Score: 537.67
+300
+Episode 32	Best Average Score: 228.26
+Episode 32	All Average Score: -2231.43	All SE Score: 2105.85
+Long Eval: Average Score: 232.78	SE Score: 78.45
+Long Eval: Median Score: 537.90
+300
+Episode 33	Best Average Score: 224.49
+Episode 33	All Average Score: -4549.93	All SE Score: 2347.84
+Long Eval: Average Score: 302.02	SE Score: 75.01
+Long Eval: Median Score: 539.63
+300
+Episode 34	Best Average Score: 240.32
+Episode 34	All Average Score: -3773.82	All SE Score: 2296.63
+Long Eval: Average Score: 263.90	SE Score: 75.90
+Long Eval: Median Score: 552.39
+300
+Episode 35	Best Average Score: 244.76
+Episode 35	All Average Score: -500.44	All SE Score: 484.83
+Long Eval: Average Score: 267.14	SE Score: 71.06
+Long Eval: Median Score: 551.27
+300
+Episode 36	Best Average Score: 240.94
+Episode 36	All Average Score: -119.67	All SE Score: 199.77
+Long Eval: Average Score: 305.96	SE Score: 61.51
+Long Eval: Median Score: 543.35
+300
+Episode 37	Best Average Score: 256.52
+Episode 37	All Average Score: -6492.44	All SE Score: 3166.47
+Long Eval: Average Score: 242.08	SE Score: 75.56
+Long Eval: Median Score: 553.21
+300
+Episode 38	Best Average Score: 258.48
+Episode 38	All Average Score: -1047.42	All SE Score: 1025.12
+Long Eval: Average Score: 174.38	SE Score: 98.12
+Long Eval: Median Score: 546.21
+300
+Episode 39	Best Average Score: 250.71
+Episode 39	All Average Score: -3566.52	All SE Score: 2168.88
+Long Eval: Average Score: 193.31	SE Score: 85.14
+Long Eval: Median Score: 540.94
+300
+Episode 40	Best Average Score: 238.08
+Episode 40	All Average Score: -2114.18	All SE Score: 1441.61
+Long Eval: Average Score: 393.06	SE Score: 57.19
+Long Eval: Median Score: 540.07
+300
+Episode 41	Best Average Score: 249.74
+Episode 41	All Average Score: -8491.64	All SE Score: 3250.17
+Long Eval: Average Score: 315.91	SE Score: 60.04
+Long Eval: Median Score: 526.20
+300
+Episode 42	Best Average Score: 269.05
+Episode 42	All Average Score: -6023.95	All SE Score: 2573.03
+Long Eval: Average Score: 374.16	SE Score: 53.46
+Long Eval: Median Score: 553.47
+300
+Episode 43	Best Average Score: 283.19
+Episode 43	All Average Score: -3031.31	All SE Score: 1916.98
+Long Eval: Average Score: 309.07	SE Score: 54.29
+Long Eval: Median Score: 541.18
+300
+Episode 44	Best Average Score: 283.90
+Episode 44	All Average Score: -753.85	All SE Score: 417.84
+Long Eval: Average Score: 206.50	SE Score: 80.71
+Long Eval: Median Score: 549.11
+300
+Episode 45	Best Average Score: 278.16
+Episode 45	All Average Score: -2392.04	All SE Score: 1412.25
+Long Eval: Average Score: 335.68	SE Score: 56.25
+Long Eval: Median Score: 543.37
+300
+Episode 46	Best Average Score: 285.01
+Episode 46	All Average Score: -2915.32	All SE Score: 1978.24
+Long Eval: Average Score: 155.51	SE Score: 92.35
+Long Eval: Median Score: 547.37
+300
+Episode 47	Best Average Score: 269.97
+Episode 47	All Average Score: -502.85	All SE Score: 431.51
+Long Eval: Average Score: 371.81	SE Score: 45.78
+Long Eval: Median Score: 549.12
+300
+Episode 48	Best Average Score: 282.94
+Episode 48	All Average Score: -1527.35	All SE Score: 1326.64
+Long Eval: Average Score: 371.70	SE Score: 46.41
+Long Eval: Median Score: 552.30
+300
+Episode 49	Best Average Score: 302.67
+Episode 49	All Average Score: -2278.81	All SE Score: 1814.92
+Long Eval: Average Score: 318.10	SE Score: 56.77
+Long Eval: Median Score: 534.58
+300
+Episode 50	Best Average Score: 315.15
+Episode 50	All Average Score: -2675.38	All SE Score: 1756.96
+Long Eval: Average Score: 180.91	SE Score: 92.79
+Long Eval: Median Score: 556.30
+300
+Episode 51	Best Average Score: 293.94
+Episode 51	All Average Score: -2600.90	All SE Score: 1802.44
+Long Eval: Average Score: 282.22	SE Score: 73.20
+Long Eval: Median Score: 542.17
+300
+Episode 52	Best Average Score: 290.57
+Episode 52	All Average Score: -71.29	All SE Score: 179.83
+Long Eval: Average Score: 303.88	SE Score: 79.31
+Long Eval: Median Score: 549.78
+300
+Episode 53	Best Average Score: 283.54
+Episode 53	All Average Score: 149.25	All SE Score: 86.80
+Long Eval: Average Score: 287.98	SE Score: 75.44
+Long Eval: Median Score: 546.06
+300
+Episode 54	Best Average Score: 281.43
+Episode 54	All Average Score: -352.28	All SE Score: 579.77
+Long Eval: Average Score: 261.52	SE Score: 100.71
+Long Eval: Median Score: 542.18
+300
+Episode 55	Best Average Score: 286.93
+Episode 55	All Average Score: -759.50	All SE Score: 810.14
+Long Eval: Average Score: 173.20	SE Score: 83.04
+Long Eval: Median Score: 534.44
+300
+Episode 56	Best Average Score: 270.68
+Episode 56	All Average Score: -2981.25	All SE Score: 1796.54
+Long Eval: Average Score: 271.04	SE Score: 68.02
+Long Eval: Median Score: 532.60
+300
+Episode 57	Best Average Score: 282.24
+Episode 57	All Average Score: -961.15	All SE Score: 860.11
+Long Eval: Average Score: 182.14	SE Score: 80.26
+Long Eval: Median Score: 531.38
+300
+Episode 58	Best Average Score: 263.27
+Episode 58	All Average Score: -425.67	All SE Score: 325.14
+Long Eval: Average Score: 309.30	SE Score: 63.14
+Long Eval: Median Score: 541.58
+300
+Episode 59	Best Average Score: 257.03
+Episode 59	All Average Score: -1230.48	All SE Score: 1245.84
+Long Eval: Average Score: 294.48	SE Score: 66.08
+Long Eval: Median Score: 529.68
+300
+Episode 60	Best Average Score: 254.67
+Episode 60	All Average Score: -1981.91	All SE Score: 1031.19
+Long Eval: Average Score: 413.76	SE Score: 46.52
+Long Eval: Median Score: 562.96
+300
+Episode 61	Best Average Score: 277.95
+Episode 61	All Average Score: -503.82	All SE Score: 585.03
+Long Eval: Average Score: 301.71	SE Score: 62.89
+Long Eval: Median Score: 546.74
+300
+Episode 62	Best Average Score: 279.90
+Episode 62	All Average Score: -5732.66	All SE Score: 2222.30
+Long Eval: Average Score: 375.27	SE Score: 46.95
+Long Eval: Median Score: 540.03
+300
+Episode 63	Best Average Score: 287.04
+Episode 63	All Average Score: -1162.34	All SE Score: 731.01
+Long Eval: Average Score: 339.96	SE Score: 51.71
+Long Eval: Median Score: 541.52
+300
+Episode 64	Best Average Score: 292.24
+Episode 64	All Average Score: 28.08	All SE Score: 219.49
+Long Eval: Average Score: 350.45	SE Score: 52.40
+Long Eval: Median Score: 553.86
+300
+Episode 65	Best Average Score: 301.13
+Episode 65	All Average Score: -705.95	All SE Score: 563.91
+Long Eval: Average Score: 225.66	SE Score: 75.04
+Long Eval: Median Score: 539.48
+300
+Episode 66	Best Average Score: 306.38
+Episode 66	All Average Score: 124.47	All SE Score: 93.26
+Long Eval: Average Score: 290.52	SE Score: 67.37
+Long Eval: Median Score: 543.51
+300
+Episode 67	Best Average Score: 308.33
+Episode 67	All Average Score: -292.76	All SE Score: 452.65
+Long Eval: Average Score: 290.18	SE Score: 57.45
+Long Eval: Median Score: 540.48
+300
+Episode 68	Best Average Score: 319.13
+Episode 68	All Average Score: -35.78	All SE Score: 134.52
+Long Eval: Average Score: 334.43	SE Score: 60.25
+Long Eval: Median Score: 542.31
+300
+Episode 69	Best Average Score: 321.64
+Episode 69	All Average Score: 86.33	All SE Score: 120.82
+Long Eval: Average Score: 337.94	SE Score: 48.95
+Long Eval: Median Score: 541.47
+300
+Episode 70	Best Average Score: 325.99
+Episode 70	All Average Score: -157.86	All SE Score: 296.50
+Long Eval: Average Score: 358.33	SE Score: 47.98
+Long Eval: Median Score: 539.85
+300
+Episode 71	Best Average Score: 320.45
+Episode 71	All Average Score: 152.91	All SE Score: 83.29
+Long Eval: Average Score: 235.83	SE Score: 81.04
+Long Eval: Median Score: 535.04
+300
+Episode 72	Best Average Score: 313.86
+Episode 72	All Average Score: -500.59	All SE Score: 358.24
+Long Eval: Average Score: 275.47	SE Score: 78.79
+Long Eval: Median Score: 546.11
+300
+Episode 73	Best Average Score: 303.88
+Episode 73	All Average Score: -152.09	All SE Score: 366.69
+Long Eval: Average Score: 275.73	SE Score: 66.28
+Long Eval: Median Score: 539.52
+300
+Episode 74	Best Average Score: 297.45
+Episode 74	All Average Score: 246.98	All SE Score: 72.51
+Long Eval: Average Score: 254.65	SE Score: 77.70
+Long Eval: Median Score: 542.44
+300
+Episode 75	Best Average Score: 287.87
+Episode 75	All Average Score: 201.51	All SE Score: 142.19
+Long Eval: Average Score: 37.60	SE Score: 113.17
+Long Eval: Median Score: 551.47
+300
+Episode 76	Best Average Score: 269.07
+Episode 76	All Average Score: 160.68	All SE Score: 68.51
+Long Eval: Average Score: 313.15	SE Score: 65.07
+Long Eval: Median Score: 549.60
+300
+Episode 77	Best Average Score: 271.33
+Episode 77	All Average Score: 27.06	All SE Score: 112.90
+Long Eval: Average Score: 327.62	SE Score: 86.18
+Long Eval: Median Score: 546.09
+300
+Episode 78	Best Average Score: 275.07
+Episode 78	All Average Score: -501.34	All SE Score: 652.25
+Long Eval: Average Score: 77.73	SE Score: 112.15
+Long Eval: Median Score: 549.22
+300
+Episode 79	Best Average Score: 249.40
+Episode 79	All Average Score: -660.60	All SE Score: 661.66
+Long Eval: Average Score: 395.51	SE Score: 42.50
+Long Eval: Median Score: 549.62
+300
+Episode 80	Best Average Score: 255.16
+Episode 80	All Average Score: 159.40	All SE Score: 103.60
+Long Eval: Average Score: 196.22	SE Score: 84.20
+Long Eval: Median Score: 555.10
+300
+Episode 81	Best Average Score: 238.95
+Episode 81	All Average Score: -247.51	All SE Score: 321.91
+Long Eval: Average Score: 336.76	SE Score: 56.23
+Long Eval: Median Score: 542.82
+300
+Episode 82	Best Average Score: 249.04
+Episode 82	All Average Score: -255.03	All SE Score: 374.92
+Long Eval: Average Score: 121.46	SE Score: 111.11
+Long Eval: Median Score: 553.00
+300
+Episode 83	Best Average Score: 233.64
+Episode 83	All Average Score: -1041.46	All SE Score: 1178.38
+Long Eval: Average Score: 316.38	SE Score: 62.69
+Long Eval: Median Score: 540.64
+300
+Episode 84	Best Average Score: 237.71
+Episode 84	All Average Score: 18.90	All SE Score: 130.79
+Long Eval: Average Score: 308.11	SE Score: 62.28
+Long Eval: Median Score: 548.53
+300
+Episode 85	Best Average Score: 243.05
+Episode 85	All Average Score: -536.38	All SE Score: 655.04
+Long Eval: Average Score: 318.91	SE Score: 64.13
+Long Eval: Median Score: 561.66
+300
+Episode 86	Best Average Score: 271.18
+Episode 86	All Average Score: 192.37	All SE Score: 87.21
+Long Eval: Average Score: 211.44	SE Score: 74.80
+Long Eval: Median Score: 538.95
+300
+Episode 87	Best Average Score: 261.01
+Episode 87	All Average Score: 2.24	All SE Score: 165.42
+Long Eval: Average Score: 236.25	SE Score: 74.93
+Long Eval: Median Score: 541.21
+300
+Episode 88	Best Average Score: 251.88
+Episode 88	All Average Score: -2.79	All SE Score: 144.58
+Long Eval: Average Score: 326.33	SE Score: 63.96
+Long Eval: Median Score: 546.03
+300
+Episode 89	Best Average Score: 276.74
+Episode 89	All Average Score: -29.30	All SE Score: 255.90
+Long Eval: Average Score: 329.83	SE Score: 52.85
+Long Eval: Median Score: 544.60
+300
+Episode 90	Best Average Score: 270.17
+Episode 90	All Average Score: 246.31	All SE Score: 95.17
+Long Eval: Average Score: 224.35	SE Score: 80.16
+Long Eval: Median Score: 553.88
+300
+Episode 91	Best Average Score: 272.98
+Episode 91	All Average Score: 208.96	All SE Score: 101.65
+Long Eval: Average Score: 240.18	SE Score: 84.67
+Long Eval: Median Score: 552.60
+300
+Episode 92	Best Average Score: 263.32
+Episode 92	All Average Score: -295.07	All SE Score: 346.02
+Long Eval: Average Score: 180.26	SE Score: 93.29
+Long Eval: Median Score: 541.15
+300
+Episode 93	Best Average Score: 269.20
+Episode 93	All Average Score: -39.10	All SE Score: 136.42
+Long Eval: Average Score: 220.11	SE Score: 91.26
+Long Eval: Median Score: 542.10
+300
+Episode 94	Best Average Score: 259.58
+Episode 94	All Average Score: 131.98	All SE Score: 81.78
+Long Eval: Average Score: 329.46	SE Score: 64.81
+Long Eval: Median Score: 547.45
+300
+Episode 95	Best Average Score: 261.71
+Episode 95	All Average Score: 163.20	All SE Score: 81.83
+Long Eval: Average Score: 266.37	SE Score: 80.24
+Long Eval: Median Score: 549.67
+300
+Episode 96	Best Average Score: 256.46
+Episode 96	All Average Score: -116.71	All SE Score: 251.96
+Long Eval: Average Score: 211.31	SE Score: 69.57
+Long Eval: Median Score: 552.22
+300
+Episode 97	Best Average Score: 256.45
+Episode 97	All Average Score: 202.48	All SE Score: 71.53
+Long Eval: Average Score: 272.16	SE Score: 67.34
+Long Eval: Median Score: 536.23
+300
+Episode 98	Best Average Score: 260.04
+Episode 98	All Average Score: 109.98	All SE Score: 78.80
+Long Eval: Average Score: 264.42	SE Score: 85.72
+Long Eval: Median Score: 564.38
+300
+Episode 99	Best Average Score: 253.85
+Episode 99	All Average Score: -807.67	All SE Score: 785.01
+Long Eval: Average Score: 292.84	SE Score: 59.09
+Long Eval: Median Score: 556.64
+300
+Episode 100	Best Average Score: 250.15
+Episode 100	All Average Score: -64.74	All SE Score: 101.18
+Long Eval: Average Score: 213.29	SE Score: 93.24
+Long Eval: Median Score: 553.34
+300
+Episode 101	Best Average Score: 249.04
+Episode 101	All Average Score: -926.71	All SE Score: 843.45
+Long Eval: Average Score: 352.57	SE Score: 61.97
+Long Eval: Median Score: 570.38
+300
+Episode 102	Best Average Score: 260.28
+Episode 102	All Average Score: -206.51	All SE Score: 270.13
+Long Eval: Average Score: 1.58	SE Score: 131.31
+Long Eval: Median Score: 539.36
+300
+Episode 103	Best Average Score: 242.41
+Episode 103	All Average Score: 152.13	All SE Score: 80.77
+Long Eval: Average Score: 71.97	SE Score: 115.39
+Long Eval: Median Score: 553.58
+300
+Episode 104	Best Average Score: 227.60
+Episode 104	All Average Score: -48.83	All SE Score: 143.74
+Long Eval: Average Score: -352.89	SE Score: 179.60
+Long Eval: Median Score: 549.57
+300
+Episode 105	Best Average Score: 159.36
+Episode 105	All Average Score: -491.41	All SE Score: 522.65
+Long Eval: Average Score: -317.68	SE Score: 202.99
+Long Eval: Median Score: 564.02
+300
+Episode 106	Best Average Score: 100.96
+Episode 106	All Average Score: -95.20	All SE Score: 116.80
+Long Eval: Average Score: 18.40	SE Score: 112.04
+Long Eval: Median Score: 540.99
+300
+Episode 107	Best Average Score: 81.67
+Episode 107	All Average Score: -299.68	All SE Score: 162.54
+Long Eval: Average Score: -225.32	SE Score: 164.93
+Long Eval: Median Score: 549.61
+300
+Episode 108	Best Average Score: 31.92
+Episode 108	All Average Score: -81.57	All SE Score: 117.30
+Long Eval: Average Score: -194.12	SE Score: 177.47
+Long Eval: Median Score: 555.89
+300
+Episode 109	Best Average Score: -13.94
+Episode 109	All Average Score: -294.34	All SE Score: 166.74
+Long Eval: Average Score: 78.81	SE Score: 118.90
+Long Eval: Median Score: 547.59
+300
+Episode 110	Best Average Score: -35.34
+Episode 110	All Average Score: -354.06	All SE Score: 170.72
+Long Eval: Average Score: 233.30	SE Score: 79.69
+Long Eval: Median Score: 556.05
+300
+Episode 111	Best Average Score: -33.34
+Episode 111	All Average Score: 28.47	All SE Score: 93.04
+Long Eval: Average Score: -140.74	SE Score: 162.84
+Long Eval: Median Score: 556.24
+300
+Episode 112	Best Average Score: -82.67
+Episode 112	All Average Score: -266.46	All SE Score: 259.00
+Long Eval: Average Score: -238.29	SE Score: 213.64
+Long Eval: Median Score: 555.43
+300
+Episode 113	Best Average Score: -106.66
+Episode 113	All Average Score: -171.73	All SE Score: 132.24
+Long Eval: Average Score: -67.68	SE Score: 151.28
+Long Eval: Median Score: 546.73
+300
+Episode 114	Best Average Score: -120.62
+Episode 114	All Average Score: -548.49	All SE Score: 176.81
+Long Eval: Average Score: 161.52	SE Score: 107.27
+Long Eval: Median Score: 550.55
+300
+Episode 115	Best Average Score: -69.18
+Episode 115	All Average Score: 26.95	All SE Score: 112.90
+Long Eval: Average Score: 107.50	SE Score: 109.28
+Long Eval: Median Score: 565.29
+300
+Episode 116	Best Average Score: -26.66
+Episode 116	All Average Score: 89.95	All SE Score: 97.28
+Long Eval: Average Score: 406.88	SE Score: 54.93
+Long Eval: Median Score: 553.49
+300
+Episode 117	Best Average Score: 12.19
+Episode 117	All Average Score: 102.43	All SE Score: 112.01
+Long Eval: Average Score: 362.46	SE Score: 54.78
+Long Eval: Median Score: 547.43
+300
+Episode 118	Best Average Score: 70.96
+Episode 118	All Average Score: 228.19	All SE Score: 67.42
+Long Eval: Average Score: 104.29	SE Score: 115.76
+Long Eval: Median Score: 551.92
+300
+Episode 119	Best Average Score: 100.80
+Episode 119	All Average Score: -354.12	All SE Score: 587.58
+Long Eval: Average Score: 13.91	SE Score: 140.58
+Long Eval: Median Score: 565.99
+300
+Episode 120	Best Average Score: 94.31
+Episode 120	All Average Score: -1012.10	All SE Score: 1317.65
+Long Eval: Average Score: -22.79	SE Score: 140.75
+Long Eval: Median Score: 565.25
+300
+Episode 121	Best Average Score: 68.70
+Episode 121	All Average Score: -409.60	All SE Score: 389.89
+Long Eval: Average Score: -22.88	SE Score: 155.82
+Long Eval: Median Score: 560.52
+300
+Episode 122	Best Average Score: 80.49
+Episode 122	All Average Score: -185.32	All SE Score: 200.93
+Long Eval: Average Score: -59.88	SE Score: 155.65
+Long Eval: Median Score: 563.66
+300
+Episode 123	Best Average Score: 98.33
+Episode 123	All Average Score: 27.71	All SE Score: 120.57
+Long Eval: Average Score: 58.97	SE Score: 142.11
+Long Eval: Median Score: 553.75
+300
+Episode 124	Best Average Score: 111.00
+Episode 124	All Average Score: -332.47	All SE Score: 162.01
+Long Eval: Average Score: 157.29	SE Score: 96.27
+Long Eval: Median Score: 563.67
+300
+Episode 125	Best Average Score: 110.57
+Episode 125	All Average Score: -186.50	All SE Score: 342.59
+Long Eval: Average Score: -18.61	SE Score: 177.07
+Long Eval: Median Score: 540.58
+300
+Episode 126	Best Average Score: 97.96
+Episode 126	All Average Score: -123.35	All SE Score: 136.78
+Long Eval: Average Score: 115.28	SE Score: 98.68
+Long Eval: Median Score: 558.39
+300
+Episode 127	Best Average Score: 68.80
+Episode 127	All Average Score: -33.84	All SE Score: 148.68
+Long Eval: Average Score: 291.60	SE Score: 90.30
+Long Eval: Median Score: 567.47
+300
+Episode 128	Best Average Score: 61.72
+Episode 128	All Average Score: -416.57	All SE Score: 354.91
+Long Eval: Average Score: 124.23	SE Score: 134.86
+Long Eval: Median Score: 556.84
+300
+Episode 129	Best Average Score: 63.71
+Episode 129	All Average Score: -699.63	All SE Score: 870.18
+Long Eval: Average Score: 7.71	SE Score: 140.92
+Long Eval: Median Score: 563.67
+300
+Episode 130	Best Average Score: 63.09
+Episode 130	All Average Score: -1347.14	All SE Score: 929.69
+Long Eval: Average Score: -384.49	SE Score: 219.16
+Long Eval: Median Score: 541.17
+300
+Episode 131	Best Average Score: 26.92
+Episode 131	All Average Score: -1598.58	All SE Score: 958.08
+Long Eval: Average Score: -229.85	SE Score: 180.12
+Long Eval: Median Score: 551.16
+300
+Episode 132	Best Average Score: 6.22
+Episode 132	All Average Score: -334.35	All SE Score: 300.37
+Long Eval: Average Score: -197.00	SE Score: 180.12
+Long Eval: Median Score: 544.47
+300
+Episode 133	Best Average Score: -7.49
+Episode 133	All Average Score: -879.53	All SE Score: 299.77
+Long Eval: Average Score: -108.53	SE Score: 163.19
+Long Eval: Median Score: 545.16
+300
+Episode 134	Best Average Score: -24.24
+Episode 134	All Average Score: -1469.94	All SE Score: 793.05
+Long Eval: Average Score: -190.60	SE Score: 174.07
+Long Eval: Median Score: 559.46
+300
+Episode 135	Best Average Score: -59.03
+Episode 135	All Average Score: -857.97	All SE Score: 268.03
+Long Eval: Average Score: -269.96	SE Score: 182.69
+Long Eval: Median Score: 535.10
+300
+Episode 136	Best Average Score: -84.16
+Episode 136	All Average Score: -641.14	All SE Score: 610.19
+Long Eval: Average Score: -129.05	SE Score: 191.14
+Long Eval: Median Score: 556.76
+300
+Episode 137	Best Average Score: -108.59
+Episode 137	All Average Score: -977.59	All SE Score: 632.58
+Long Eval: Average Score: -143.38	SE Score: 153.61
+Long Eval: Median Score: 545.82
+300
+Episode 138	Best Average Score: -152.09
+Episode 138	All Average Score: -1614.76	All SE Score: 1154.18
+Long Eval: Average Score: -49.10	SE Score: 137.59
+Long Eval: Median Score: 551.14
+300
+Episode 139	Best Average Score: -169.42
+Episode 139	All Average Score: -1084.24	All SE Score: 884.59
+Long Eval: Average Score: -102.06	SE Score: 161.82
+Long Eval: Median Score: 556.59
+300
+Episode 140	Best Average Score: -180.40
+Episode 140	All Average Score: -43.30	All SE Score: 117.07
+Long Eval: Average Score: -223.64	SE Score: 204.13
+Long Eval: Median Score: 559.53
+300
+Episode 141	Best Average Score: -164.32
+Episode 141	All Average Score: -62.31	All SE Score: 120.95
+Long Eval: Average Score: 6.09	SE Score: 155.79
+Long Eval: Median Score: 552.12
+300
+Episode 142	Best Average Score: -140.72
+Episode 142	All Average Score: 130.23	All SE Score: 81.75
+Long Eval: Average Score: -118.91	SE Score: 157.53
+Long Eval: Median Score: 547.37
+300
+Episode 143	Best Average Score: -132.91
+Episode 143	All Average Score: 6.57	All SE Score: 113.59
+Long Eval: Average Score: -302.91	SE Score: 223.88
+Long Eval: Median Score: 550.22
+300
+Episode 144	Best Average Score: -152.35
+Episode 144	All Average Score: -285.45	All SE Score: 137.88
+Long Eval: Average Score: -128.38	SE Score: 165.49
+Long Eval: Median Score: 558.53
+300
+Episode 145	Best Average Score: -146.13
+Episode 145	All Average Score: 1.97	All SE Score: 98.88
+Long Eval: Average Score: -173.14	SE Score: 157.97
+Long Eval: Median Score: 557.27
+300
+Episode 146	Best Average Score: -136.45
+Episode 146	All Average Score: 17.12	All SE Score: 112.04
+Long Eval: Average Score: -570.10	SE Score: 245.75
+Long Eval: Median Score: 546.45
+300
+Episode 147	Best Average Score: -180.55
+Episode 147	All Average Score: -45.78	All SE Score: 123.76
+Long Eval: Average Score: 14.17	SE Score: 120.33
+Long Eval: Median Score: 544.87
+300
+Episode 148	Best Average Score: -164.80
+Episode 148	All Average Score: -82.34	All SE Score: 116.49
+Long Eval: Average Score: 30.55	SE Score: 123.39
+Long Eval: Median Score: 558.85
+300
+Episode 149	Best Average Score: -156.83
+Episode 149	All Average Score: -240.25	All SE Score: 150.20
+Long Eval: Average Score: 182.65	SE Score: 133.11
+Long Eval: Median Score: 555.81
+300
+Episode 150	Best Average Score: -128.36
+Episode 150	All Average Score: -159.88	All SE Score: 117.90
+Long Eval: Average Score: 23.69	SE Score: 133.13
+Long Eval: Median Score: 558.73
+300
+Episode 151	Best Average Score: -103.63
+Episode 151	All Average Score: -219.02	All SE Score: 208.45
+Long Eval: Average Score: 219.11	SE Score: 81.88
+Long Eval: Median Score: 562.62
+300
+Episode 152	Best Average Score: -82.33
+Episode 152	All Average Score: -158.29	All SE Score: 132.28
+Long Eval: Average Score: 73.30	SE Score: 129.23
+Long Eval: Median Score: 566.70
+300
+Episode 153	Best Average Score: -63.11
+Episode 153	All Average Score: 197.09	All SE Score: 80.36
+Long Eval: Average Score: 11.45	SE Score: 156.63
+Long Eval: Median Score: 554.03
+300
+Episode 154	Best Average Score: -31.67
+Episode 154	All Average Score: -141.02	All SE Score: 121.06
+Long Eval: Average Score: 110.29	SE Score: 124.82
+Long Eval: Median Score: 553.01
+300
+Episode 155	Best Average Score: -7.80
+Episode 155	All Average Score: -1532.18	All SE Score: 989.51
+Long Eval: Average Score: 294.28	SE Score: 69.89
+Long Eval: Median Score: 557.93
+300
+Episode 156	Best Average Score: 38.94
+Episode 156	All Average Score: -1025.56	All SE Score: 1105.26
+Long Eval: Average Score: -304.45	SE Score: 203.85
+Long Eval: Median Score: 544.88
+300
+Episode 157	Best Average Score: 65.50
+Episode 157	All Average Score: 38.99	All SE Score: 110.38
+Long Eval: Average Score: -56.31	SE Score: 141.72
+Long Eval: Median Score: 561.35
+300
+Episode 158	Best Average Score: 58.46
+Episode 158	All Average Score: -262.77	All SE Score: 276.03
+Long Eval: Average Score: 205.96	SE Score: 86.14
+Long Eval: Median Score: 552.15
+300
+Episode 159	Best Average Score: 76.00
+Episode 159	All Average Score: 75.56	All SE Score: 117.12
+Long Eval: Average Score: -58.04	SE Score: 155.97
+Long Eval: Median Score: 551.75
+300
+Episode 160	Best Average Score: 51.93
+Episode 160	All Average Score: 36.55	All SE Score: 110.24
+Long Eval: Average Score: 161.92	SE Score: 94.90
+Long Eval: Median Score: 546.96
+300
+Episode 161	Best Average Score: 65.75
+Episode 161	All Average Score: -49.50	All SE Score: 97.79
+Long Eval: Average Score: 55.71	SE Score: 122.41
+Long Eval: Median Score: 562.55
+300
+Episode 162	Best Average Score: 49.41
+Episode 162	All Average Score: 136.98	All SE Score: 83.19
+Long Eval: Average Score: 355.24	SE Score: 72.21
+Long Eval: Median Score: 550.74
+300
+Episode 163	Best Average Score: 77.61
+Episode 163	All Average Score: 303.14	All SE Score: 50.13
+Long Eval: Average Score: 150.30	SE Score: 95.79
+Long Eval: Median Score: 534.67
+300
+Episode 164	Best Average Score: 91.49
+Episode 164	All Average Score: 90.21	All SE Score: 102.97
+Long Eval: Average Score: 294.19	SE Score: 85.03
+Long Eval: Median Score: 547.92
+300
+Episode 165	Best Average Score: 109.88
+Episode 165	All Average Score: 160.15	All SE Score: 88.35
+Long Eval: Average Score: 181.47	SE Score: 74.69
+Long Eval: Median Score: 527.35
+300
+Episode 166	Best Average Score: 98.60
+Episode 166	All Average Score: 11.14	All SE Score: 109.72
+Long Eval: Average Score: 233.03	SE Score: 97.23
+Long Eval: Median Score: 523.74
+300
+Episode 167	Best Average Score: 152.35
+Episode 167	All Average Score: 178.16	All SE Score: 114.29
+Long Eval: Average Score: 292.54	SE Score: 69.10
+Long Eval: Median Score: 539.38
+300
+Episode 168	Best Average Score: 187.23
+Episode 168	All Average Score: -31.30	All SE Score: 130.21
+Long Eval: Average Score: 245.81	SE Score: 77.66
+Long Eval: Median Score: 542.79
+300
+Episode 169	Best Average Score: 191.22
+Episode 169	All Average Score: 265.53	All SE Score: 76.75
+Long Eval: Average Score: 294.85	SE Score: 53.18
+Long Eval: Median Score: 532.51
+300
+Episode 170	Best Average Score: 226.51
+Episode 170	All Average Score: 310.72	All SE Score: 49.81
+Long Eval: Average Score: 281.66	SE Score: 65.53
+Long Eval: Median Score: 546.42
+300
+Episode 171	Best Average Score: 238.48
+Episode 171	All Average Score: 362.70	All SE Score: 48.11
+Long Eval: Average Score: 292.43	SE Score: 62.69
+Long Eval: Median Score: 529.89
+300
+Episode 172	Best Average Score: 262.15
+Episode 172	All Average Score: 268.97	All SE Score: 67.58
+Long Eval: Average Score: 216.63	SE Score: 85.61
+Long Eval: Median Score: 536.69
+300
+Episode 173	Best Average Score: 248.29
+Episode 173	All Average Score: 229.63	All SE Score: 51.14
+Long Eval: Average Score: 337.17	SE Score: 64.74
+Long Eval: Median Score: 550.53
+300
+Episode 174	Best Average Score: 266.98
+Episode 174	All Average Score: 215.00	All SE Score: 58.22
+Long Eval: Average Score: 404.47	SE Score: 40.82
+Long Eval: Median Score: 549.31
+300
+Episode 175	Best Average Score: 278.01
+Episode 175	All Average Score: 233.83	All SE Score: 73.50
+Long Eval: Average Score: 123.31	SE Score: 86.76
+Long Eval: Median Score: 540.46
+300
+Episode 176	Best Average Score: 272.19
+Episode 176	All Average Score: 248.97	All SE Score: 58.68
+Long Eval: Average Score: 259.27	SE Score: 77.09
+Long Eval: Median Score: 544.75
+300
+Episode 177	Best Average Score: 274.81
+Episode 177	All Average Score: 296.23	All SE Score: 47.41
+Long Eval: Average Score: 179.56	SE Score: 100.71
+Long Eval: Median Score: 539.52
+300
+Episode 178	Best Average Score: 263.52
+Episode 178	All Average Score: 170.29	All SE Score: 67.31
+Long Eval: Average Score: 205.68	SE Score: 82.68
+Long Eval: Median Score: 535.38
+300
+Episode 179	Best Average Score: 259.50
+Episode 179	All Average Score: 325.47	All SE Score: 45.72
+Long Eval: Average Score: 112.21	SE Score: 112.31
+Long Eval: Median Score: 544.14
+300
+Episode 180	Best Average Score: 241.24
+Episode 180	All Average Score: 344.56	All SE Score: 42.52
+Long Eval: Average Score: 224.95	SE Score: 74.21
+Long Eval: Median Score: 534.56
+300
+Episode 181	Best Average Score: 235.57
+Episode 181	All Average Score: 310.80	All SE Score: 41.24
+Long Eval: Average Score: 274.13	SE Score: 63.69
+Long Eval: Median Score: 554.81
+300
+Episode 182	Best Average Score: 233.74
+Episode 182	All Average Score: 202.70	All SE Score: 66.36
+Long Eval: Average Score: 319.92	SE Score: 60.85
+Long Eval: Median Score: 540.02
+300
+Episode 183	Best Average Score: 244.07
+Episode 183	All Average Score: 193.24	All SE Score: 60.27
+Long Eval: Average Score: 323.44	SE Score: 63.44
+Long Eval: Median Score: 536.47
+300
+Episode 184	Best Average Score: 242.69
+Episode 184	All Average Score: 294.81	All SE Score: 46.00
+Long Eval: Average Score: 308.76	SE Score: 59.60
+Long Eval: Median Score: 527.57
+300
+Episode 185	Best Average Score: 233.12
+Episode 185	All Average Score: 337.98	All SE Score: 41.03
+Long Eval: Average Score: 133.40	SE Score: 86.74
+Long Eval: Median Score: 539.84
+300
+Episode 186	Best Average Score: 234.13
+Episode 186	All Average Score: -59.52	All SE Score: 364.15
+Long Eval: Average Score: 191.61	SE Score: 81.94
+Long Eval: Median Score: 534.07
+300
+Episode 187	Best Average Score: 227.37
+Episode 187	All Average Score: 56.20	All SE Score: 179.76
+Long Eval: Average Score: 262.03	SE Score: 72.98
+Long Eval: Median Score: 529.27
+300
+Episode 188	Best Average Score: 235.61
+Episode 188	All Average Score: 238.69	All SE Score: 47.88
+Long Eval: Average Score: 287.43	SE Score: 61.96
+Long Eval: Median Score: 532.08
+300
+Episode 189	Best Average Score: 243.79
+Episode 189	All Average Score: 267.91	All SE Score: 56.64
+Long Eval: Average Score: 245.76	SE Score: 60.64
+Long Eval: Median Score: 528.96
+300
+Episode 190	Best Average Score: 257.14
+Episode 190	All Average Score: 271.90	All SE Score: 51.96
+Long Eval: Average Score: 312.68	SE Score: 58.11
+Long Eval: Median Score: 538.12
+300
+Episode 191	Best Average Score: 265.92
+Episode 191	All Average Score: 318.94	All SE Score: 39.44
+Long Eval: Average Score: 285.28	SE Score: 71.97
+Long Eval: Median Score: 545.51
+300
+Episode 192	Best Average Score: 267.03
+Episode 192	All Average Score: 285.98	All SE Score: 45.82
+Long Eval: Average Score: 315.42	SE Score: 56.92
+Long Eval: Median Score: 535.74
+300
+Episode 193	Best Average Score: 266.58
+Episode 193	All Average Score: 273.93	All SE Score: 62.02
+Long Eval: Average Score: 258.53	SE Score: 69.48
+Long Eval: Median Score: 550.15
+300
+Episode 194	Best Average Score: 260.09
+Episode 194	All Average Score: 203.74	All SE Score: 61.15
+Long Eval: Average Score: 333.75	SE Score: 60.17
+Long Eval: Median Score: 551.07
+300
+Episode 195	Best Average Score: 262.59
+Episode 195	All Average Score: 244.17	All SE Score: 55.45
+Long Eval: Average Score: 184.22	SE Score: 80.82
+Long Eval: Median Score: 552.25
+300
+Episode 196	Best Average Score: 267.67
+Episode 196	All Average Score: 233.38	All SE Score: 69.22
+Long Eval: Average Score: 363.64	SE Score: 55.92
+Long Eval: Median Score: 555.53
+300
+Episode 197	Best Average Score: 284.87
+Episode 197	All Average Score: -78.79	All SE Score: 349.94
+Long Eval: Average Score: 381.93	SE Score: 47.24
+Long Eval: Median Score: 547.10
+300
+Episode 198	Best Average Score: 296.87
+Episode 198	All Average Score: 46.76	All SE Score: 123.51
+Long Eval: Average Score: 176.35	SE Score: 90.91
+Long Eval: Median Score: 555.04
+300
+Episode 199	Best Average Score: 285.76
+Episode 199	All Average Score: 219.45	All SE Score: 93.44
+Long Eval: Average Score: 190.32	SE Score: 82.80
+Long Eval: Median Score: 543.33
+300
+Episode 200	Best Average Score: 280.21
+Episode 200	All Average Score: -1823.61	All SE Score: 1713.06
+Long Eval: Average Score: 332.19	SE Score: 59.09
+Long Eval: Median Score: 561.68
+300
+Episode 201	Best Average Score: 282.16
+Episode 201	All Average Score: -1825.76	All SE Score: 1194.14
+Long Eval: Average Score: 199.15	SE Score: 84.79
+Long Eval: Median Score: 548.65
+300
+Episode 202	Best Average Score: 273.55
+Episode 202	All Average Score: -1224.99	All SE Score: 1412.74
+Long Eval: Average Score: 169.50	SE Score: 79.41
+Long Eval: Median Score: 534.15
+300
+Episode 203	Best Average Score: 258.96
+Episode 203	All Average Score: -1058.26	All SE Score: 756.37
+Long Eval: Average Score: 234.13	SE Score: 73.21
+Long Eval: Median Score: 540.82
+300
+Episode 204	Best Average Score: 256.52
+Episode 204	All Average Score: -3425.77	All SE Score: 2304.73
+Long Eval: Average Score: 205.33	SE Score: 83.80
+Long Eval: Median Score: 549.00
+300
+Episode 205	Best Average Score: 243.68
+Episode 205	All Average Score: -668.76	All SE Score: 515.72
+Long Eval: Average Score: 317.33	SE Score: 67.72
+Long Eval: Median Score: 558.80
+300
+Episode 206	Best Average Score: 256.99
+Episode 206	All Average Score: 122.26	All SE Score: 86.25
+Long Eval: Average Score: 271.73	SE Score: 82.85
+Long Eval: Median Score: 544.14
+300
+Episode 207	Best Average Score: 247.80
+Episode 207	All Average Score: -227.80	All SE Score: 423.83
+Long Eval: Average Score: 243.30	SE Score: 103.42
+Long Eval: Median Score: 562.78
+300
+Episode 208	Best Average Score: 233.93
+Episode 208	All Average Score: -197.62	All SE Score: 184.68
+Long Eval: Average Score: 241.43	SE Score: 98.88
+Long Eval: Median Score: 562.92
+300
+Episode 209	Best Average Score: 240.44
+Episode 209	All Average Score: -154.45	All SE Score: 278.55
+Long Eval: Average Score: 180.11	SE Score: 111.31
+Long Eval: Median Score: 556.48
+300
+Episode 210	Best Average Score: 239.42
+Episode 210	All Average Score: 14.30	All SE Score: 152.17
+Long Eval: Average Score: -34.74	SE Score: 168.23
+Long Eval: Median Score: 564.99
+300
+Episode 211	Best Average Score: 202.73
+Episode 211	All Average Score: 39.18	All SE Score: 118.30
+Long Eval: Average Score: 209.86	SE Score: 97.67
+Long Eval: Median Score: 544.42
+300
+Episode 212	Best Average Score: 203.80
+Episode 212	All Average Score: 102.15	All SE Score: 103.22
+Long Eval: Average Score: 180.41	SE Score: 98.42
+Long Eval: Median Score: 549.85
+300
+Episode 213	Best Average Score: 204.89
+Episode 213	All Average Score: -83.34	All SE Score: 129.14
+Long Eval: Average Score: 117.61	SE Score: 109.65
+Long Eval: Median Score: 551.89
+300
+Episode 214	Best Average Score: 193.24
+Episode 214	All Average Score: -1590.84	All SE Score: 1048.44
+Long Eval: Average Score: 12.00	SE Score: 102.70
+Long Eval: Median Score: 543.35
+300
+Episode 215	Best Average Score: 173.90
+Episode 215	All Average Score: -315.72	All SE Score: 336.54
+Long Eval: Average Score: 273.18	SE Score: 79.88
+Long Eval: Median Score: 562.06
+300
+Episode 216	Best Average Score: 169.49
+Episode 216	All Average Score: -307.21	All SE Score: 218.85
+Long Eval: Average Score: 248.78	SE Score: 75.56
+Long Eval: Median Score: 554.06
+300
+Episode 217	Best Average Score: 167.19
+Episode 217	All Average Score: -86.78	All SE Score: 302.20
+Long Eval: Average Score: -289.44	SE Score: 191.65
+Long Eval: Median Score: 552.39
+300
+Episode 218	Best Average Score: 113.92
+Episode 218	All Average Score: -42.65	All SE Score: 254.40
+Long Eval: Average Score: 196.57	SE Score: 88.06
+Long Eval: Median Score: 546.59
+300
+Episode 219	Best Average Score: 109.43
+Episode 219	All Average Score: -643.79	All SE Score: 227.06
+Long Eval: Average Score: 87.31	SE Score: 122.74
+Long Eval: Median Score: 549.62
+300
+Episode 220	Best Average Score: 100.15
+Episode 220	All Average Score: -29.92	All SE Score: 123.11
+Long Eval: Average Score: 173.30	SE Score: 117.24
+Long Eval: Median Score: 570.11
+300
+Episode 221	Best Average Score: 120.96
+Episode 221	All Average Score: -2256.02	All SE Score: 1141.76
+Long Eval: Average Score: -333.44	SE Score: 178.91
+Long Eval: Median Score: 546.52
+300
+Episode 222	Best Average Score: 66.63
+Episode 222	All Average Score: -1055.14	All SE Score: 820.52
+Long Eval: Average Score: -68.43	SE Score: 140.81
+Long Eval: Median Score: 555.68
+300
+Episode 223	Best Average Score: 41.74
+Episode 223	All Average Score: -3258.14	All SE Score: 1637.66
+Long Eval: Average Score: 61.01	SE Score: 123.22
+Long Eval: Median Score: 559.15
+300
+Episode 224	Best Average Score: 36.09
+Episode 224	All Average Score: 22.67	All SE Score: 114.69
+Long Eval: Average Score: 4.68	SE Score: 146.34
+Long Eval: Median Score: 559.68
+300
+Episode 225	Best Average Score: 35.35
+Episode 225	All Average Score: -1531.65	All SE Score: 1499.73
+Long Eval: Average Score: -6.88	SE Score: 130.02
+Long Eval: Median Score: 553.44
+300
+Episode 226	Best Average Score: 7.35
+Episode 226	All Average Score: -945.07	All SE Score: 620.68
+Long Eval: Average Score: -246.45	SE Score: 196.47
+Long Eval: Median Score: 557.68
+300
+Episode 227	Best Average Score: -42.18
+Episode 227	All Average Score: 11.80	All SE Score: 116.47
+Long Eval: Average Score: 232.43	SE Score: 80.17
+Long Eval: Median Score: 551.71
+300
+Episode 228	Best Average Score: 10.01
+Episode 228	All Average Score: -450.45	All SE Score: 526.53
+Long Eval: Average Score: 234.94	SE Score: 82.88
+Long Eval: Median Score: 544.88
+300
+Episode 229	Best Average Score: 13.85
+Episode 229	All Average Score: -359.87	All SE Score: 118.89
+Long Eval: Average Score: -84.67	SE Score: 172.32
+Long Eval: Median Score: 539.72
+300
+Episode 230	Best Average Score: -3.35
+Episode 230	All Average Score: 86.06	All SE Score: 113.74
+Long Eval: Average Score: -51.46	SE Score: 144.02
+Long Eval: Median Score: 544.32
+300
+Episode 231	Best Average Score: -25.83
+Episode 231	All Average Score: -1625.08	All SE Score: 1126.05
+Long Eval: Average Score: -20.43	SE Score: 150.79
+Long Eval: Median Score: 551.28
+300
+Episode 232	Best Average Score: 5.47
+Episode 232	All Average Score: -1197.09	All SE Score: 716.05
+Long Eval: Average Score: 244.91	SE Score: 81.71
+Long Eval: Median Score: 558.51
+300
+Episode 233	Best Average Score: 36.81
+Episode 233	All Average Score: -2480.91	All SE Score: 1662.32
+Long Eval: Average Score: 273.06	SE Score: 103.33
+Long Eval: Median Score: 558.39
+300
+Episode 234	Best Average Score: 58.01
+Episode 234	All Average Score: -3390.17	All SE Score: 1471.59
+Long Eval: Average Score: -10.40	SE Score: 137.18
+Long Eval: Median Score: 545.04
+300
+Episode 235	Best Average Score: 56.50
+Episode 235	All Average Score: -2690.07	All SE Score: 1222.72
+Long Eval: Average Score: 73.46	SE Score: 123.38
+Long Eval: Median Score: 553.92
+300
+Episode 236	Best Average Score: 64.54
+Episode 236	All Average Score: 40.53	All SE Score: 131.21
+Long Eval: Average Score: 202.88	SE Score: 127.47
+Long Eval: Median Score: 567.43
+300
+Episode 237	Best Average Score: 109.47
+Episode 237	All Average Score: 41.75	All SE Score: 162.55
+Long Eval: Average Score: 216.11	SE Score: 99.33
+Long Eval: Median Score: 549.40
+300
+Episode 238	Best Average Score: 107.84
+Episode 238	All Average Score: -330.59	All SE Score: 365.53
+Long Eval: Average Score: 325.78	SE Score: 57.42
+Long Eval: Median Score: 548.34
+300
+Episode 239	Best Average Score: 116.92
+Episode 239	All Average Score: -573.89	All SE Score: 372.53
+Long Eval: Average Score: 147.33	SE Score: 126.52
+Long Eval: Median Score: 563.38
+300
+Episode 240	Best Average Score: 140.12
+Episode 240	All Average Score: -339.94	All SE Score: 382.55
+Long Eval: Average Score: 94.90	SE Score: 114.39
+Long Eval: Median Score: 541.76
+300
+Episode 241	Best Average Score: 154.76
+Episode 241	All Average Score: -47.28	All SE Score: 138.39
+Long Eval: Average Score: 309.72	SE Score: 60.82
+Long Eval: Median Score: 544.02
+300
+Episode 242	Best Average Score: 187.78
+Episode 242	All Average Score: -209.02	All SE Score: 230.46
+Long Eval: Average Score: 145.46	SE Score: 84.52
+Long Eval: Median Score: 542.36
+300
+Episode 243	Best Average Score: 177.83
+Episode 243	All Average Score: -102.68	All SE Score: 278.89
+Long Eval: Average Score: 98.03	SE Score: 129.00
+Long Eval: Median Score: 543.67
+300
+Episode 244	Best Average Score: 160.33
+Episode 244	All Average Score: -50.62	All SE Score: 159.43
+Long Eval: Average Score: 295.56	SE Score: 65.08
+Long Eval: Median Score: 537.49
+300
+Episode 245	Best Average Score: 190.92
+Episode 245	All Average Score: 204.45	All SE Score: 74.57
+Long Eval: Average Score: 172.34	SE Score: 80.60
+Long Eval: Median Score: 537.14
+300
+Episode 246	Best Average Score: 200.81
+Episode 246	All Average Score: -74.46	All SE Score: 209.34
+Long Eval: Average Score: 344.35	SE Score: 56.34
+Long Eval: Median Score: 545.39
+300
+Episode 247	Best Average Score: 214.96
+Episode 247	All Average Score: -112.95	All SE Score: 326.45
+Long Eval: Average Score: 198.73	SE Score: 94.46
+Long Eval: Median Score: 519.84
+300
+Episode 248	Best Average Score: 213.22
+Episode 248	All Average Score: 271.68	All SE Score: 46.76
+Long Eval: Average Score: 212.24	SE Score: 73.32
+Long Eval: Median Score: 537.02
+300
+Episode 249	Best Average Score: 201.87
+Episode 249	All Average Score: 190.23	All SE Score: 70.53
+Long Eval: Average Score: 257.16	SE Score: 64.92
+Long Eval: Median Score: 538.78
+300
+Episode 250	Best Average Score: 212.85
+Episode 250	All Average Score: 240.80	All SE Score: 69.09
+Long Eval: Average Score: 277.85	SE Score: 78.48
+Long Eval: Median Score: 530.99
+300
+Episode 251	Best Average Score: 231.14
+Episode 251	All Average Score: 155.22	All SE Score: 84.97
+Long Eval: Average Score: 287.13	SE Score: 77.40
+Long Eval: Median Score: 556.49
+300
+Episode 252	Best Average Score: 228.89
+Episode 252	All Average Score: 186.64	All SE Score: 59.94
+Long Eval: Average Score: 144.59	SE Score: 104.71
+Long Eval: Median Score: 550.34
+300
+Episode 253	Best Average Score: 228.80
+Episode 253	All Average Score: 107.17	All SE Score: 92.33
+Long Eval: Average Score: 194.44	SE Score: 93.95
+Long Eval: Median Score: 539.51
+300
+Episode 254	Best Average Score: 238.44
+Episode 254	All Average Score: 222.19	All SE Score: 53.44
+Long Eval: Average Score: 192.98	SE Score: 81.66
+Long Eval: Median Score: 540.73
+300
+Episode 255	Best Average Score: 228.18
+Episode 255	All Average Score: 125.86	All SE Score: 69.24
+Long Eval: Average Score: 13.38	SE Score: 110.09
+Long Eval: Median Score: 544.46
+300
+Episode 256	Best Average Score: 212.29
+Episode 256	All Average Score: 234.07	All SE Score: 66.65
+Long Eval: Average Score: 231.41	SE Score: 74.33
+Long Eval: Median Score: 537.62
+300
+Episode 257	Best Average Score: 200.99
+Episode 257	All Average Score: 224.12	All SE Score: 82.24
+Long Eval: Average Score: 315.35	SE Score: 71.38
+Long Eval: Median Score: 549.61
+300
+Episode 258	Best Average Score: 212.65
+Episode 258	All Average Score: 180.61	All SE Score: 119.42
+Long Eval: Average Score: 229.46	SE Score: 88.38
+Long Eval: Median Score: 541.13
+300
+Episode 259	Best Average Score: 214.38
+Episode 259	All Average Score: 67.90	All SE Score: 115.28
+Long Eval: Average Score: 249.25	SE Score: 70.26
+Long Eval: Median Score: 537.82
+300
+Episode 260	Best Average Score: 213.59
+Episode 260	All Average Score: 220.30	All SE Score: 73.31
+Long Eval: Average Score: 98.45	SE Score: 117.52
+Long Eval: Median Score: 542.10
+300
+Episode 261	Best Average Score: 195.64
+Episode 261	All Average Score: 27.05	All SE Score: 92.21
+Long Eval: Average Score: 225.81	SE Score: 82.03
+Long Eval: Median Score: 552.87
+300
+Episode 262	Best Average Score: 189.51
+Episode 262	All Average Score: 85.40	All SE Score: 80.90
+Long Eval: Average Score: 220.94	SE Score: 101.28
+Long Eval: Median Score: 560.98
+300
+Episode 263	Best Average Score: 197.15
+Episode 263	All Average Score: 120.88	All SE Score: 81.40
+Long Eval: Average Score: 302.30	SE Score: 69.15
+Long Eval: Median Score: 558.16
+300
+Episode 264	Best Average Score: 207.93
+Episode 264	All Average Score: 222.99	All SE Score: 73.50
+Long Eval: Average Score: 115.00	SE Score: 131.97
+Long Eval: Median Score: 559.53
+300
+Episode 265	Best Average Score: 200.14
+Episode 265	All Average Score: 131.17	All SE Score: 86.74
+Long Eval: Average Score: -7.04	SE Score: 150.36
+Long Eval: Median Score: 559.03
+300
+Episode 266	Best Average Score: 198.09
+Episode 266	All Average Score: 108.25	All SE Score: 88.37
+Long Eval: Average Score: 159.18	SE Score: 127.36
+Long Eval: Median Score: 535.82
+300
+Episode 267	Best Average Score: 190.87
+Episode 267	All Average Score: 63.49	All SE Score: 104.61
+Long Eval: Average Score: 225.04	SE Score: 93.19
+Long Eval: Median Score: 552.15
+300
+Episode 268	Best Average Score: 181.84
+Episode 268	All Average Score: 185.12	All SE Score: 72.94
+Long Eval: Average Score: 2.33	SE Score: 164.70
+Long Eval: Median Score: 562.97
+300
+Episode 269	Best Average Score: 159.13
+Episode 269	All Average Score: 1.96	All SE Score: 107.07
+Long Eval: Average Score: 190.69	SE Score: 85.09
+Long Eval: Median Score: 554.66
+300
+Episode 270	Best Average Score: 153.27
+Episode 270	All Average Score: 351.49	All SE Score: 54.15
+Long Eval: Average Score: 265.62	SE Score: 77.22
+Long Eval: Median Score: 534.26
+300
+Episode 271	Best Average Score: 169.99
+Episode 271	All Average Score: 44.28	All SE Score: 105.48
+Long Eval: Average Score: 95.54	SE Score: 88.39
+Long Eval: Median Score: 542.13
+300
+Episode 272	Best Average Score: 156.96
+Episode 272	All Average Score: 210.37	All SE Score: 74.94
+Long Eval: Average Score: -25.21	SE Score: 164.55
+Long Eval: Median Score: 530.59
+300
+Episode 273	Best Average Score: 132.35
+Episode 273	All Average Score: 92.46	All SE Score: 84.18
+Long Eval: Average Score: 294.25	SE Score: 72.74
+Long Eval: Median Score: 538.58
+300
+Episode 274	Best Average Score: 131.54
+Episode 274	All Average Score: 183.44	All SE Score: 99.40
+Long Eval: Average Score: 203.82	SE Score: 123.51
+Long Eval: Median Score: 555.82
+300
+Episode 275	Best Average Score: 140.42
+Episode 275	All Average Score: 154.81	All SE Score: 86.14
+Long Eval: Average Score: 133.02	SE Score: 121.29
+Long Eval: Median Score: 537.06
+300
+Episode 276	Best Average Score: 154.43
+Episode 276	All Average Score: 267.61	All SE Score: 49.48
+Long Eval: Average Score: 189.06	SE Score: 112.23
+Long Eval: Median Score: 547.18
+300
+Episode 277	Best Average Score: 157.42
+Episode 277	All Average Score: -51.68	All SE Score: 149.81
+Long Eval: Average Score: 94.49	SE Score: 123.07
+Long Eval: Median Score: 558.40
+300
+Episode 278	Best Average Score: 144.36
+Episode 278	All Average Score: 234.33	All SE Score: 78.32
+Long Eval: Average Score: 284.58	SE Score: 72.35
+Long Eval: Median Score: 539.41
+300
+Episode 279	Best Average Score: 172.59
+Episode 279	All Average Score: 192.28	All SE Score: 66.41
+Long Eval: Average Score: 198.56	SE Score: 83.11
+Long Eval: Median Score: 548.71
+300
+Episode 280	Best Average Score: 173.37
+Episode 280	All Average Score: -92.49	All SE Score: 108.82
+Long Eval: Average Score: -96.21	SE Score: 195.39
+Long Eval: Median Score: 547.99
+300
+Episode 281	Best Average Score: 137.19
+Episode 281	All Average Score: 104.53	All SE Score: 110.07
+Long Eval: Average Score: 135.88	SE Score: 81.73
+Long Eval: Median Score: 548.82
+300
+Episode 282	Best Average Score: 141.22
+Episode 282	All Average Score: -366.00	All SE Score: 503.48
+Long Eval: Average Score: 171.58	SE Score: 96.59
+Long Eval: Median Score: 544.30
+300
+Episode 283	Best Average Score: 160.90
+Episode 283	All Average Score: -40.56	All SE Score: 162.48
+Long Eval: Average Score: 239.63	SE Score: 75.18
+Long Eval: Median Score: 556.94
+300
+Episode 284	Best Average Score: 155.44
+Episode 284	All Average Score: -498.39	All SE Score: 357.59
+Long Eval: Average Score: 187.59	SE Score: 85.87
+Long Eval: Median Score: 539.30
+300
+Episode 285	Best Average Score: 153.82
+Episode 285	All Average Score: -1778.10	All SE Score: 732.95
+Long Eval: Average Score: -28.92	SE Score: 263.69
+Long Eval: Median Score: 540.44
+300
+Episode 286	Best Average Score: 137.62
+Episode 286	All Average Score: -1761.32	All SE Score: 829.45
+Long Eval: Average Score: -267.56	SE Score: 546.07
+Long Eval: Median Score: 555.23
+300
+Episode 287	Best Average Score: 91.96
+Episode 287	All Average Score: -2002.87	All SE Score: 875.18
+Long Eval: Average Score: -237.50	SE Score: 268.72
+Long Eval: Median Score: 541.70
+300
+Episode 288	Best Average Score: 58.76
+Episode 288	All Average Score: -2909.04	All SE Score: 1118.65
+Long Eval: Average Score: 331.20	SE Score: 61.27
+Long Eval: Median Score: 560.48
+300
+Episode 289	Best Average Score: 63.42
+Episode 289	All Average Score: -2957.33	All SE Score: 934.70
+Long Eval: Average Score: 314.24	SE Score: 58.64
+Long Eval: Median Score: 557.32
+300
+Episode 290	Best Average Score: 74.99
+Episode 290	All Average Score: -723.97	All SE Score: 689.18
+Long Eval: Average Score: 364.81	SE Score: 57.88
+Long Eval: Median Score: 560.10
+300
+Episode 291	Best Average Score: 121.09
+Episode 291	All Average Score: -568.13	All SE Score: 494.61
+Long Eval: Average Score: 366.04	SE Score: 60.29
+Long Eval: Median Score: 560.61
+300
+Episode 292	Best Average Score: 144.11
+Episode 292	All Average Score: -140.65	All SE Score: 154.34
+Long Eval: Average Score: 222.44	SE Score: 71.10
+Long Eval: Median Score: 546.84
+300
+Episode 293	Best Average Score: 149.20
+Episode 293	All Average Score: -481.41	All SE Score: 458.86
+Long Eval: Average Score: 243.76	SE Score: 74.48
+Long Eval: Median Score: 539.58
+300
+Episode 294	Best Average Score: 149.61
+Episode 294	All Average Score: 281.46	All SE Score: 85.47
+Long Eval: Average Score: 289.55	SE Score: 67.38
+Long Eval: Median Score: 553.88
+300
+Episode 295	Best Average Score: 159.81
+Episode 295	All Average Score: -123.74	All SE Score: 279.42
+Long Eval: Average Score: 185.12	SE Score: 96.01
+Long Eval: Median Score: 539.71
+300
+Episode 296	Best Average Score: 181.21
+Episode 296	All Average Score: -869.01	All SE Score: 547.11
+Long Eval: Average Score: -719.19	SE Score: 631.69
+Long Eval: Median Score: 545.20
+300
+Episode 297	Best Average Score: 136.05
+Episode 297	All Average Score: -1621.01	All SE Score: 835.49
+Long Eval: Average Score: 308.75	SE Score: 62.41
+Long Eval: Median Score: 555.97
+300
+Episode 298	Best Average Score: 190.67
+Episode 298	All Average Score: -413.71	All SE Score: 463.15
+Long Eval: Average Score: 241.33	SE Score: 77.60
+Long Eval: Median Score: 550.92
+300
+Episode 299	Best Average Score: 181.68
+Episode 299	All Average Score: -757.75	All SE Score: 458.17
+Long Eval: Average Score: -532.52	SE Score: 519.66
+Long Eval: Median Score: 540.72
+300
+Episode 300	Best Average Score: 97.01
+Episode 300	All Average Score: -197.40	All SE Score: 164.88
+Long Eval: Average Score: -1014.84	SE Score: 777.17
+Long Eval: Median Score: 543.61
+300
+Episode 301	Best Average Score: -40.96
+Episode 301	All Average Score: -1851.96	All SE Score: 1065.54
+Long Eval: Average Score: -711.91	SE Score: 720.76
+Long Eval: Median Score: 531.54
+300
+Episode 302	Best Average Score: -148.75
+Episode 302	All Average Score: -1795.70	All SE Score: 962.14
+Long Eval: Average Score: -1200.36	SE Score: 905.72
+Long Eval: Median Score: 555.10
+300
+Episode 303	Best Average Score: -291.03
+Episode 303	All Average Score: -1418.70	All SE Score: 995.25
+Long Eval: Average Score: -385.88	SE Score: 638.12
+Long Eval: Median Score: 554.30
+300
+Episode 304	Best Average Score: -354.00
+Episode 304	All Average Score: -923.79	All SE Score: 530.64
+Long Eval: Average Score: 20.23	SE Score: 141.40
+Long Eval: Median Score: 552.53
+300
+Episode 305	Best Average Score: -380.93
+Episode 305	All Average Score: -685.03	All SE Score: 453.66
+Long Eval: Average Score: 54.89	SE Score: 161.02
+Long Eval: Median Score: 549.09
+300
+Episode 306	Best Average Score: -393.95
+Episode 306	All Average Score: -2790.25	All SE Score: 887.45
+Long Eval: Average Score: 28.45	SE Score: 197.53
+Long Eval: Median Score: 562.17
+300
+Episode 307	Best Average Score: -319.19
+Episode 307	All Average Score: -1625.01	All SE Score: 979.22
+Long Eval: Average Score: -430.20	SE Score: 526.69
+Long Eval: Median Score: 547.08
+300
+Episode 308	Best Average Score: -393.08
+Episode 308	All Average Score: -1867.47	All SE Score: 951.29
+Long Eval: Average Score: 28.49	SE Score: 134.41
+Long Eval: Median Score: 541.43
+300
+Episode 309	Best Average Score: -414.36
+Episode 309	All Average Score: -537.38	All SE Score: 360.07
+Long Eval: Average Score: -764.73	SE Score: 691.01
+Long Eval: Median Score: 545.01
+300
+Episode 310	Best Average Score: -437.59
+Episode 310	All Average Score: -875.32	All SE Score: 553.30
+Long Eval: Average Score: -108.81	SE Score: 171.83
+Long Eval: Median Score: 550.06
+300
+Episode 311	Best Average Score: -346.98
+Episode 311	All Average Score: -1021.00	All SE Score: 641.56
+Long Eval: Average Score: -38.98	SE Score: 152.32
+Long Eval: Median Score: 548.93
+300
+Episode 312	Best Average Score: -279.69
+Episode 312	All Average Score: -2343.95	All SE Score: 788.09
+Long Eval: Average Score: 255.87	SE Score: 97.43
+Long Eval: Median Score: 560.27
+300
+Episode 313	Best Average Score: -134.07
+Episode 313	All Average Score: -1525.86	All SE Score: 662.96
+Long Eval: Average Score: -877.28	SE Score: 684.17
+Long Eval: Median Score: 557.35
+300
+Episode 314	Best Average Score: -183.21
+Episode 314	All Average Score: -1780.97	All SE Score: 781.62
+Long Eval: Average Score: -2433.53	SE Score: 1242.54
+Long Eval: Median Score: 537.29
+300
+Episode 315	Best Average Score: -428.58
+Episode 315	All Average Score: -1281.82	All SE Score: 763.89
+Long Eval: Average Score: 125.11	SE Score: 100.93
+Long Eval: Median Score: 546.80
+300
+Episode 316	Best Average Score: -421.56
+Episode 316	All Average Score: -1949.01	All SE Score: 904.73
+Long Eval: Average Score: 144.07	SE Score: 141.29
+Long Eval: Median Score: 549.56
+300
+Episode 317	Best Average Score: -410.00
+Episode 317	All Average Score: -1634.63	All SE Score: 951.00
+Long Eval: Average Score: 107.51	SE Score: 147.08
+Long Eval: Median Score: 557.69
+300
+Episode 318	Best Average Score: -356.23
+Episode 318	All Average Score: -1267.75	All SE Score: 722.17
+Long Eval: Average Score: -72.37	SE Score: 157.61
+Long Eval: Median Score: 561.62
+300
+Episode 319	Best Average Score: -366.32
+Episode 319	All Average Score: -1189.78	All SE Score: 562.14
+Long Eval: Average Score: 124.10	SE Score: 114.17
+Long Eval: Median Score: 553.21
+300
+Episode 320	Best Average Score: -277.43
+Episode 320	All Average Score: -1874.24	All SE Score: 795.07
+Long Eval: Average Score: -48.03	SE Score: 161.73
+Long Eval: Median Score: 554.19
+300
+Episode 321	Best Average Score: -271.35
+Episode 321	All Average Score: -2274.17	All SE Score: 1073.18
+Long Eval: Average Score: 33.78	SE Score: 123.72
+Long Eval: Median Score: 549.28
+300
+Episode 322	Best Average Score: -264.08
+Episode 322	All Average Score: -1732.70	All SE Score: 671.53
+Long Eval: Average Score: 114.70	SE Score: 120.23
+Long Eval: Median Score: 551.80
+300
+Episode 323	Best Average Score: -278.19
+Episode 323	All Average Score: -2747.09	All SE Score: 915.72
+Long Eval: Average Score: 129.81	SE Score: 138.48
+Long Eval: Median Score: 550.07
+300
+Episode 324	Best Average Score: -177.48
+Episode 324	All Average Score: -1766.53	All SE Score: 776.92
+Long Eval: Average Score: 181.58	SE Score: 102.30
+Long Eval: Median Score: 567.83
+300
+Episode 325	Best Average Score: 84.03
+Episode 325	All Average Score: -921.27	All SE Score: 452.74
+Long Eval: Average Score: -237.40	SE Score: 192.49
+Long Eval: Median Score: 547.01
+300
+Episode 326	Best Average Score: 47.77
+Episode 326	All Average Score: -2411.96	All SE Score: 1177.28
+Long Eval: Average Score: 53.59	SE Score: 133.95
+Long Eval: Median Score: 555.50
+300
+Episode 327	Best Average Score: 38.73
+Episode 327	All Average Score: -1375.69	All SE Score: 834.74
+Long Eval: Average Score: -353.26	SE Score: 211.48
+Long Eval: Median Score: 555.14
+300
+Episode 328	Best Average Score: -7.35
+Episode 328	All Average Score: -1256.69	All SE Score: 651.39
+Long Eval: Average Score: -1385.74	SE Score: 954.68
+Long Eval: Median Score: 540.71
+300
+Episode 329	Best Average Score: -138.69
+Episode 329	All Average Score: -1825.48	All SE Score: 777.73
+Long Eval: Average Score: -90.97	SE Score: 139.58
+Long Eval: Median Score: 551.32
+300
+Episode 330	Best Average Score: -160.19
+Episode 330	All Average Score: -4896.31	All SE Score: 1567.37
+Long Eval: Average Score: 165.89	SE Score: 128.87
+Long Eval: Median Score: 557.69
+300
+Episode 331	Best Average Score: -138.80
+Episode 331	All Average Score: -4798.62	All SE Score: 1243.22
+Long Eval: Average Score: -180.51	SE Score: 145.33
+Long Eval: Median Score: 543.94
+300
+Episode 332	Best Average Score: -160.23
+Episode 332	All Average Score: -638.94	All SE Score: 534.42
+Long Eval: Average Score: 114.56	SE Score: 148.54
+Long Eval: Median Score: 562.35
+300
+Episode 333	Best Average Score: -160.24
+Episode 333	All Average Score: -1818.62	All SE Score: 878.55
+Long Eval: Average Score: 229.97	SE Score: 84.19
+Long Eval: Median Score: 537.98
+300
+Episode 334	Best Average Score: -150.23
+Episode 334	All Average Score: -164.09	All SE Score: 271.43
+Long Eval: Average Score: -53.82	SE Score: 180.79
+Long Eval: Median Score: 531.21
+300
+Episode 335	Best Average Score: -173.77
+Episode 335	All Average Score: -615.74	All SE Score: 485.67
+Long Eval: Average Score: -120.63	SE Score: 187.29
+Long Eval: Median Score: 551.19
+300
+Episode 336	Best Average Score: -162.09
+Episode 336	All Average Score: -415.87	All SE Score: 286.46
+Long Eval: Average Score: -98.31	SE Score: 174.87
+Long Eval: Median Score: 552.33
+300
+Episode 337	Best Average Score: -177.28
+Episode 337	All Average Score: -1181.74	All SE Score: 838.71
+Long Eval: Average Score: -9.75	SE Score: 133.82
+Long Eval: Median Score: 557.18
+300
+Episode 338	Best Average Score: -142.93
+Episode 338	All Average Score: -1800.47	All SE Score: 1060.68
+Long Eval: Average Score: -22.18	SE Score: 116.14
+Long Eval: Median Score: 554.27
+300
+Episode 339	Best Average Score: -6.57
+Episode 339	All Average Score: -1112.12	All SE Score: 706.72
+Long Eval: Average Score: 218.57	SE Score: 102.31
+Long Eval: Median Score: 559.38
+300
+Episode 340	Best Average Score: 24.38
+Episode 340	All Average Score: -1696.57	All SE Score: 1333.05
+Long Eval: Average Score: -165.72	SE Score: 182.29
+Long Eval: Median Score: 553.49
+300
+Episode 341	Best Average Score: -8.78
+Episode 341	All Average Score: -3272.25	All SE Score: 1439.26
+Long Eval: Average Score: 207.69	SE Score: 97.99
+Long Eval: Median Score: 544.85
+300
+Episode 342	Best Average Score: 30.04
+Episode 342	All Average Score: -2232.55	All SE Score: 1077.72
+Long Eval: Average Score: 144.91	SE Score: 95.70
+Long Eval: Median Score: 543.22
+300
+Episode 343	Best Average Score: 33.07
+Episode 343	All Average Score: -1821.85	All SE Score: 742.81
+Long Eval: Average Score: 180.17	SE Score: 97.12
+Long Eval: Median Score: 550.62
+300
+Episode 344	Best Average Score: 28.09
+Episode 344	All Average Score: -381.06	All SE Score: 302.54
+Long Eval: Average Score: 175.72	SE Score: 114.59
+Long Eval: Median Score: 547.13
+300
+Episode 345	Best Average Score: 51.05
+Episode 345	All Average Score: -1054.00	All SE Score: 479.52
+Long Eval: Average Score: -169.52	SE Score: 198.36
+Long Eval: Median Score: 556.76
+300
+Episode 346	Best Average Score: 46.16
+Episode 346	All Average Score: -2667.65	All SE Score: 1367.18
+Long Eval: Average Score: -106.45	SE Score: 216.50
+Long Eval: Median Score: 553.84
+300
+Episode 347	Best Average Score: 45.34
+Episode 347	All Average Score: -1510.23	All SE Score: 616.73
+Long Eval: Average Score: 11.47	SE Score: 171.78
+Long Eval: Median Score: 563.80
+300
+Episode 348	Best Average Score: 47.47
+Episode 348	All Average Score: -2711.78	All SE Score: 1511.77
+Long Eval: Average Score: 138.06	SE Score: 142.86
+Long Eval: Median Score: 556.68
+300
+Episode 349	Best Average Score: 63.49
+Episode 349	All Average Score: -2507.39	All SE Score: 954.65
+Long Eval: Average Score: 129.39	SE Score: 110.54
+Long Eval: Median Score: 546.99
+300
+Episode 350	Best Average Score: 54.57
+Episode 350	All Average Score: -1558.00	All SE Score: 738.94
+Long Eval: Average Score: -307.72	SE Score: 244.68
+Long Eval: Median Score: 543.97
+300
+Episode 351	Best Average Score: 40.37
+Episode 351	All Average Score: -592.10	All SE Score: 442.03
+Long Eval: Average Score: -375.68	SE Score: 227.86
+Long Eval: Median Score: 543.73
+300
+Episode 352	Best Average Score: -17.97
+Episode 352	All Average Score: -794.36	All SE Score: 444.38
+Long Eval: Average Score: -223.66	SE Score: 207.52
+Long Eval: Median Score: 555.66
+300
+Episode 353	Best Average Score: -54.82
+Episode 353	All Average Score: -460.16	All SE Score: 266.56
+Long Eval: Average Score: -91.08	SE Score: 183.16
+Long Eval: Median Score: 561.55
+300
+Episode 354	Best Average Score: -81.95
+Episode 354	All Average Score: -768.27	All SE Score: 418.75
+Long Eval: Average Score: -280.24	SE Score: 216.33
+Long Eval: Median Score: 558.07
+300
+Episode 355	Best Average Score: -127.54
+Episode 355	All Average Score: -439.02	All SE Score: 229.69
+Long Eval: Average Score: -465.03	SE Score: 254.82
+Long Eval: Median Score: 555.98
+300
+Episode 356	Best Average Score: -157.09
+Episode 356	All Average Score: -591.15	All SE Score: 410.79
+Long Eval: Average Score: -662.89	SE Score: 253.04
+Long Eval: Median Score: 542.91
+300
+Episode 357	Best Average Score: -212.74
+Episode 357	All Average Score: -200.76	All SE Score: 189.47
+Long Eval: Average Score: -86.64	SE Score: 162.79
+Long Eval: Median Score: 551.86
+300
+Episode 358	Best Average Score: -222.55
+Episode 358	All Average Score: -888.52	All SE Score: 372.22
+Long Eval: Average Score: 76.46	SE Score: 146.26
+Long Eval: Median Score: 551.92
+300
+Episode 359	Best Average Score: -228.71
+Episode 359	All Average Score: -642.97	All SE Score: 490.36
+Long Eval: Average Score: -657.51	SE Score: 286.93
+Long Eval: Median Score: 540.34
+300
+Episode 360	Best Average Score: -307.40
+Episode 360	All Average Score: -272.62	All SE Score: 151.59
+Long Eval: Average Score: -353.82	SE Score: 232.38
+Long Eval: Median Score: 534.02
+300
+Episode 361	Best Average Score: -312.01
+Episode 361	All Average Score: -371.77	All SE Score: 179.24
+Long Eval: Average Score: -501.73	SE Score: 260.58
+Long Eval: Median Score: 544.71
+300
+Episode 362	Best Average Score: -324.62
+Episode 362	All Average Score: -366.54	All SE Score: 166.12
+Long Eval: Average Score: 3.37	SE Score: 146.11
+Long Eval: Median Score: 539.40
+300
+Episode 363	Best Average Score: -301.91
+Episode 363	All Average Score: -170.44	All SE Score: 139.13
+Long Eval: Average Score: -128.31	SE Score: 208.57
+Long Eval: Median Score: 560.83
+300
+Episode 364	Best Average Score: -305.64
+Episode 364	All Average Score: -293.85	All SE Score: 133.64
+Long Eval: Average Score: 23.00	SE Score: 151.88
+Long Eval: Median Score: 547.85
+300
+Episode 365	Best Average Score: -275.31
+Episode 365	All Average Score: 58.88	All SE Score: 101.25
+Long Eval: Average Score: -416.93	SE Score: 251.19
+Long Eval: Median Score: 539.48
+300
+Episode 366	Best Average Score: -270.50
+Episode 366	All Average Score: -214.11	All SE Score: 154.37
+Long Eval: Average Score: -511.72	SE Score: 256.75
+Long Eval: Median Score: 544.68
+300
+Episode 367	Best Average Score: -255.38
+Episode 367	All Average Score: 93.88	All SE Score: 121.91
+Long Eval: Average Score: -273.48	SE Score: 202.55
+Long Eval: Median Score: 541.67
+300
+Episode 368	Best Average Score: -274.07
+Episode 368	All Average Score: -550.50	All SE Score: 178.42
+Long Eval: Average Score: -364.75	SE Score: 267.76
+Long Eval: Median Score: 546.52
+300
+Episode 369	Best Average Score: -318.19
+Episode 369	All Average Score: 6.06	All SE Score: 109.79
+Long Eval: Average Score: -81.32	SE Score: 174.43
+Long Eval: Median Score: 551.66
+300
+Episode 370	Best Average Score: -260.57
+Episode 370	All Average Score: -178.63	All SE Score: 156.53
+Long Eval: Average Score: -173.79	SE Score: 170.62
+Long Eval: Median Score: 542.21
+300
+Episode 371	Best Average Score: -242.57
+Episode 371	All Average Score: -75.35	All SE Score: 129.70
+Long Eval: Average Score: 101.22	SE Score: 120.49
+Long Eval: Median Score: 550.61
+300
+Episode 372	Best Average Score: -182.27
+Episode 372	All Average Score: -258.55	All SE Score: 164.60
+Long Eval: Average Score: -191.81	SE Score: 231.16
+Long Eval: Median Score: 542.42
+300
+Episode 373	Best Average Score: -201.79
+Episode 373	All Average Score: -314.51	All SE Score: 157.24
+Long Eval: Average Score: 151.44	SE Score: 98.19
+Long Eval: Median Score: 556.29
+300
+Episode 374	Best Average Score: -173.81
+Episode 374	All Average Score: -43.16	All SE Score: 148.60
+Long Eval: Average Score: -197.44	SE Score: 188.57
+Long Eval: Median Score: 550.44
+300
+Episode 375	Best Average Score: -195.86
+Episode 375	All Average Score: -473.90	All SE Score: 610.42
+Long Eval: Average Score: 44.93	SE Score: 133.11
+Long Eval: Median Score: 554.42
+300
+Episode 376	Best Average Score: -149.67
+Episode 376	All Average Score: 15.83	All SE Score: 146.03
+Long Eval: Average Score: 251.56	SE Score: 88.38
+Long Eval: Median Score: 555.54
+300
+Episode 377	Best Average Score: -73.34
+Episode 377	All Average Score: -52.33	All SE Score: 111.40
+Long Eval: Average Score: -381.81	SE Score: 224.48
+Long Eval: Median Score: 548.65
+300
+Episode 378	Best Average Score: -84.18
+Episode 378	All Average Score: -276.78	All SE Score: 160.48
+Long Eval: Average Score: -183.25	SE Score: 186.63
+Long Eval: Median Score: 546.26
+300
+Episode 379	Best Average Score: -66.02
+Episode 379	All Average Score: -1471.45	All SE Score: 867.48
+Long Eval: Average Score: -133.20	SE Score: 164.45
+Long Eval: Median Score: 542.99
+300
+Episode 380	Best Average Score: -71.21
+Episode 380	All Average Score: -1099.84	All SE Score: 505.53
+Long Eval: Average Score: -163.14	SE Score: 213.29
+Long Eval: Median Score: 556.03
+300
+Episode 381	Best Average Score: -70.15
+Episode 381	All Average Score: -1442.92	All SE Score: 773.25
+Long Eval: Average Score: -80.63	SE Score: 145.02
+Long Eval: Median Score: 551.86
+300
+Episode 382	Best Average Score: -88.33
+Episode 382	All Average Score: -2520.78	All SE Score: 1076.73
+Long Eval: Average Score: 155.25	SE Score: 114.15
+Long Eval: Median Score: 558.16
+300
+Episode 383	Best Average Score: -53.63
+Episode 383	All Average Score: -604.29	All SE Score: 454.56
+Long Eval: Average Score: -158.01	SE Score: 158.79
+Long Eval: Median Score: 550.19
+300
+Episode 384	Best Average Score: -84.57
+Episode 384	All Average Score: -368.85	All SE Score: 217.02
+Long Eval: Average Score: -65.74	SE Score: 152.61
+Long Eval: Median Score: 558.35
+300
+Episode 385	Best Average Score: -71.40
+Episode 385	All Average Score: -337.30	All SE Score: 201.99
+Long Eval: Average Score: 177.08	SE Score: 101.06
+Long Eval: Median Score: 543.61
+300
+Episode 386	Best Average Score: -58.19
+Episode 386	All Average Score: -1371.93	All SE Score: 739.71
+Long Eval: Average Score: -76.67	SE Score: 167.98
+Long Eval: Median Score: 546.80
+300
+Episode 387	Best Average Score: -91.01
+Episode 387	All Average Score: -1113.70	All SE Score: 633.35
+Long Eval: Average Score: 138.38	SE Score: 105.05
+Long Eval: Median Score: 548.91
+300
+Episode 388	Best Average Score: -38.99
+Episode 388	All Average Score: -2603.91	All SE Score: 1079.10
+Long Eval: Average Score: -1.47	SE Score: 179.06
+Long Eval: Median Score: 552.10
+300
+Episode 389	Best Average Score: -20.82
+Episode 389	All Average Score: -302.43	All SE Score: 339.49
+Long Eval: Average Score: 135.61	SE Score: 118.61
+Long Eval: Median Score: 552.84
+300
+Episode 390	Best Average Score: 6.06
+Episode 390	All Average Score: -1311.86	All SE Score: 919.18
+Long Eval: Average Score: -191.91	SE Score: 165.69
+Long Eval: Median Score: 549.29
+300
+Episode 391	Best Average Score: 3.19
+Episode 391	All Average Score: -18.54	All SE Score: 110.34
+Long Eval: Average Score: 108.97	SE Score: 138.03
+Long Eval: Median Score: 548.96
+300
+Episode 392	Best Average Score: 22.15
+Episode 392	All Average Score: -2954.31	All SE Score: 1326.16
+Long Eval: Average Score: 6.83	SE Score: 125.54
+Long Eval: Median Score: 556.97
+300
+Episode 393	Best Average Score: 7.31
+Episode 393	All Average Score: -566.74	All SE Score: 406.90
+Long Eval: Average Score: 87.20	SE Score: 128.58
+Long Eval: Median Score: 550.05
+300
+Episode 394	Best Average Score: 31.83
+Episode 394	All Average Score: -953.39	All SE Score: 1047.96
+Long Eval: Average Score: 213.50	SE Score: 127.34
+Long Eval: Median Score: 553.25
+300
+Episode 395	Best Average Score: 59.75
+Episode 395	All Average Score: -47.95	All SE Score: 140.02
+Long Eval: Average Score: -7.00	SE Score: 160.66
+Long Eval: Median Score: 544.01
+300
+Episode 396	Best Average Score: 41.34
+Episode 396	All Average Score: 17.09	All SE Score: 110.68
+Long Eval: Average Score: -122.98	SE Score: 228.26
+Long Eval: Median Score: 556.19
+300
+Episode 397	Best Average Score: 36.71
+Episode 397	All Average Score: -1170.40	All SE Score: 797.54
+Long Eval: Average Score: 206.86	SE Score: 80.97
+Long Eval: Median Score: 540.03
+300
+Episode 398	Best Average Score: 43.56
+Episode 398	All Average Score: -843.47	All SE Score: 551.21
+Long Eval: Average Score: -68.39	SE Score: 161.68
+Long Eval: Median Score: 558.14
+300
+Episode 399	Best Average Score: 36.87
+Episode 399	All Average Score: -658.30	All SE Score: 865.57
+Long Eval: Average Score: 31.13	SE Score: 125.04
+Long Eval: Median Score: 547.23
+300
+Episode 400	Best Average Score: 26.42
+Episode 400	All Average Score: -262.02	All SE Score: 158.02
+Long Eval: Average Score: -63.08	SE Score: 218.35
+Long Eval: Median Score: 555.36
+300
+Episode 401	Best Average Score: 39.30
+Episode 401	All Average Score: -651.20	All SE Score: 396.66
+Long Eval: Average Score: 41.79	SE Score: 118.16
+Long Eval: Median Score: 545.13
+300
+Episode 402	Best Average Score: 32.58
+Episode 402	All Average Score: -2105.38	All SE Score: 854.25
+Long Eval: Average Score: 313.26	SE Score: 65.27
+Long Eval: Median Score: 552.01
+300
+Episode 403	Best Average Score: 63.23
+Episode 403	All Average Score: -3682.11	All SE Score: 1779.04
+Long Eval: Average Score: 24.75	SE Score: 158.49
+Long Eval: Median Score: 557.72
+300
+Episode 404	Best Average Score: 56.98
+Episode 404	All Average Score: -3709.87	All SE Score: 1273.49
+Long Eval: Average Score: 242.59	SE Score: 107.64
+Long Eval: Median Score: 560.08
+300
+Episode 405	Best Average Score: 59.89
+Episode 405	All Average Score: -4280.74	All SE Score: 1407.82
+Long Eval: Average Score: -123.48	SE Score: 168.72
+Long Eval: Median Score: 550.27
+300
+Episode 406	Best Average Score: 48.24
+Episode 406	All Average Score: -6661.65	All SE Score: 2079.12
+Long Eval: Average Score: 37.55	SE Score: 120.40
+Long Eval: Median Score: 545.50
+300
+Episode 407	Best Average Score: 64.30
+Episode 407	All Average Score: -1637.44	All SE Score: 1028.73
+Long Eval: Average Score: -86.07	SE Score: 155.08
+Long Eval: Median Score: 542.91
+300
+Episode 408	Best Average Score: 35.00
+Episode 408	All Average Score: -2121.78	All SE Score: 747.70
+Long Eval: Average Score: 87.01	SE Score: 151.38
+Long Eval: Median Score: 557.92
+300
+Episode 409	Best Average Score: 50.55
+Episode 409	All Average Score: -1935.18	All SE Score: 936.99
+Long Eval: Average Score: 204.77	SE Score: 133.21
+Long Eval: Median Score: 557.24
+300
+Episode 410	Best Average Score: 67.91
+Episode 410	All Average Score: -4197.88	All SE Score: 1424.19
+Long Eval: Average Score: 83.42	SE Score: 120.29
+Long Eval: Median Score: 543.32
+300
+Episode 411	Best Average Score: 82.56
+Episode 411	All Average Score: -3272.70	All SE Score: 1642.35
+Long Eval: Average Score: 132.98	SE Score: 121.09
+Long Eval: Median Score: 542.17
+300
+Episode 412	Best Average Score: 91.68
+Episode 412	All Average Score: -2191.76	All SE Score: 926.56
+Long Eval: Average Score: 179.75	SE Score: 144.96
+Long Eval: Median Score: 550.01
+300
+Episode 413	Best Average Score: 78.33
+Episode 413	All Average Score: -2238.24	All SE Score: 1307.07
+Long Eval: Average Score: 13.04	SE Score: 155.32
+Long Eval: Median Score: 548.38
+300
+Episode 414	Best Average Score: 77.16
+Episode 414	All Average Score: -983.41	All SE Score: 479.77
+Long Eval: Average Score: 52.09	SE Score: 124.18
+Long Eval: Median Score: 554.18
+300
+Episode 415	Best Average Score: 58.11
+Episode 415	All Average Score: -743.98	All SE Score: 594.10
+Long Eval: Average Score: 198.21	SE Score: 108.00
+Long Eval: Median Score: 557.29
+300
+Episode 416	Best Average Score: 90.28
+Episode 416	All Average Score: 140.05	All SE Score: 145.60
+Long Eval: Average Score: 56.40	SE Score: 145.26
+Long Eval: Median Score: 545.39
+300
+Episode 417	Best Average Score: 92.16
+Episode 417	All Average Score: -1196.68	All SE Score: 791.81
+Long Eval: Average Score: 124.99	SE Score: 122.13
+Long Eval: Median Score: 549.21
+300
+Episode 418	Best Average Score: 113.27
+Episode 418	All Average Score: -674.81	All SE Score: 487.31
+Long Eval: Average Score: 112.74	SE Score: 149.52
+Long Eval: Median Score: 550.36
+300
+Episode 419	Best Average Score: 115.84
+Episode 419	All Average Score: -1050.17	All SE Score: 626.40
+Long Eval: Average Score: 35.94	SE Score: 161.13
+Long Eval: Median Score: 548.56
+300
+Episode 420	Best Average Score: 98.96
+Episode 420	All Average Score: -308.43	All SE Score: 443.02
+Long Eval: Average Score: 255.17	SE Score: 85.52
+Long Eval: Median Score: 548.93
+300
+Episode 421	Best Average Score: 116.13
+Episode 421	All Average Score: 73.62	All SE Score: 132.89
+Long Eval: Average Score: 24.41	SE Score: 144.14
+Long Eval: Median Score: 543.91
+300
+Episode 422	Best Average Score: 105.27
+Episode 422	All Average Score: 65.21	All SE Score: 101.67
+Long Eval: Average Score: 244.77	SE Score: 67.40
+Long Eval: Median Score: 551.87
+300
+Episode 423	Best Average Score: 111.78
+Episode 423	All Average Score: -109.05	All SE Score: 148.41
+Long Eval: Average Score: 313.86	SE Score: 69.55
+Long Eval: Median Score: 554.14
+300
+Episode 424	Best Average Score: 141.86
+Episode 424	All Average Score: -19.96	All SE Score: 120.72
+Long Eval: Average Score: 82.59	SE Score: 142.97
+Long Eval: Median Score: 553.36
+300
+Episode 425	Best Average Score: 144.91
+Episode 425	All Average Score: -113.85	All SE Score: 116.86
+Long Eval: Average Score: 0.85	SE Score: 121.47
+Long Eval: Median Score: 548.19
+300
+Episode 426	Best Average Score: 125.17
+Episode 426	All Average Score: 186.28	All SE Score: 68.03
+Long Eval: Average Score: 121.56	SE Score: 123.35
+Long Eval: Median Score: 556.15
+300
+Episode 427	Best Average Score: 131.69
+Episode 427	All Average Score: -887.00	All SE Score: 566.33
+Long Eval: Average Score: 12.61	SE Score: 130.50
+Long Eval: Median Score: 555.34
+300
+Episode 428	Best Average Score: 120.45
+Episode 428	All Average Score: 55.26	All SE Score: 141.30
+Long Eval: Average Score: 211.03	SE Score: 97.57
+Long Eval: Median Score: 543.13
+300
+Episode 429	Best Average Score: 130.28
+Episode 429	All Average Score: -91.74	All SE Score: 130.29
+Long Eval: Average Score: 297.21	SE Score: 87.13
+Long Eval: Median Score: 561.74
+300
+Episode 430	Best Average Score: 156.41
+Episode 430	All Average Score: 32.24	All SE Score: 133.75
+Long Eval: Average Score: 186.16	SE Score: 117.57
+Long Eval: Median Score: 564.17
+300
+Episode 431	Best Average Score: 149.51
+Episode 431	All Average Score: 124.77	All SE Score: 73.53
+Long Eval: Average Score: -138.28	SE Score: 183.11
+Long Eval: Median Score: 548.15
+300
+Episode 432	Best Average Score: 133.24
+Episode 432	All Average Score: 59.70	All SE Score: 106.39
+Long Eval: Average Score: 200.99	SE Score: 99.85
+Long Eval: Median Score: 555.65
+300
+Episode 433	Best Average Score: 128.86
+Episode 433	All Average Score: 55.35	All SE Score: 112.51
+Long Eval: Average Score: 13.59	SE Score: 142.98
+Long Eval: Median Score: 551.09
+300
+Episode 434	Best Average Score: 98.83
+Episode 434	All Average Score: -58.74	All SE Score: 138.92
+Long Eval: Average Score: -18.45	SE Score: 156.76
+Long Eval: Median Score: 549.54
+300
+Episode 435	Best Average Score: 88.73
+Episode 435	All Average Score: -277.15	All SE Score: 152.17
+Long Eval: Average Score: 41.51	SE Score: 133.24
+Long Eval: Median Score: 545.61
+300
+Episode 436	Best Average Score: 92.79
+Episode 436	All Average Score: -196.32	All SE Score: 138.61
+Long Eval: Average Score: -348.97	SE Score: 190.64
+Long Eval: Median Score: 552.81
+300
+Episode 437	Best Average Score: 45.74
+Episode 437	All Average Score: -142.85	All SE Score: 129.99
+Long Eval: Average Score: -747.94	SE Score: 260.25
+Long Eval: Median Score: 545.64
+300
+Episode 438	Best Average Score: -30.31
+Episode 438	All Average Score: -75.61	All SE Score: 132.02
+Long Eval: Average Score: -593.12	SE Score: 251.99
+Long Eval: Median Score: 555.54
+300
+Episode 439	Best Average Score: -110.73
+Episode 439	All Average Score: -61.50	All SE Score: 113.59
+Long Eval: Average Score: -92.50	SE Score: 157.28
+Long Eval: Median Score: 542.96
+300
+Episode 440	Best Average Score: -149.70
+Episode 440	All Average Score: -1161.64	All SE Score: 614.87
+Long Eval: Average Score: -184.38	SE Score: 188.73
+Long Eval: Median Score: 557.56
+300
+Episode 441	Best Average Score: -186.76
+Episode 441	All Average Score: 116.46	All SE Score: 92.54
+Long Eval: Average Score: -439.70	SE Score: 235.43
+Long Eval: Median Score: 544.15
+300
+Episode 442	Best Average Score: -216.90
+Episode 442	All Average Score: -366.94	All SE Score: 176.05
+Long Eval: Average Score: -359.67	SE Score: 217.36
+Long Eval: Median Score: 562.08
+300
+Episode 443	Best Average Score: -272.96
+Episode 443	All Average Score: -125.81	All SE Score: 111.66
+Long Eval: Average Score: -44.71	SE Score: 147.79
+Long Eval: Median Score: 546.95
+300
+Episode 444	Best Average Score: -278.79
+Episode 444	All Average Score: -187.95	All SE Score: 154.22
+Long Eval: Average Score: -224.95	SE Score: 194.94
+Long Eval: Median Score: 551.11
+300
+Episode 445	Best Average Score: -299.44
+Episode 445	All Average Score: -158.91	All SE Score: 137.54
+Long Eval: Average Score: 5.52	SE Score: 149.09
+Long Eval: Median Score: 557.75
+300
+Episode 446	Best Average Score: -303.04
+Episode 446	All Average Score: 127.08	All SE Score: 97.37
+Long Eval: Average Score: -589.95	SE Score: 218.30
+Long Eval: Median Score: 554.87
+300
+Episode 447	Best Average Score: -327.14
+Episode 447	All Average Score: -535.86	All SE Score: 252.06
+Long Eval: Average Score: -490.99	SE Score: 219.86
+Long Eval: Median Score: 543.24
+300
+Episode 448	Best Average Score: -301.45
+Episode 448	All Average Score: -541.64	All SE Score: 180.17
+Long Eval: Average Score: -207.79	SE Score: 206.08
+Long Eval: Median Score: 560.41
+300
+Episode 449	Best Average Score: -262.91
+Episode 449	All Average Score: -33.39	All SE Score: 100.19
+Long Eval: Average Score: -442.64	SE Score: 231.46
+Long Eval: Median Score: 553.64
+300
+Episode 450	Best Average Score: -297.93
+Episode 450	All Average Score: -193.64	All SE Score: 122.18
+Long Eval: Average Score: -196.51	SE Score: 180.01
+Long Eval: Median Score: 556.98
+300
+Episode 451	Best Average Score: -299.14
+Episode 451	All Average Score: -209.13	All SE Score: 163.11
+Long Eval: Average Score: -421.78	SE Score: 203.37
+Long Eval: Median Score: 536.70
+300
+Episode 452	Best Average Score: -297.35
+Episode 452	All Average Score: -344.61	All SE Score: 142.38
+Long Eval: Average Score: -231.38	SE Score: 196.16
+Long Eval: Median Score: 559.68
+300
+Episode 453	Best Average Score: -284.52
+Episode 453	All Average Score: -161.67	All SE Score: 161.24
+Long Eval: Average Score: -559.14	SE Score: 265.64
+Long Eval: Median Score: 542.39
+300
+Episode 454	Best Average Score: -335.96
+Episode 454	All Average Score: -136.34	All SE Score: 128.76
+Long Eval: Average Score: -645.25	SE Score: 297.69
+Long Eval: Median Score: 561.21
+300
+Episode 455	Best Average Score: -377.99
+Episode 455	All Average Score: -236.91	All SE Score: 183.10
+Long Eval: Average Score: -76.73	SE Score: 188.51
+Long Eval: Median Score: 548.47
+300
+Episode 456	Best Average Score: -386.22
+Episode 456	All Average Score: -262.18	All SE Score: 152.70
+Long Eval: Average Score: -24.34	SE Score: 181.76
+Long Eval: Median Score: 546.51
+300
+Episode 457	Best Average Score: -329.65
+Episode 457	All Average Score: -548.56	All SE Score: 196.25
+Long Eval: Average Score: -133.91	SE Score: 189.57
+Long Eval: Median Score: 550.04
+300
+Episode 458	Best Average Score: -293.95
+Episode 458	All Average Score: -164.31	All SE Score: 214.12
+Long Eval: Average Score: -306.84	SE Score: 209.52
+Long Eval: Median Score: 540.79
+300
+Episode 459	Best Average Score: -303.85
+Episode 459	All Average Score: -261.45	All SE Score: 192.99
+Long Eval: Average Score: -38.14	SE Score: 159.31
+Long Eval: Median Score: 548.36
+300
+Episode 460	Best Average Score: -263.40
+Episode 460	All Average Score: -30.05	All SE Score: 103.75
+Long Eval: Average Score: -141.70	SE Score: 205.41
+Long Eval: Median Score: 544.01
+300
+Episode 461	Best Average Score: -257.92
+Episode 461	All Average Score: -59.60	All SE Score: 108.04
+Long Eval: Average Score: 0.70	SE Score: 151.87
+Long Eval: Median Score: 552.74
+300
+Episode 462	Best Average Score: -215.67
+Episode 462	All Average Score: -113.13	All SE Score: 137.80
+Long Eval: Average Score: -16.43	SE Score: 129.71
+Long Eval: Median Score: 554.21
+300
+Episode 463	Best Average Score: -194.18
+Episode 463	All Average Score: -240.74	All SE Score: 148.39
+Long Eval: Average Score: -205.53	SE Score: 201.55
+Long Eval: Median Score: 563.07
+300
+Episode 464	Best Average Score: -158.82
+Episode 464	All Average Score: -598.57	All SE Score: 211.36
+Long Eval: Average Score: -325.30	SE Score: 227.21
+Long Eval: Median Score: 550.01
+300
+Episode 465	Best Average Score: -126.82
+Episode 465	All Average Score: -79.64	All SE Score: 135.92
+Long Eval: Average Score: -746.13	SE Score: 277.61
+Long Eval: Median Score: 540.17
+300
+Episode 466	Best Average Score: -193.76
+Episode 466	All Average Score: -388.65	All SE Score: 191.13
+Long Eval: Average Score: -441.23	SE Score: 232.88
+Long Eval: Median Score: 536.00
+300
+Episode 467	Best Average Score: -235.45
+Episode 467	All Average Score: -647.12	All SE Score: 191.98
+Long Eval: Average Score: 30.54	SE Score: 139.26
+Long Eval: Median Score: 546.74
+300
+Episode 468	Best Average Score: -219.01
+Episode 468	All Average Score: -53.53	All SE Score: 109.95
+Long Eval: Average Score: -296.08	SE Score: 183.06
+Long Eval: Median Score: 549.09
+300
+Episode 469	Best Average Score: -217.93
+Episode 469	All Average Score: -170.62	All SE Score: 147.14
+Long Eval: Average Score: -78.88	SE Score: 155.29
+Long Eval: Median Score: 537.25
+300
+Episode 470	Best Average Score: -222.00
+Episode 470	All Average Score: -268.56	All SE Score: 148.40
+Long Eval: Average Score: 111.49	SE Score: 130.94
+Long Eval: Median Score: 553.03
+300
+Episode 471	Best Average Score: -196.68
+Episode 471	All Average Score: 27.26	All SE Score: 103.44
+Long Eval: Average Score: 225.25	SE Score: 124.66
+Long Eval: Median Score: 544.00
+300
+Episode 472	Best Average Score: -174.23
+Episode 472	All Average Score: -317.29	All SE Score: 170.73
+Long Eval: Average Score: -80.30	SE Score: 146.60
+Long Eval: Median Score: 543.51
+300
+Episode 473	Best Average Score: -180.62
+Episode 473	All Average Score: -68.05	All SE Score: 151.72
+Long Eval: Average Score: 197.97	SE Score: 96.65
+Long Eval: Median Score: 549.83
+300
+Episode 474	Best Average Score: -140.27
+Episode 474	All Average Score: -97.67	All SE Score: 104.26
+Long Eval: Average Score: -399.18	SE Score: 212.31
+Long Eval: Median Score: 550.65
+300
+Episode 475	Best Average Score: -147.65
+Episode 475	All Average Score: -93.71	All SE Score: 178.74
+Long Eval: Average Score: 112.01	SE Score: 150.04
+Long Eval: Median Score: 543.92
+300
+Episode 476	Best Average Score: -61.84
+Episode 476	All Average Score: -64.99	All SE Score: 150.48
+Long Eval: Average Score: -18.37	SE Score: 146.80
+Long Eval: Median Score: 547.35
+300
+Episode 477	Best Average Score: -19.55
+Episode 477	All Average Score: -48.24	All SE Score: 101.66
+Long Eval: Average Score: -299.91	SE Score: 217.08
+Long Eval: Median Score: 551.84
+300
+Episode 478	Best Average Score: -52.60
+Episode 478	All Average Score: -402.28	All SE Score: 183.59
+Long Eval: Average Score: -424.83	SE Score: 201.49
+Long Eval: Median Score: 550.90
+300
+Episode 479	Best Average Score: -65.47
+Episode 479	All Average Score: -283.99	All SE Score: 178.40
+Long Eval: Average Score: 93.94	SE Score: 138.64
+Long Eval: Median Score: 558.26
+300
+Episode 480	Best Average Score: -48.19
+Episode 480	All Average Score: -98.84	All SE Score: 127.37
+Long Eval: Average Score: -50.76	SE Score: 152.86
+Long Eval: Median Score: 546.50
+300
+Episode 481	Best Average Score: -64.42
+Episode 481	All Average Score: -313.66	All SE Score: 162.82
+Long Eval: Average Score: -351.20	SE Score: 240.88
+Long Eval: Median Score: 544.85
+300
+Episode 482	Best Average Score: -122.06
+Episode 482	All Average Score: -73.67	All SE Score: 112.01
+Long Eval: Average Score: -240.44	SE Score: 192.38
+Long Eval: Median Score: 553.68
+300
+Episode 483	Best Average Score: -138.08
+Episode 483	All Average Score: -348.54	All SE Score: 224.17
+Long Eval: Average Score: -210.67	SE Score: 178.91
+Long Eval: Median Score: 564.04
+300
+Episode 484	Best Average Score: -178.94
+Episode 484	All Average Score: -370.94	All SE Score: 152.30
+Long Eval: Average Score: -107.75	SE Score: 185.35
+Long Eval: Median Score: 553.10
+300
+Episode 485	Best Average Score: -149.80
+Episode 485	All Average Score: -189.26	All SE Score: 152.61
+Long Eval: Average Score: -200.21	SE Score: 177.89
+Long Eval: Median Score: 563.54
+300
+Episode 486	Best Average Score: -181.02
+Episode 486	All Average Score: -96.08	All SE Score: 118.97
+Long Eval: Average Score: -128.73	SE Score: 160.07
+Long Eval: Median Score: 555.23
+300
+Episode 487	Best Average Score: -192.06
+Episode 487	All Average Score: -339.21	All SE Score: 198.58
+Long Eval: Average Score: -274.06	SE Score: 181.07
+Long Eval: Median Score: 553.17
+300
+Episode 488	Best Average Score: -189.47
+Episode 488	All Average Score: -266.62	All SE Score: 194.89
+Long Eval: Average Score: -109.45	SE Score: 186.36
+Long Eval: Median Score: 564.96
+300
+Episode 489	Best Average Score: -157.93
+Episode 489	All Average Score: -546.52	All SE Score: 205.01
+Long Eval: Average Score: -67.60	SE Score: 179.48
+Long Eval: Median Score: 571.67
+300
+Episode 490	Best Average Score: -174.09
+Episode 490	All Average Score: -752.10	All SE Score: 346.20
+Long Eval: Average Score: -121.33	SE Score: 175.98
+Long Eval: Median Score: 560.43
+300
+Episode 491	Best Average Score: -181.14
+Episode 491	All Average Score: -546.40	All SE Score: 203.61
+Long Eval: Average Score: -384.46	SE Score: 218.98
+Long Eval: Median Score: 536.67
+300
+Episode 492	Best Average Score: -184.47
+Episode 492	All Average Score: -445.34	All SE Score: 222.81
+Long Eval: Average Score: -237.74	SE Score: 170.11
+Long Eval: Median Score: 548.85
+300
+Episode 493	Best Average Score: -184.20
+Episode 493	All Average Score: -50.46	All SE Score: 101.54
+Long Eval: Average Score: -450.89	SE Score: 236.87
+Long Eval: Median Score: 551.23
+300
+Episode 494	Best Average Score: -208.22
+Episode 494	All Average Score: -1163.25	All SE Score: 413.40
+Long Eval: Average Score: -110.87	SE Score: 166.90
+Long Eval: Median Score: 548.38
+300
+Episode 495	Best Average Score: -208.53
+Episode 495	All Average Score: -593.93	All SE Score: 227.21
+Long Eval: Average Score: 207.50	SE Score: 103.32
+Long Eval: Median Score: 569.39
+300
+Episode 496	Best Average Score: -167.76
+Episode 496	All Average Score: -2008.25	All SE Score: 679.13
+Long Eval: Average Score: -81.27	SE Score: 193.13
+Long Eval: Median Score: 566.10
+300
+Episode 497	Best Average Score: -163.02
+Episode 497	All Average Score: -2706.53	All SE Score: 994.70
+Long Eval: Average Score: -137.69	SE Score: 208.27
+Long Eval: Median Score: 573.05
+300
+Episode 498	Best Average Score: -149.38
+Episode 498	All Average Score: -1757.67	All SE Score: 1028.82
+Long Eval: Average Score: -348.48	SE Score: 241.66
+Long Eval: Median Score: 574.65
+300
+Episode 499	Best Average Score: -173.28
+Episode 499	All Average Score: -2538.72	All SE Score: 876.41
+300
+513.5889621487061
+300
+567.9051972205552
+300
+408.9372999177892
+300
+555.010088751788
+300
+490.4143768105427
+300
+664.4093879062567
+300
+578.9784648936039
+300
+606.2950473900336
+300
+578.6691197729343
+300
+739.9320257264268
+300
+537.7579510288333
+300
+453.39725004763727
+300
+474.49280463292905
+300
+652.3376372941887
+300
+507.9290843530822
+300
+478.80414463915133
+300
+-1921.2098218614733
+300
+662.8560986991179
+300
+487.1348394155519
+300
+528.0128166729224
+300
+480.4620522064022
+300
+604.374371445864
+300
+522.4434927051667
+300
+655.8809209815365
+300
+533.1956664357288
+300
+418.75583251843693
+300
+691.923024189926
+300
+571.8602258030068
+300
+579.51639280231
+300
+670.1725681295818
+300
+495.58941403531503
+300
+544.7189931396836
+300
+441.0585807947163
+300
+697.4627630074913
+300
+619.3811626330687
+300
+665.1754728414503
+300
+566.8568324947494
+300
+753.4964233043579
+300
+613.4885052084019
+300
+754.8531474495608
+300
+729.0149146459457
+300
+627.1900494059714
+300
+531.3820561370648
+300
+617.7285222309982
+300
+430.88917920276305
+300
+636.0152506576555
+300
+627.5194227181275
+300
+420.04977070891283
+300
+677.1664189207398
+300
+546.1679456240344
+300
+453.3704589839356
+300
+699.7334868764383
+300
+476.1621117640749
+300
+607.8815445560807
+300
+538.2643476177713
+300
+706.3689917280782
+300
+600.5434442946955
+300
+465.48613489987855
+300
+622.3593135726662
+300
+619.0037148517574
+300
+408.3633543697873
+300
+577.5131211630834
+300
+585.042372920919
+300
+590.2123744557491
+300
+-13121.076818971702
+300
+667.4380944259724
+300
+577.7465931011766
+300
+624.60142515087
+300
+-8736.259867902027
+300
+542.6478448229293
+300
+643.5572606018015
+300
+507.2664153280456
+300
+644.945048254976
+300
+483.68164399803726
+300
+424.62645776325235
+300
+527.7023712924779
+300
+482.4596680980449
+300
+705.8799472069403
+300
+720.4199537817186
+300
+435.27787705276904
+300
+527.1529206142106
+300
+497.60941325413125
+300
+441.16505120461335
+300
+561.4785503353382
+300
+-695.5293854758067
+300
+678.6706796759053
+300
+656.3132711266256
+300
+566.0421556954667
+300
+576.9876023925693
+300
+480.7653872226913
+300
+440.377032908215
+300
+509.2590105593888
+300
+-2691.0768766948404
+300
+668.8454510717103
+300
+546.6542617322991
+300
+569.3301832408418
+300
+431.2717200782368
+300
+-16082.997638779376
+300
+467.2073146566838
+300
+578.5795921690258
+300
+701.2454161715534
+300
+610.0567419632378
+300
+509.53699686712514
+300
+576.3878644309056
+300
+490.5311138212465
+300
+-2666.3728833875557
+300
+525.618355598534
+300
+416.81055360761286
+300
+678.5353720751227
+300
+660.4471002777526
+300
+630.6429517296783
+300
+-737.4416450410351
+300
+573.7105836112752
+300
+568.2459703372482
+300
+626.2111264252032
+300
+564.0930910973364
+300
+447.2281458605223
+300
+483.4699052462832
+300
+662.2121919941338
+300
+377.77674109756776
+300
+556.8190589988401
+300
+633.7457900041699
+300
+-14275.01799370273
+300
+724.0345207954143
+300
+544.092754694412
+300
+-3210.722441666076
+300
+584.8766327980345
+300
+465.54440570394064
+300
+647.8551930547604
+300
+614.1220437627069
+300
+517.8468289682943
+300
+619.9746227045473
+300
+333.91099940143727
+300
+-5993.628804411043
+300
+585.9580998780181
+300
+585.7135198978384
+300
+-1235.938995186647
+300
+671.032609010452
+300
+475.36671138615833
+300
+553.8975536315072
+300
+449.52250259428126
+300
+470.71329554892657
+300
+650.3128513819529
+300
+592.091236475048
+300
+573.378851636821
+300
+508.5654860573823
+300
+423.71920857284965
+300
+591.2164730473996
+300
+595.4104425556765
+300
+619.6357200449664
+300
+397.19697942967787
+300
+542.075956658391
+300
+635.7095415710108
+300
+550.4195224417185
+300
+-565.599434798819
+300
+486.2016420780411
+300
+-6102.44873415986
+300
+569.9441230408411
+300
+621.057570188977
+300
+455.3565429990817
+300
+639.5456567972676
+300
+549.9823221142148
+300
+-6166.4961960831915
+300
+518.9247727969266
+300
+540.542456541754
+300
+485.79783826892293
+300
+525.1752180804896
+300
+650.0644735857834
+300
+456.5373077097208
+300
+742.2426140047551
+300
+420.9967182364535
+300
+658.1120511119587
+300
+413.25849799422
+300
+617.9421049258647
+300
+-16944.059247301706
+300
+602.5109026286005
+300
+595.926259912188
+300
+685.0649081991885
+300
+627.2415989784564
+300
+588.4638236867688
+300
+749.7612260978535
+300
+420.4893891773454
+300
+488.0124823016949
+300
+512.0311822599502
+300
+469.4375583768225
+300
+758.0941670093391
+300
+446.21324592723875
+300
+467.3112499272461
+300
+670.9961805730572
+300
+694.2777988276505
+300
+608.7482514145601
+300
+-7908.021372643793
+300
+607.7854756147907
+300
+581.8521445879637
+300
+609.5953807598617
+300
+591.7840454152672
+300
+595.5869977036385
+300
+574.2088496771983
+300
+596.11309427955
+300
+383.84781312779796
+300
+698.8839761914842
+300
+-17293.61910267464
+300
+497.2068835143666
+300
+517.0887510911446
+300
+500.9178221066009
+300
+752.3548814140955
+300
+431.3720260646022
+300
+650.3189093917504
+300
+-4196.088601318911
+300
+-3696.832738693646
+300
+632.2314737815125
+300
+-22768.368342932896
+300
+596.0575536161408
+300
+476.47527073331617
+300
+514.0863622096749
+300
+522.41415275897
+300
+711.8726335894825
+300
+537.0070085545949
+300
+590.6503760999666
+300
+505.67818372065574
+300
+599.3119510645062
+300
+541.0588738863682
+300
+657.1192222990171
+300
+724.2002174959451
+300
+-35981.75965571635
+300
+746.5500144030061
+300
+661.7018007378321
+300
+625.7315150401994
+300
+605.1017819478378
+300
+509.80057636432633
+300
+509.084687403703
+300
+573.9720523717539
+300
+664.4048818105152
+300
+733.971268479168
+300
+521.4015932475816
+300
+610.3488036699673
+300
+593.5717988825861
+300
+-78.00521209951671
+300
+547.7308337769489
+300
+618.947225329635
+300
+595.1109981444472
+300
+630.5282928532289
+300
+644.2589461929529
+300
+589.2726024068955
+300
+675.5145927641142
+300
+474.50177422250374
+300
+579.6039663414278
+300
+670.9961977976693
+300
+705.346904096239
+300
+665.5650218674167
+300
+617.8057802084978
+300
+430.6834785824736
+300
+568.0638796455296
+300
+575.5021488115217
+300
+406.80304821655443
+300
+560.7133104369743
+300
+418.037528874081
+300
+502.8353254811398
+300
+556.0889349317611
+300
+648.6249339485227
+300
+582.1625390803206
+300
+373.3892355570486
+300
+627.6223794419942
+300
+438.2492607821541
+300
+487.8437264206502
+300
+528.3628106980447
+300
+470.6011239917474
+300
+597.0728874640612
+300
+433.2940389567641
+300
+-12137.544713667021
+300
+546.7193000084703
+300
+622.4990539845851
+300
+565.4362747292296
+300
+302.29838236168524
+300
+679.6713581704918
+300
+662.87032862237
+300
+641.9337018530045
+300
+686.9975871784029
+300
+371.680860264115
+300
+607.3054668281306
+300
+578.0297639484096
+300
+531.4740106405011
+300
+524.3452405159043
+300
+407.33851633592263
+300
+485.4220316245099
+300
+740.813733504239
+300
+542.9738826091967
+300
+556.6740632971315
+300
+601.1262142910706
+300
+656.5527155156763
+300
+476.5548166181476
+300
+564.0861020547223
+300
+662.4997893821704
+300
+704.8870209779568
+300
+552.4397538086296
+300
+538.2642661909626
+300
+527.5605772070134
+300
+628.0024328240195
+300
+-1160.0711846685
+300
+371.1457155543735
+Average Reward: -167.8467706841365
+SE Reward: 199.37269992844975

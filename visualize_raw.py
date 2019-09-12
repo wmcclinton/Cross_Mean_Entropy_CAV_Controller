@@ -9,13 +9,14 @@ def moving_average(interval, window_size):
 
 window_size = 1
 
-c_data = numpy.genfromtxt("rew_cacc_1.csv", delimiter=",")
-data = numpy.genfromtxt("rew_ours_1.csv", delimiter=",")
+#c_data = numpy.genfromtxt("rew_cacc_1.csv", delimiter=",")
+#data = numpy.genfromtxt("rew_ours_1.csv", delimiter=",")
 #h_data = numpy.genfromtxt("rew_human.csv", delimiter=",")
 
 #file_list = [["window_1_run.txt","r"],["window_5_run.txt","g"],["window_10_run.txt","b"]]
 
-file_list = [["window_5_run.txt","g"],["cacc_start.txt","b"]]
+#file_list = [["window_5_run.txt","g"],["cacc_start.txt","b"]]
+file_list = [["output_run.log","g"]]
 
 for file_name in file_list:
 
@@ -28,8 +29,9 @@ for file_name in file_list:
 
         for line in contents.split("\n"):
                 if "Long Eval: Average Score:" in line:
-                        train_data.append(float(line.replace("Long Eval: Average Score: ","").split(" SE Score: ")[0].replace(" ","")))
-                        train_data_se.append(float(line.replace("Long Eval: Average Score: ","").split(" SE Score: ")[1].replace(" ","")))
+                        print(line)
+                        train_data.append(float(line.replace("Long Eval: Average Score: ","").split("\tSE Score: ")[0].replace(" ","")))
+                        train_data_se.append(float(line.replace("Long Eval: Average Score: ","").split("\tSE Score: ")[1].replace(" ","")))
 
         m_train_data = []
 
@@ -37,18 +39,18 @@ for file_name in file_list:
         m_f=open(file_name[0],"r")
         m_contents = m_f.read()
 
-        for line in m_contents.split("\n"):
-                if "Long Eval: Median Score:" in line:
-                        m_train_data.append(float(line.replace("Long Eval: Median Score:","").replace(" ","")))
+        #for line in m_contents.split("\n"):
+                #if "Long Eval: Median Score:" in line:
+                        #m_train_data.append(float(line.replace("Long Eval: Median Score:","").replace(" ","")))
 
-        #plt.plot(moving_average(train_data,window_size)[window_size:-window_size] * 55,file_name[1])
-        plt.plot(moving_average(m_train_data,window_size)[window_size:-window_size] * 55,color=file_name[1],linestyle="--")
+        plt.plot(moving_average(train_data,window_size)[window_size:-window_size],file_name[1])
+        #plt.plot(moving_average(m_train_data,window_size)[window_size:-window_size] * 55,color=file_name[1],linestyle="--")
 
 # Compare with Human
 
 plt.title("Learning Curve")
-#plt.axhline(y=200, color='b', linestyle='-')
-#plt.axhline(y=-126, color='r', linestyle='-')
+plt.axhline(y=-25000, color='b', linestyle='-')
+plt.axhline(y=-30000, color='r', linestyle='-')
 #plt.plot(moving_average(c_data,window_size)[window_size:-window_size], color='b')
 #plt.plot(moving_average(data,window_size)[window_size:-window_size],color="r")
 #plt.plot(moving_average(c_data,window_size)[window_size:-window_size][:len(train_data)], color='b')

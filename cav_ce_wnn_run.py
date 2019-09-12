@@ -12,7 +12,7 @@ from collections import deque
 
 ##### Controller HYPERPARAMETERS FOR TUNING
 
-start_from_init = True
+start_from_init = False
 num_leading_vehicle = 3
 num_following_vehicle = 3
 
@@ -140,7 +140,7 @@ class Agent(nn.Module):
 
 
 def cem(agent: Agent,
-        n_iters: int = 150,
+        n_iters: int = 500,
         max_t: int = 1000,
         gamma: float = 1,
         pop_size: int = 50,
@@ -227,7 +227,7 @@ if __name__ == "__main__":
 
         state = env.reset()
         # For Graph
-        env.verbose = True
+        #env.verbose = True
         start_disp = env.center_state(env.current_states[0])
         #
 
@@ -235,7 +235,7 @@ if __name__ == "__main__":
         t = 0
         while True:
             with torch.no_grad():
-                env.render()
+                #env.render()
                 window.appendleft(torch.Tensor(state))
                 action_probs = agent(deque2state(env)).detach().numpy()
                 action = np.argmax(action_probs)

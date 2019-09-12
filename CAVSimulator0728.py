@@ -13,7 +13,7 @@ rew_scale_val = -10
 
 print("#"*30)
 print("Environment Hyperparameters")
-print()
+print(rew_scale_val)
 print("#"*30)
 #
 
@@ -267,15 +267,16 @@ class Simulator():
         if gap < -1e-10:
             if(self.verbose):
                 print("Crashed")
-            print("%")
-            print(s)
+            #print("%")
+            #print(s)
             #quit()
             self.is_crashed = True
-            #rew = rew + -100000
+            rew = rew + -100000
 
         if gap > large_gap_threshold: ### change penalty: continuous
-            rew = rew + pn_safe * (gap-large_gap_threshold) ** pn_safe_power
-            print("BADBADBAD")
+            rew = rew + -100000
+            #rew = rew + pn_safe * (gap-large_gap_threshold) ** pn_safe_power
+            #print("BADBADBAD")
             #quit()
             if(self.verbose):
                 print("Warning Gap Too Large")
@@ -484,18 +485,18 @@ class Simulator():
         sum_car_disp = sum([(1**i)*disps[self.num_leading_cars:][i] for i in range(self.num_vehicles - self.num_leading_cars)])
 
         reward = sum_car_disp - self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size))
-        if((reward + sum(self.neg_rewards))/self.rew_normalize < -100):
-            print("$$$$")
-            print(sum_car_disp)
-            print(sum_squared_acc)
-            print(self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size)))
-            print(self.LAMBDA * ((self.num_vehicles - self.num_leading_cars)*size)/(sum_squared_acc + self.EPSILON) )
-            print(self.neg_rewards)
-            print(sum(self.neg_rewards))
-            print(reward)
-            print((reward + sum(self.neg_rewards)))
-            print((reward + sum(self.neg_rewards))/self.rew_normalize)
-            print("$$$$")
+        #if((reward + sum(self.neg_rewards))/self.rew_normalize < -100):
+            #print("$$$$")
+            #print(sum_car_disp)
+            #print(sum_squared_acc)
+            #print(self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size)))
+            #print(self.LAMBDA * ((self.num_vehicles - self.num_leading_cars)*size)/(sum_squared_acc + self.EPSILON) )
+            #print(self.neg_rewards)
+            #print(sum(self.neg_rewards))
+            #print(reward)
+            #print((reward + sum(self.neg_rewards)))
+            #print((reward + sum(self.neg_rewards))/self.rew_normalize)
+            #print("$$$$")
             #print(accels)
             #input()
             # quit()
