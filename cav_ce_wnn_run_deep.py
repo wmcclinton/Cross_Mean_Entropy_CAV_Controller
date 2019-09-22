@@ -6,31 +6,22 @@ from collections import deque
 import torch
 import torch.nn as nn
 
-import random
-
 from CAVSimulator0728 import Simulator
 
 from collections import deque
 
-import torch.optim as optim
-
-import torch.nn.functional as F
-
 ##### Controller HYPERPARAMETERS FOR TUNING
 
-start_from_init = True
+start_from_init = False
 num_leading_vehicle = 3
-num_following_vehicle = 3
+num_following_vehicle = 0
+num_eps = 300
 
 
 print("Controller Hyperparameters")
-print(start_from_init, num_leading_vehicle, num_following_vehicle)
+print()
 print("#"*30)
 ######
-
-def moving_average(interval, window_size):
-    window = np.ones(int(window_size))/float(window_size)
-    return np.convolve(interval, window, 'same')
 
 window_size = 1
 window = deque(maxlen=window_size)
@@ -47,18 +38,6 @@ def deque2state(env):
             window[i] = torch.Tensor(np.array(env.center_state(env.get_state(env.t_start - d_t))))
             d_t = d_t + 1
         state = torch.cat([state,window[i]])
-    return state
-
-def win_deque2state(env,tmp_window):
-    state = tmp_window[0]
-    d_t = 1
-    for i in range(1, window_size):
-        if tmp_window[i] is None:
-            # on start get data directly
-            #window[i] = torch.zeros(len(window[0]))
-            tmp_window[i] = torch.Tensor(np.array(env.center_state(env.get_state(env.t_start - d_t))))
-            d_t = d_t + 1
-        state = torch.cat([state,tmp_window[i]])
     return state
 
 from copy import deepcopy
@@ -99,16 +78,18 @@ class Agent(nn.Module):
         self.action_size = env.action_space.n
 
         self.fc1 = nn.Linear(self.space_size, self.hidden_size)
+        self.fc1_2 = nn.Linear(self.hidden_size, self.hidden_size)
+        self.fc1_3 = nn.Linear(self.hidden_size, self.hidden_size)
         self.fc2 = nn.Linear(self.hidden_size, self.action_size)
 
         self.eval_long = False
-        # create your optimizer
-
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         out = torch.relu(self.fc1(x))
+        out = torch.relu(self.fc1_2(out))
+        out = torch.relu(self.fc1_3(out))
         out = torch.tanh(self.fc2(out)) # try removing
-        out = out
+        out = torch.softmax(out, dim=0)
         return out
 
     def set_weights(self, weights: np.ndarray) -> None:
@@ -117,18 +98,36 @@ class Agent(nn.Module):
         a = self.action_size
         # separate the weights for each layer
         fc1_end = (s * h) + h
+        fc1_2_end = fc1_end + (h * h) + h
+        fc1_3_end = fc1_2_end + (h * h) + h
+
         fc1_W = torch.from_numpy(weights[:s * h].reshape(s, h))
         fc1_b = torch.from_numpy(weights[s * h:fc1_end])
-        fc2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*a)].reshape(h, a))
-        fc2_b = torch.from_numpy(weights[fc1_end+(h*a):])
+
+        fc1_2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*h)].reshape(h, h))
+        fc1_2_b = torch.from_numpy(weights[fc1_end + (h*h):fc1_2_end])
+
+        fc1_3_W = torch.from_numpy(weights[fc1_2_end:fc1_2_end+(h*h)].reshape(h, h))
+        fc1_3_b = torch.from_numpy(weights[fc1_2_end + (h*h):fc1_3_end])
+        
+        fc2_W = torch.from_numpy(weights[fc1_3_end:fc1_3_end+(h*a)].reshape(h, a))
+        fc2_b = torch.from_numpy(weights[fc1_3_end+(h*a):])
+
         # set the weights for each layer
         self.fc1.weight.data.copy_(fc1_W.view_as(self.fc1.weight.data))
         self.fc1.bias.data.copy_(fc1_b.view_as(self.fc1.bias.data))
+
+        self.fc1_2.weight.data.copy_(fc1_2_W.view_as(self.fc1_2.weight.data))
+        self.fc1_2.bias.data.copy_(fc1_2_b.view_as(self.fc1_2.bias.data))
+
+        self.fc1_3.weight.data.copy_(fc1_3_W.view_as(self.fc1_3.weight.data))
+        self.fc1_3.bias.data.copy_(fc1_3_b.view_as(self.fc1_3.bias.data))
+
         self.fc2.weight.data.copy_(fc2_W.view_as(self.fc2.weight.data))
         self.fc2.bias.data.copy_(fc2_b.view_as(self.fc2.bias.data))
 
     def get_weights_dim(self) -> int:
-        return (self.space_size + 1) * self.hidden_size + \
+        return (self.space_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + \
             (self.hidden_size + 1) * self.action_size
 
     def evaluate(self,
@@ -137,7 +136,7 @@ class Agent(nn.Module):
                  max_t: float = 5000) -> float:
         self.set_weights(weights)
         episode_return = 0.0
-        num_episodes = num_eps # WARNING need to be small but not too small
+        num_episodes = num_eps
         if self.eval_long:
             num_episodes = num_eps
         rewards = []
@@ -162,59 +161,85 @@ class Agent(nn.Module):
             print(len(rewards))
         return episode_return/num_episodes
 
-data_loss = []
-data_acc = []
-def mimic_optimize(env,agent,Replay_Buffer,buffer_size):
-    optimizer = optim.SGD(agent.parameters(), lr=0.01)
-    criterion = nn.MSELoss()
 
-    if buffer_size == None:
-        buffer_size = len(Replay_Buffer)
+def cem(agent: Agent,
+        n_iters: int = 500,
+        max_t: int = 1000,
+        gamma: float = 1,
+        pop_size: int = 50,
+        elite_frac: int = 0.2,
+        std: float = 0.5):
+    """
+    PyTorch implementation of the cross-entropy method.
+    Params
+    ======
+        n_iter: maximum number of training iterations
+        max_t: maximum number of timesteps per episode
+        gamma: discount rate
+        print_every: how often to print average score (over last 100 episodes)
+        pop_size: size of population at each iteration
+        elite_frac: percentage of top performers to use in update (0.2)
+        std: standard deviation of additive noise (0.5)
+    """
+    n_elite=int(pop_size * elite_frac)
+    scores_deque = deque(maxlen=10)
+    scores = []
+    best_weight = std * np.random.randn(agent.get_weights_dim())
+    elite_weights = [std * np.random.randn(agent.get_weights_dim()) for i in range(n_elite)]
 
-    for _ in range(1):
-        batch = random.sample(Replay_Buffer,buffer_size)
-        inp = torch.cat([win_deque2state(env,x[0]).reshape(1,-1) for x in batch],0)
-        target = torch.Tensor([[((x[1] - env.a_min) / (env.a_max - env.a_min)) *  (agent.action_size - 1)] for x in batch]).int().long()
-        t_onehot = torch.FloatTensor(len(batch), agent.action_size)
+    for i_iter in range(n_iters):
+        weights_pop = [best_weight +
+                       (std * np.random.randn(agent.get_weights_dim()))
+                       for i in range(pop_size - n_elite)] + elite_weights
 
-        # In your for loop
-        t_onehot.zero_()
-        t_onehot.scatter_(1, torch.clamp(target,0,14), 1)
+        rewards = np.array([agent.evaluate(weights, gamma, max_t)
+                            for weights in weights_pop])
+
+        elite_idxs = rewards.argsort()[-n_elite:]
+        elite_weights = [weights_pop[i] for i in elite_idxs]
+        best_weight = np.array(elite_weights).mean(axis=0)
+        
+        agent.eval_long = True
+        reward = agent.evaluate(best_weight, gamma=1.0)
+        agent.eval_long = False
+        scores_deque.append(reward)
+        scores.append(reward)
+
+        torch.save(agent.state_dict(), './cem_cartpole.pth') # Path to save model to
+
+        print('Episode {}\tBest Average Score: {:.2f}'.\
+              format(i_iter, np.mean(scores_deque)))
+        print('Episode {}\tAll Average Score: {:.2f}\tAll SE Score: {:.2f}'.\
+              format(i_iter, np.mean(rewards), np.std(rewards)/(len(rewards)**0.5)))
 
 
-        optimizer.zero_grad()   # zero the gradient buffers
-        output = agent(inp)
-
-        loss = criterion(output, t_onehot)
-        loss.backward()
-        optimizer.step()    # Does the update
-        print("Loss",loss)
-  
-        acc = (((torch.argmax(F.softmax(output), 1, keepdim=True)  == target).float().sum()).numpy()/ (len(target))) * 100
-        print("Accuracy",str(acc)+"%")
-        #print(random.sample([x[1] for x in batch],10))
-        data_loss.append(loss.detach().numpy())
-        data_acc.append(acc/100)
-
-    return loss.detach().numpy(), acc
+    return agent, scores
 
 if __name__ == "__main__":
+    # Variable to designate train or just load from path and test
+    train = True
+    #
     env = Simulator(num_leading_vehicle,num_following_vehicle)
 
     print('observation space:', env.observation_space)
     print('action space:', env.action_space)
 
     agent = Agent(env)
+    #
+    if start_from_init:
+        print("Started from CACC initialization")
+        agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
+    #
+    if train:
+        agent, scores = cem(agent)
 
     # evaluate
     # load the weights from file
     #agent.load_state_dict(torch.load('./cem_cartpole.pth'))
     #agent.load_state_dict(torch.load('./cem_cartpole_5.pth')) # Path to load model from
-    #agent.load_state_dict(torch.load('./cem_cartpole.pth'))
-    num_episodes = 1000
+    #agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
+    num_episodes = num_eps
     rewards = []
-
-    Replay_Buffer = deque(maxlen=10000)
 
     for i in range(num_episodes):
         #
@@ -235,19 +260,14 @@ if __name__ == "__main__":
             with torch.no_grad():
                 #env.render()
                 window.appendleft(torch.Tensor(state))
-                #action_probs = agent(deque2state(env)).detach().numpy()
-                #action = np.argmax(action_probs)
-                #a = (env.a_max - env.a_min)*((action)/(agent.action_size - 1)) + env.a_min
+                action_probs = agent(deque2state(env)).detach().numpy()
+                action = np.argmax(action_probs)
+                a = (env.a_max - env.a_min)*((action)/(agent.action_size - 1)) + env.a_min
                 #for i in range(agent.action_size):
                     #print((env.a_max - env.a_min)*((i)/(agent.action_size - 1)) + env.a_min)
                 #quit()
                 #print(a)
                 #input()
-
-                v, x, a = env.CACC(state,env.num_leading_cars)
-                Replay_Buffer.appendleft([window,a])
-                #print(v)
-
                 next_state, reward, done, _ = env.step(a)
                 # For Graph
                 add2loc_map(env)
@@ -256,37 +276,14 @@ if __name__ == "__main__":
                 t = t + 1
                 if done:
                     break
-        #print(t)
-        #print(reward)
+        print(t)
+        print(reward)
         rewards.append(reward)
-        if(len(Replay_Buffer) > 1024):
-            mimic_optimize(env,agent,Replay_Buffer,1024)
+        
 
-    print("DONE")
-    acc = 0
-    loss = 0
-    n = 0
-    while acc < 90 or loss > 0.02:
-        loss, acc = mimic_optimize(env,agent,Replay_Buffer,2048)
-        n = n + 1
-        print("Epoch",n)
-        print("Loss",loss," Accuracy",str(acc)+"%")
-        print()
-
-    torch.save(agent.state_dict(), './mimic_cav_' + str(int(acc)) + '_.pth') # Path to save model to
-
-window_size = 10
-
-plt.title("Learning Curve")
-plt.plot(moving_average(data_loss,window_size)[window_size:-window_size],"r")
-plt.plot(moving_average(data_acc,window_size)[window_size:-window_size],"g")
-plt.ylabel("Acc/Loss")
-plt.xlabel("Step")
-plt.show()
-
-quit()
 print("Average Reward:",np.mean(rewards))
 print("SE Reward:",np.std(rewards)/(len(rewards))**0.5)
+quit()
 #print(rewards)
 rewards = np.sort(rewards)
 plt.hist(rewards, bins='auto')

@@ -7,7 +7,7 @@ def moving_average(interval, window_size):
     window = numpy.ones(int(window_size))/float(window_size)
     return numpy.convolve(interval, window, 'same')
 
-window_size = 1
+window_size = 1 # Plot running average
 
 #c_data = numpy.genfromtxt("rew_cacc_1.csv", delimiter=",")
 #data = numpy.genfromtxt("rew_ours_1.csv", delimiter=",")
@@ -18,7 +18,7 @@ window_size = 1
 #file_list = [["window_5_run.txt","g"],["cacc_start.txt","b"]]
 
 # Filename
-file_list = [["output_run.log","g"]]
+file_list = [["output_run2.log","g"]]
 
 for file_name in file_list:
 

@@ -14,11 +14,17 @@ from collections import deque
 
 ################
 
-num_eps = 10
+num_leading_vehicle = 3
+num_following_vehicle = 0
+num_eps = 300
+window_size = 1 # Input 
 
+
+print("Controller Hyperparameters")
+print()
+print("#"*30)
 ##########
 
-window_size = 1
 window = deque(maxlen=window_size)
 for i in range(window_size):
     window.appendleft(None)
@@ -46,12 +52,16 @@ class Agent(nn.Module):
         self.action_size = env.action_space.n
 
         self.fc1 = nn.Linear(self.space_size, self.hidden_size)
+        self.fc1_2 = nn.Linear(self.hidden_size, self.hidden_size)
+        self.fc1_3 = nn.Linear(self.hidden_size, self.hidden_size)
         self.fc2 = nn.Linear(self.hidden_size, self.action_size)
 
         self.eval_long = False
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         out = torch.relu(self.fc1(x))
+        out = torch.relu(self.fc1_2(out))
+        out = torch.relu(self.fc1_3(out))
         out = torch.tanh(self.fc2(out)) # try removing
         out = torch.softmax(out, dim=0)
         return out
@@ -62,18 +72,36 @@ class Agent(nn.Module):
         a = self.action_size
         # separate the weights for each layer
         fc1_end = (s * h) + h
+        fc1_2_end = fc1_end + (h * h) + h
+        fc1_3_end = fc1_2_end + (h * h) + h
+
         fc1_W = torch.from_numpy(weights[:s * h].reshape(s, h))
         fc1_b = torch.from_numpy(weights[s * h:fc1_end])
-        fc2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*a)].reshape(h, a))
-        fc2_b = torch.from_numpy(weights[fc1_end+(h*a):])
+
+        fc1_2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*h)].reshape(h, h))
+        fc1_2_b = torch.from_numpy(weights[fc1_end + (h*h):fc1_2_end])
+
+        fc1_3_W = torch.from_numpy(weights[fc1_2_end:fc1_2_end+(h*h)].reshape(h, h))
+        fc1_3_b = torch.from_numpy(weights[fc1_2_end + (h*h):fc1_3_end])
+        
+        fc2_W = torch.from_numpy(weights[fc1_3_end:fc1_3_end+(h*a)].reshape(h, a))
+        fc2_b = torch.from_numpy(weights[fc1_3_end+(h*a):])
+
         # set the weights for each layer
         self.fc1.weight.data.copy_(fc1_W.view_as(self.fc1.weight.data))
         self.fc1.bias.data.copy_(fc1_b.view_as(self.fc1.bias.data))
+
+        self.fc1_2.weight.data.copy_(fc1_2_W.view_as(self.fc1_2.weight.data))
+        self.fc1_2.bias.data.copy_(fc1_2_b.view_as(self.fc1_2.bias.data))
+
+        self.fc1_3.weight.data.copy_(fc1_3_W.view_as(self.fc1_3.weight.data))
+        self.fc1_3.bias.data.copy_(fc1_3_b.view_as(self.fc1_3.bias.data))
+
         self.fc2.weight.data.copy_(fc2_W.view_as(self.fc2.weight.data))
         self.fc2.bias.data.copy_(fc2_b.view_as(self.fc2.bias.data))
 
     def get_weights_dim(self) -> int:
-        return (self.space_size + 1) * self.hidden_size + \
+        return (self.space_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + \
             (self.hidden_size + 1) * self.action_size
 
     def evaluate(self,
@@ -82,9 +110,9 @@ class Agent(nn.Module):
                  max_t: float = 5000) -> float:
         self.set_weights(weights)
         episode_return = 0.0
-        num_episodes = 10
+        num_episodes = num_eps
         if self.eval_long:
-            num_episodes =  1000
+            num_episodes = num_eps
         rewards = []
         for i in range(num_episodes):
             state = self.env.reset()
@@ -102,6 +130,8 @@ class Agent(nn.Module):
         if self.eval_long:
             print('Long Eval: Average Score: {:.2f}\tSE Score: {:.2f}'.\
                 format(np.mean(rewards), np.std(rewards)/(len(rewards)**0.5)))
+            print('Long Eval: Median Score: {:.2f}'.\
+                format(np.median(rewards)))
             print(len(rewards))
         return episode_return/num_episodes
 
@@ -129,7 +159,7 @@ def create_loc_map(env):
     plt.xlabel("Time")
     plt.show()
 
-env = Simulator(3,3)
+env = Simulator(num_leading_vehicle,num_following_vehicle)
 env.normalize = False
 env.verbose = True
 num_episodes = num_eps
@@ -312,28 +342,41 @@ print()
 print("OURS")
 print("Average Reward:",np.mean(rewards_ours))
 print("SE Reward:",np.std(rewards_ours)/(len(rewards_ours))**0.5)
+
+############
+# For normalization #
+avg = np.mean(rewards_human + rewards_CACC + rewards_ours)
+stdev = np.std(rewards_human + rewards_CACC + rewards_ours)
+
+norm_rewards_human = [(i - avg)/stdev for i in rewards_human]
+norm_rewards_CACC = [(i - avg)/stdev for i in rewards_CACC]
+norm_rewards_ours = [(i - avg)/stdev for i in rewards_ours]
+
+###########
+
+
 #print(np.sort(rewards_ours))
 #print(rewards)
 plt.title("Reward Histogram (100 Episodes)")
-plt.hist(rewards_human, bins='auto',color="b")
-plt.hist(rewards_CACC, bins='auto',color="r")
-plt.hist(rewards_ours, bins='auto',color="g")
+plt.hist(norm_rewards_human, bins='auto',color="b")
+plt.hist(norm_rewards_CACC, bins='auto',color="r")
+plt.hist(norm_rewards_ours, bins='auto',color="g")
 plt.xlabel("Reward")
 plt.ylabel("Number of Episodes")
 plt.show()
 
 plt.title("Controller Rewards (100 Episodes)")
-plt.plot(rewards_CACC,"r")
-plt.plot(rewards_human,"b")
-plt.plot(rewards_ours,"g")
+plt.plot(norm_rewards_CACC,"r")
+plt.plot(norm_rewards_human,"b")
+plt.plot(norm_rewards_ours,"g")
 plt.ylabel("Reward")
 plt.xlabel("Episode")
 plt.show()
 
 plt.title("Controller Rewards (100 Episodes)")
-plt.plot(rewards_CACC,"r")
+plt.plot(norm_rewards_CACC,"r")
 #plt.plot(rewards_human,"b")
-plt.plot(rewards_ours,"g")
+plt.plot(norm_rewards_ours,"g")
 plt.ylabel("Reward")
 plt.xlabel("Episode")
 plt.show()

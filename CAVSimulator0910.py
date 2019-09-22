@@ -251,11 +251,11 @@ class Simulator():
                 a_ = a_gap
             if a_<self.a_min or a_>self.a_max:
                 if(self.verbose):
-                    print(xl_3)
-                    print(x3)
-                    print(x_)
-                    print(v_)
-                    print(a_)
+                    #print(xl_3)
+                    #print(x3)
+                    #print(x_)
+                    #print(v_)
+                    #print(a_)
                     print("safety wrong acc")
                     # TODO
                     #quit()
@@ -507,18 +507,18 @@ class Simulator():
         sum_car_disp = sum([(1**i)*disps[self.num_leading_cars:][i] for i in range(self.num_vehicles - self.num_leading_cars)])
 
         reward = sum_car_disp - self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size))
-        if((reward + sum(self.neg_rewards))/self.rew_normalize < -100):
-            print("$$$$")
-            print(sum_car_disp)
-            print(sum_squared_acc)
-            print(self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size)))
-            print(self.LAMBDA * ((self.num_vehicles - self.num_leading_cars)*size)/(sum_squared_acc + self.EPSILON) )
-            print(self.neg_rewards)
-            print(sum(self.neg_rewards))
-            print(reward)
-            print((reward + sum(self.neg_rewards)))
-            print((reward + sum(self.neg_rewards))/self.rew_normalize)
-            print("$$$$")
+        #if((reward + sum(self.neg_rewards))/self.rew_normalize < -100):
+            #print("$$$$")
+            #print(sum_car_disp)
+            #print(sum_squared_acc)
+            #print(self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size)))
+            #print(self.LAMBDA * ((self.num_vehicles - self.num_leading_cars)*size)/(sum_squared_acc + self.EPSILON) )
+            #print(self.neg_rewards)
+            #print(sum(self.neg_rewards))
+            #print(reward)
+            #print((reward + sum(self.neg_rewards)))
+            #print((reward + sum(self.neg_rewards))/self.rew_normalize)
+            #print("$$$$")
             #print(accels)
             #input()
             # quit()
