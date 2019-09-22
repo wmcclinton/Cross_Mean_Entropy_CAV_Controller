@@ -1,4 +1,4 @@
-from CAVSimulator0728 import Simulator
+from CAVSimulator0910 import Simulator
 import numpy as np
 from copy import deepcopy
 import matplotlib.pyplot as plt
@@ -10,6 +10,13 @@ import torch
 import torch.nn as nn
 
 from collections import deque
+
+
+################
+
+num_eps = 10
+
+##########
 
 window_size = 1
 window = deque(maxlen=window_size)
@@ -125,7 +132,7 @@ def create_loc_map(env):
 env = Simulator(3,3)
 env.normalize = False
 env.verbose = True
-num_episodes = 100
+num_episodes = num_eps
 rewards = []
 
 for i in range(num_episodes):
@@ -184,7 +191,11 @@ agent = Agent(env)
 
 # evaluate
 # load the weights from file
+
+# Path to controller
 agent.load_state_dict(torch.load('./cem_cartpole.pth'))
+
+
 #agent.load_state_dict(torch.load('./cem_cartpole_5.pth')) # Path to load model from
 #agent.load_state_dict(torch.load('./cem_cartpole_learned.pth'))
 
@@ -208,7 +219,7 @@ for i in range(num_episodes):
             # For Graph
             add2loc_map(env)
             #
-            env.render()
+            #env.render()
             window.appendleft(torch.Tensor(state))
             action_probs = agent(deque2state(env)).detach().numpy()
             action = np.argmax(action_probs)

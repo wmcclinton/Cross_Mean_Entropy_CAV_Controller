@@ -1,0 +1,12 @@
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+##############################
+Environment Hyperparameters
+-10
+##############################
+Controller Hyperparameters
+
+##############################
+Initializing Environment...
+observation space: <CAVSimulator0728.observation_space object at 0x1083e5f60>
+action space: <CAVSimulator0728.action_space object at 0x10b26dba8>

@@ -14,7 +14,8 @@ from collections import deque
 
 start_from_init = False
 num_leading_vehicle = 3
-num_following_vehicle = 3
+num_following_vehicle = 0
+num_eps = 300
 
 
 print("Controller Hyperparameters")
@@ -215,7 +216,7 @@ if __name__ == "__main__":
     #agent.load_state_dict(torch.load('./cem_cartpole.pth'))
     #agent.load_state_dict(torch.load('./cem_cartpole_5.pth')) # Path to load model from
     #agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
-    num_episodes = 300
+    num_episodes = num_eps
     rewards = []
 
     for i in range(num_episodes):

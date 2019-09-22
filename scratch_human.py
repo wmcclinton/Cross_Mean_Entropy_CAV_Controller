@@ -1,4 +1,4 @@
-from CAVSimulator0728 import Simulator
+from CAVSimulator0910 import Simulator
 import numpy as np
 from copy import deepcopy
 import matplotlib.pyplot as plt
@@ -64,7 +64,7 @@ for i in range(num_episodes):
     reward = None
     while not done:
         #print(env.t)
-        #env.render()
+        env.render()
         # For graph
         add2loc_map(env)
         #print(s)

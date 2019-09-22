@@ -16,6 +16,8 @@ window_size = 1
 #file_list = [["window_1_run.txt","r"],["window_5_run.txt","g"],["window_10_run.txt","b"]]
 
 #file_list = [["window_5_run.txt","g"],["cacc_start.txt","b"]]
+
+# Filename
 file_list = [["output_run.log","g"]]
 
 for file_name in file_list:
@@ -49,6 +51,7 @@ for file_name in file_list:
 # Compare with Human
 
 plt.title("Learning Curve")
+# Human and CACC raw
 plt.axhline(y=-25000, color='b', linestyle='-')
 plt.axhline(y=-30000, color='r', linestyle='-')
 #plt.plot(moving_average(c_data,window_size)[window_size:-window_size], color='b')
