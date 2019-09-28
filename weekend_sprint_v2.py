@@ -49,7 +49,7 @@ class AtariProcessor(Processor):
 
     def process_state_batch(self, batch):
         processed_batch = batch.astype('float32') #/ 255.
-        return processed_batch.reshape([-1,48])
+        return processed_batch.reshape([-1,12])
 
     def process_reward(self, reward):
         #return np.clip(reward, -10., 1000.)
