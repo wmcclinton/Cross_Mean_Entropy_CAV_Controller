@@ -8,7 +8,7 @@ import torch.nn as nn
 
 import random
 
-from CAVSimulator0728 import Simulator
+from CAVSimulator0910 import Simulator
 
 from collections import deque
 
@@ -20,7 +20,7 @@ import torch.nn.functional as F
 
 start_from_init = True
 num_leading_vehicle = 3
-num_following_vehicle = 3
+num_following_vehicle = 0
 
 
 print("Controller Hyperparameters")
@@ -32,7 +32,7 @@ def moving_average(interval, window_size):
     window = np.ones(int(window_size))/float(window_size)
     return np.convolve(interval, window, 'same')
 
-window_size = 1
+window_size = 2
 window = deque(maxlen=window_size)
 for i in range(window_size):
     window.appendleft(None)
@@ -165,7 +165,7 @@ class Agent(nn.Module):
 data_loss = []
 data_acc = []
 def mimic_optimize(env,agent,Replay_Buffer,buffer_size):
-    optimizer = optim.SGD(agent.parameters(), lr=0.01)
+    optimizer = optim.SGD(agent.parameters(), lr=0.003)
     criterion = nn.MSELoss()
 
     if buffer_size == None:
@@ -243,8 +243,9 @@ if __name__ == "__main__":
                 #quit()
                 #print(a)
                 #input()
-
-                v, x, a = env.CACC(state,env.num_leading_cars)
+                
+                #v, x, a = env.CACC(state,env.num_leading_cars)
+                a = env.get_state(env.t_start+env.t)[3*num_leading_vehicle + 2]
                 Replay_Buffer.appendleft([window,a])
                 #print(v)
 
@@ -259,8 +260,8 @@ if __name__ == "__main__":
         #print(t)
         #print(reward)
         rewards.append(reward)
-        if(len(Replay_Buffer) > 1024):
-            mimic_optimize(env,agent,Replay_Buffer,1024)
+        if(len(Replay_Buffer) > 2048):
+            mimic_optimize(env,agent,Replay_Buffer,2048)
 
     print("DONE")
     acc = 0

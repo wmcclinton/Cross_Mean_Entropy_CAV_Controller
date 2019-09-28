@@ -1,4 +1,4 @@
-from CAVSimulator0910 import Simulator
+from CAVSimulator0910_old import Simulator
 import numpy as np
 from copy import deepcopy
 import matplotlib.pyplot as plt
@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 start_from_init = True
 num_leading_vehicle = 3
-num_following_vehicle = 3
+num_following_vehicle = 0
 num_eps = 100
 
 print("Controller Hyperparameters")
@@ -64,7 +64,7 @@ for i in range(num_episodes):
     reward = None
     while not done:
         #print(env.t)
-        env.render()
+        #env.render()
         # For graph
         add2loc_map(env)
         #print(s)

@@ -28,7 +28,7 @@ print("#"*30)
 
 ### update on 09/10:
 ### correct safety constraints: not just next step, but until the leading vehicle stops
-### simulate following IDM with initialized networkq
+### simulate following IDM with initialized networks
 ### rectifying for IDM/CACC?
 
 
@@ -37,20 +37,8 @@ data = loadmat('veh_combined.mat')['veh_combined']
 ### future improve: heterogeneous value for each vehicle from historical data
 
 a_min_hv = min([item for sublist in data[:,:,5] for item in sublist]) ### leading vehicle may decelerate at HV's minimum deceleration
-a_max_hv = max([item for sublist in data[:,:,5] for item in sublist])
 large_gap_threshold = (median([item for sublist in data[:,:,2] for item in sublist])+max([item for sublist in data[:,:,2] for item in sublist]))/2 #can we find the threshold satisfy 90% of distribution?
-v_min_hv = min([item for sublist in data[:,:,3] for item in sublist])
-v_max_hv = max([item for sublist in data[:,:,3] for item in sublist])
-#print(v_min_hv)
-#print(v_max_hv)
-#print(large_gap_threshold)
-#print(a_min_hv)
-#print(a_max_hv)
-#min_spacing = min(data[:,2,2]) #5.3< veh_l, no need to subtract veh_l
-#max_spacing = max([item for sublist in data[:,:,2] for item in sublist])
-#print(min_spacing)
-#print(max_spacing)
-#quit()
+#a_min_hv = -2
 
 class observation_space:
     def __init__(self, num_leading_cars, num_following_cars):
@@ -62,7 +50,7 @@ class observation_space:
 class action_space:
     def __init__(self):
         # Acceleration
-        self.n = 15
+        self.n = 7
 
 # Simulator needed for CAVQL
 class Simulator():
@@ -106,11 +94,11 @@ class Simulator():
 
 
         # Max and Min Vel and Acc
-        self.a_max = a_max_hv#2.0
-        self.a_min = a_min_hv#-2.0
+        self.a_max = 2.0
+        self.a_min = -2.0
         self.dt = 0.1 # time interval
-        self.v_max = v_max_hv #16
-        self.v_min = v_min_hv #0
+        self.v_max = 16 #16
+        self.v_min = 0 #0
 
         # Allows printing of Vel, Acc, and Gap warnings
         self.verbose = False
@@ -164,7 +152,6 @@ class Simulator():
         pn_a_min = rew_scale_val
         pn_a_max_power = 2
         pn_a_min_power = 2
-        a_ = a
         # penalty for violating constraint for acceleration
         if a > self.a_max: # or use rectify function
             rew = rew + pn_a_max*(a/self.a_max)**pn_a_max_power ###change penalty: continuous
@@ -185,12 +172,6 @@ class Simulator():
         else:
             a_ = a
 
-        #if a_- a>0:
-        #    print("compareeeeeeeeeeee11111")
-        #    print(a_)
-        #    print(a)
-        #    quit()
-
         if human:
             v_ = self.get_state(self.t_start+self.t+1)[self.num_leading_cars*3+0]
             v3 = self.get_state(self.t_start+self.t+2)[self.num_leading_cars*3+0]
@@ -199,6 +180,8 @@ class Simulator():
             v_ = v + a1*self.dt #current
             v3 = v_ + a_*self.dt #using a_, next
 
+        self.v_max = 16
+        self.v_min = 0
         ###change penalty: continuous
         pn_v_max = rew_scale_val
         pn_v_min = rew_scale_val
@@ -232,14 +215,14 @@ class Simulator():
 
 
         min_s = 2.0 # safe gap
-        #l = 6.85
+        l = 6.85
         ### change safety constraints: guarantee no crash even when the leading car break at its maximum deceleration
         xl_ = self.get_state(self.t_start+self.t+1)[(self.num_leading_cars-1)*3+1] # current location of the leading vehicle at t2 xl_2, estimated in real world?
         vl_ = self.get_state(self.t_start+self.t+1)[(self.num_leading_cars-1)*3+0]# current speed vl_2
         dt_sharp_stop = -vl_/a_min_hv #time needed for the leading car's sharp stop # discretization issue?
         xl_sharp_stop = xl_ + vl_*dt_sharp_stop + (1/2)*a_min_hv*dt_sharp_stop**2 # location of leading car when after the sharp stop
         x_sharp_stop = x3 + v3*(dt_sharp_stop-self.dt) + (1/2)*self.a_min*(dt_sharp_stop-self.dt)**2  # location of controlled car when the leading car stops
-        gap = xl_sharp_stop - x_sharp_stop - min_s #-l### gap after the sharp stop, long term prevention
+        gap = xl_sharp_stop - x_sharp_stop -l - min_s ### gap after the sharp stop, long term prevention
         #print("GAP")
         #print(gap)
         #print("GAP")
@@ -255,13 +238,13 @@ class Simulator():
                 print(gap)
                 print("Warning Within Gap")
                 #quit()
-                #print(x3)
-                #print(a_)
-                #print(x_)
-                #print(xl_)
+                print(x3)
+                print(a_)
+                print(x_)
+                print(xl_)
 
             if (not human) and controller == "OURS":
-                x_sharp_stop = xl_sharp_stop - min_s #-l# to meet gap = 0
+                x_sharp_stop = xl_sharp_stop -l - min_s # to meet gap = 0
                 a_gap = (x_sharp_stop - x_ - v_*self.dt - (1/2)*self.a_min*(dt_sharp_stop-self.dt)**2) / (dt_sharp_stop*self.dt-(1/2)*self.dt**2)
                 #print(a_gap)
                 #print(a_)
@@ -288,13 +271,13 @@ class Simulator():
         ###????
 
         #gap = xl_3 - x3 -l - min_s
-        gap = xl_sharp_stop - x_sharp_stop - min_s #-l
+        gap = xl_sharp_stop - x_sharp_stop -l - min_s
         if gap < -1e-10:
             if(self.verbose):
                 print("Crashed")
             print("%")
             print(s)
-            quit()
+            #quit()
             self.is_crashed = True
             #rew = rew + -100000
 
@@ -308,11 +291,6 @@ class Simulator():
         s_[self.num_leading_cars*3+0] = v_
         s_[self.num_leading_cars*3+1] = x_
         s_[self.num_leading_cars*3+2] = a_
-        if a_-a != 0:
-            print("compareeeeeeeeeeee222222")
-            print(a_)
-            print(a)
-            quit()
         if human:
             s_[self.num_leading_cars*3+0] = self.get_state(self.t_start+self.t+1)[self.num_leading_cars*3+0]
             s_[self.num_leading_cars*3+1] = self.get_state(self.t_start+self.t+1)[self.num_leading_cars*3+1]
@@ -423,7 +401,7 @@ class Simulator():
         return v_temp, x_temp, a_temp
 
     def CACC(self,s,n): # traditional controller to choose the acceleration
-        l = 0#6.85
+        l = 6.85
         k = 0.3
         ka = 1.0
         kv = 3.0
@@ -435,17 +413,8 @@ class Simulator():
         xp = s[(n-1)*3+1]
         ap = s[(n-1)*3+2]
         r_ref = 2
-        #a_d = ka*ap + kv*(vp-v) + kd*(xp-x-l -r_ref)
-        #a_ = min(a_v,a_d)
-        k1 = 0.2
-        k2 = 0.08
-        g_d = 3
-        a_d = k1*(xp-x-v*g_d)+k2*(vp-v)
-        a_ = a_d
-        #if a_d > 0:
-            #a_ = min(a_d, a_max_hv)
-        #elif a_d < 0:
-            #a_ = max(a_d, a_min_hv)
+        a_d = ka*ap + kv*(vp-v) + kd*(xp-x-l -r_ref)
+        a_ = min(a_v,a_d)
         # update by adding rectify 06/13/19
         ####### update from here
         if False:
@@ -506,7 +475,7 @@ class Simulator():
                         print("CACC safety wrong vel")
                         #quit()
 
-
+            
 
         ######## update end here
         return v_, x_, a_
@@ -628,9 +597,9 @@ class Simulator():
             print()
         #print(self.center_state(self.current_states[-1]))
 
-    def step(self, a, human=False, controller="OURS"):
+    def step(self, a, human=False):
         # returns next_state, reward, is_done, and info base on chosen acceleration
-        s, a, r, s_, a_ = self.update_state(self.current_states[-1], a, human, controller)
+        s, a, r, s_, a_ = self.update_state(self.current_states[-1], a, human)
 
         self.current_states.append(s_)
         self.neg_rewards.append(r)
