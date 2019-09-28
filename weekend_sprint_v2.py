@@ -38,7 +38,7 @@ from rl.memory import EpisodeParameterMemory
 #We downsize the atari frame to 84 x 84 and feed the model 4 frames at a time for
 #a sense of direction and speed.
 INPUT_SHAPE = (env.observation_space.shape)
-WINDOW_LENGTH = 4
+WINDOW_LENGTH = 1
 
 #Standard Atari processing
 class AtariProcessor(Processor):
