@@ -16,7 +16,7 @@ from collections import deque
 
 num_leading_vehicle = 3
 num_following_vehicle = 0
-num_eps = 300
+num_eps = 1000
 window_size = 1 # Input 
 
 
@@ -52,16 +52,12 @@ class Agent(nn.Module):
         self.action_size = env.action_space.n
 
         self.fc1 = nn.Linear(self.space_size, self.hidden_size)
-        self.fc1_2 = nn.Linear(self.hidden_size, self.hidden_size)
-        self.fc1_3 = nn.Linear(self.hidden_size, self.hidden_size)
         self.fc2 = nn.Linear(self.hidden_size, self.action_size)
 
         self.eval_long = False
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         out = torch.relu(self.fc1(x))
-        out = torch.relu(self.fc1_2(out))
-        out = torch.relu(self.fc1_3(out))
         out = torch.tanh(self.fc2(out)) # try removing
         out = torch.softmax(out, dim=0)
         return out
@@ -72,68 +68,20 @@ class Agent(nn.Module):
         a = self.action_size
         # separate the weights for each layer
         fc1_end = (s * h) + h
-        fc1_2_end = fc1_end + (h * h) + h
-        fc1_3_end = fc1_2_end + (h * h) + h
-
         fc1_W = torch.from_numpy(weights[:s * h].reshape(s, h))
         fc1_b = torch.from_numpy(weights[s * h:fc1_end])
-
-        fc1_2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*h)].reshape(h, h))
-        fc1_2_b = torch.from_numpy(weights[fc1_end + (h*h):fc1_2_end])
-
-        fc1_3_W = torch.from_numpy(weights[fc1_2_end:fc1_2_end+(h*h)].reshape(h, h))
-        fc1_3_b = torch.from_numpy(weights[fc1_2_end + (h*h):fc1_3_end])
-        
-        fc2_W = torch.from_numpy(weights[fc1_3_end:fc1_3_end+(h*a)].reshape(h, a))
-        fc2_b = torch.from_numpy(weights[fc1_3_end+(h*a):])
-
+        fc2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*a)].reshape(h, a))
+        fc2_b = torch.from_numpy(weights[fc1_end+(h*a):])
         # set the weights for each layer
         self.fc1.weight.data.copy_(fc1_W.view_as(self.fc1.weight.data))
         self.fc1.bias.data.copy_(fc1_b.view_as(self.fc1.bias.data))
-
-        self.fc1_2.weight.data.copy_(fc1_2_W.view_as(self.fc1_2.weight.data))
-        self.fc1_2.bias.data.copy_(fc1_2_b.view_as(self.fc1_2.bias.data))
-
-        self.fc1_3.weight.data.copy_(fc1_3_W.view_as(self.fc1_3.weight.data))
-        self.fc1_3.bias.data.copy_(fc1_3_b.view_as(self.fc1_3.bias.data))
-
         self.fc2.weight.data.copy_(fc2_W.view_as(self.fc2.weight.data))
         self.fc2.bias.data.copy_(fc2_b.view_as(self.fc2.bias.data))
 
     def get_weights_dim(self) -> int:
-        return (self.space_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + \
+        return (self.space_size + 1) * self.hidden_size + \
             (self.hidden_size + 1) * self.action_size
 
-    def evaluate(self,
-                 weights: torch.Tensor,
-                 gamma: float = 1.0,
-                 max_t: float = 5000) -> float:
-        self.set_weights(weights)
-        episode_return = 0.0
-        num_episodes = num_eps
-        if self.eval_long:
-            num_episodes = num_eps
-        rewards = []
-        for i in range(num_episodes):
-            state = self.env.reset()
-            for t in range(max_t):
-                state = torch.Tensor(state)
-                window.appendleft(state)
-                action_probs = self.forward(deque2state(env))
-                action = np.argmax(action_probs.detach().numpy())
-                a = (env.a_max - env.a_min)*((action)/(agent.action_size - 1)) + env.a_min
-                state, reward, done, _ = self.env.step(a)
-                episode_return += reward * gamma**t
-                if done:
-                    rewards.append(reward)
-                    break
-        if self.eval_long:
-            print('Long Eval: Average Score: {:.2f}\tSE Score: {:.2f}'.\
-                format(np.mean(rewards), np.std(rewards)/(len(rewards)**0.5)))
-            print('Long Eval: Median Score: {:.2f}'.\
-                format(np.median(rewards)))
-            print(len(rewards))
-        return episode_return/num_episodes
 
 data_t = []
 data_d = []
@@ -190,7 +138,7 @@ for i in range(num_episodes):
         v, x, a = env.CACC(s,env.num_leading_cars)
         #print(v)
         #print(a)
-        s, reward, done, info = env.step(a)
+        s, reward, done, info = env.step(a,controller="CACC")
         #print(reward)
         #print()
         i = i + 1
@@ -223,7 +171,7 @@ agent = Agent(env)
 # load the weights from file
 
 # Path to controller
-agent.load_state_dict(torch.load('./cem_cartpole.pth'))
+agent.load_state_dict(torch.load('./cem_cartpole_ep117.pth'))
 
 
 #agent.load_state_dict(torch.load('./cem_cartpole_5.pth')) # Path to load model from
@@ -259,7 +207,7 @@ for i in range(num_episodes):
             #quit()
             #print(a)
             #input()
-            next_state, reward, done, _ = env.step(a)
+            next_state, reward, done, _ = env.step(a,controller="OURS")
 
             state = next_state
             t = t + 1

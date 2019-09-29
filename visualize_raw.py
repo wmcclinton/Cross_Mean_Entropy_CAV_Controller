@@ -18,7 +18,7 @@ window_size = 1 # Plot running average
 #file_list = [["window_5_run.txt","g"],["cacc_start.txt","b"]]
 
 # Filename
-file_list = [["output_run2.log","g"]]
+file_list = [["output_good.log","g"]]
 
 for file_name in file_list:
 
@@ -32,8 +32,8 @@ for file_name in file_list:
         for line in contents.split("\n"):
                 if "Long Eval: Average Score:" in line:
                         print(line)
-                        train_data.append(float(line.replace("Long Eval: Average Score: ","").split("\tSE Score: ")[0].replace(" ","")))
-                        train_data_se.append(float(line.replace("Long Eval: Average Score: ","").split("\tSE Score: ")[1].replace(" ","")))
+                        train_data.append(float(line.replace("Long Eval: Average Score: ","").split("SE Score: ")[0].replace(" ","")))
+                        train_data_se.append(float(line.replace("Long Eval: Average Score: ","").split("SE Score: ")[1].replace(" ","")))
 
         m_train_data = []
 
@@ -52,8 +52,8 @@ for file_name in file_list:
 
 plt.title("Learning Curve")
 # Human and CACC raw
-plt.axhline(y=-25000, color='b', linestyle='-')
-plt.axhline(y=-30000, color='r', linestyle='-')
+plt.axhline(y=110, color='b', linestyle='-')
+plt.axhline(y=50, color='r', linestyle='-')
 #plt.plot(moving_average(c_data,window_size)[window_size:-window_size], color='b')
 #plt.plot(moving_average(data,window_size)[window_size:-window_size],color="r")
 #plt.plot(moving_average(c_data,window_size)[window_size:-window_size][:len(train_data)], color='b')

@@ -1,3 +1,6 @@
+Initializing Environment...
+observation space: <CAVSimulator0728.observation_space object at 0x10e02c0f0>
+action space: <CAVSimulator0728.action_space object at 0x114b54d30>
 Long Eval: Average Score: -1350813850.62        SE Score: 22194651.68
 Long Eval: Median Score: -1439862028.97
 300
@@ -591,10 +594,3 @@ Episode 117     All Average Score: -221947180.74        All SE Score: 57168480.1
 Long Eval: Average Score: 165.90        SE Score: 1.23
 Long Eval: Median Score: 170.63
 300
-Episode 118     Best Average Score: -232.97
-Episode 118     All Average Score: -187626830.04        All SE Score: 51050251.29
-Long Eval: Average Score: -463.99       SE Score: 442.72
-Long Eval: Median Score: 169.16
-300
-Episode 119     Best Average Score: -268.17
-Episode 119     All Average Score: -220029077.47        All SE Score: 58872055.88
