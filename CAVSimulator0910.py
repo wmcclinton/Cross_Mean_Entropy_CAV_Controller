@@ -288,14 +288,14 @@ class Simulator():
         ###????
 
         #gap = xl_3 - x3 -l - min_s
-        gap = xl_sharp_stop - x_sharp_stop - min_s #-l
-        if gap < -1e-10:
-            if(self.verbose):
-                print("Crashed")
-            print("%")
-            print(s)
+        #gap = xl_sharp_stop - x_sharp_stop - min_s #-l
+        #if gap < -1e-10:
+            #if(self.verbose):
+                #print("Crashed")
+            #print("%")
+            #print(s)
             #quit()
-            self.is_crashed = True
+            #self.is_crashed = True
             #rew = rew + -100000
 
         if gap > large_gap_threshold: ### change penalty: continuous
