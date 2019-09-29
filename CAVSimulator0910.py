@@ -168,16 +168,16 @@ class Simulator():
         # penalty for violating constraint for acceleration
         if a > self.a_max: # or use rectify function
             rew = rew + pn_a_max*(a/self.a_max)**pn_a_max_power ###change penalty: continuous
-            if (not human) and controller == "OURS":
-                a_ = self.a_max
+            #if (not human) and controller == "OURS":
+                #a_ = self.a_max
             if(self.verbose):
                 print("Violates Max Acceleration")
                 print(a)
                 #quit()
         elif a < self.a_min:
             rew = rew + pn_a_min*(a/self.a_min)**pn_a_min_power ###change penalty: continuous
-            if (not human) and controller == "OURS":
-                a_ = self.a_min
+            #if (not human) and controller == "OURS":
+                #a_ = self.a_min
             if(self.verbose):
                 print("Violates Min Acceleration")
                 print(a)
@@ -207,18 +207,18 @@ class Simulator():
         # penalty for violating constraint for velocity
         if v3 > self.v_max:
             rew = rew + pn_v_max*(v3-self.v_max)**pn_v_max_power###change penalty: continuous
-            if (not human) and controller == "OURS":
-                v3 = self.v_max
-                a_ = (v3-v_) / self.dt
+            #if (not human) and controller == "OURS":
+                #v3 = self.v_max
+                #a_ = (v3-v_) / self.dt
             if(self.verbose):
                 print("Violates Max Vel")
                 print(a_)
                 #quit()
         elif v3 < self.v_min:
             rew = rew + pn_v_min*(self.v_min-v3)**pn_v_max_power ###change penalty: continuous
-            if (not human) and controller == "OURS":
-                v3 = self.v_min
-                a_ = (v3-v_) / self.dt
+            #if (not human) and controller == "OURS":
+                #v3 = self.v_min
+                #a_ = (v3-v_) / self.dt
             if(self.verbose):
                 print("Violates Min Vel")
                 print(a_)
@@ -260,12 +260,12 @@ class Simulator():
                 #print(x_)
                 #print(xl_)
 
-            if (not human) and controller == "OURS":
-                x_sharp_stop = xl_sharp_stop - min_s #-l# to meet gap = 0
-                a_gap = (x_sharp_stop - x_ - v_*self.dt - (1/2)*self.a_min*(dt_sharp_stop-self.dt)**2) / (dt_sharp_stop*self.dt-(1/2)*self.dt**2)
+            #if (not human) and controller == "OURS":
+                #x_sharp_stop = xl_sharp_stop - min_s #-l# to meet gap = 0
+                #a_gap = (x_sharp_stop - x_ - v_*self.dt - (1/2)*self.a_min*(dt_sharp_stop-self.dt)**2) / (dt_sharp_stop*self.dt-(1/2)*self.dt**2)
                 #print(a_gap)
                 #print(a_)
-                a_ = a_gap
+                #a_ = a_gap
             if a_<self.a_min or a_>self.a_max:
                 if(self.verbose):
                     #print(xl_3)
@@ -276,8 +276,8 @@ class Simulator():
                     print("safety wrong acc")
                     # TODO
                     #quit()
-            if (not human) and controller == "OURS":
-                v3 = v_ + a_*self.dt
+            #if (not human) and controller == "OURS":
+                #v3 = v_ + a_*self.dt
             if v3<self.v_min or v3>self.v_max:
                 if(self.verbose):
                     print(v_)

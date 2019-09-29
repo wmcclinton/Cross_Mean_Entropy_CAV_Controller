@@ -214,7 +214,7 @@ if __name__ == "__main__":
     # evaluate
     # load the weights from file
     #agent.load_state_dict(torch.load('./cem_cartpole.pth'))
-    #agent.load_state_dict(torch.load('./cem_cartpole_5.pth')) # Path to load model from
+    agent.load_state_dict(torch.load('./cem_cartpole_ep86.pth')) # Path to load model from
     #agent.load_state_dict(torch.load('./mimic_cav_90_.pth'))
     num_episodes = num_eps
     rewards = []
