@@ -195,7 +195,7 @@ def cem(agent: Agent,
 
 if __name__ == "__main__":
     # Variable to designate train or just load from path and test
-    train = False
+    train = True
     #
     env = Simulator(num_leading_vehicle,num_following_vehicle)
 
