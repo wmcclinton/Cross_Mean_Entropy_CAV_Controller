@@ -106,8 +106,8 @@ class Simulator():
 
 
         # Max and Min Vel and Acc
-        self.a_max = a_max_hv#2.0
-        self.a_min = a_min_hv#-2.0
+        self.a_max = 2.0
+        self.a_min = -2.0
         self.dt = 0.1 # time interval
         self.v_max = v_max_hv #16
         self.v_min = v_min_hv #0
@@ -294,7 +294,7 @@ class Simulator():
                 print("Crashed")
             print("%")
             print(s)
-            quit()
+            #quit()
             self.is_crashed = True
             #rew = rew + -100000
 
@@ -308,11 +308,11 @@ class Simulator():
         s_[self.num_leading_cars*3+0] = v_
         s_[self.num_leading_cars*3+1] = x_
         s_[self.num_leading_cars*3+2] = a_
-        if a_-a != 0:
-            print("compareeeeeeeeeeee222222")
-            print(a_)
-            print(a)
-            quit()
+        #if a_-a != 0:
+            #print("compareeeeeeeeeeee222222")
+            #print(a_)
+            #print(a)
+            #quit()
         if human:
             s_[self.num_leading_cars*3+0] = self.get_state(self.t_start+self.t+1)[self.num_leading_cars*3+0]
             s_[self.num_leading_cars*3+1] = self.get_state(self.t_start+self.t+1)[self.num_leading_cars*3+1]
@@ -562,8 +562,9 @@ class Simulator():
         # Resets cumilators for this time frame
         #print("Environment Reset")
         self.t_start = randint(20,len(data)-self.max_t-1)
-        #while (self.t_start > 4000 and self.t_start < 5000) or (self.t_start > 6000 and self.t_start < 7000) or (self.t_start > 8000 and self.t_start < 9000):
-            #self.t_start = randint(20,len(data)-self.max_t-1)
+        break_index = [74,290,661,899,1619,1876,2668,2806,4323,4510,6655,6787,7044,7832,8128,8938,9962]
+        while (True in [True for idx in break_index if (idx in range(self.t_start,self.t_start+self.max_t))==True]):
+            self.t_start = randint(20,len(data)-self.max_t-1)
         self.current_states = [self.get_state(self.t_start)]
         self.current_disps = [0 for i in range(self.num_vehicles)]
         self.t = 0

@@ -8,7 +8,7 @@ from collections import deque
 import torch
 import torch.nn as nn
 
-from CAVSimulator0910_old import Simulator
+from CAVSimulator0910 import Simulator
 
 env = Simulator(3,0)
 

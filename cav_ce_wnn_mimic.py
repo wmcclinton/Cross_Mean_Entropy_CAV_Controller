@@ -20,7 +20,7 @@ import torch.nn.functional as F
 
 start_from_init = True
 num_leading_vehicle = 3
-num_following_vehicle = 3
+num_following_vehicle = 0
 
 
 print("Controller Hyperparameters")

@@ -32,7 +32,7 @@ def moving_average(interval, window_size):
     window = np.ones(int(window_size))/float(window_size)
     return np.convolve(interval, window, 'same')
 
-window_size = 2
+window_size = 1
 window = deque(maxlen=window_size)
 for i in range(window_size):
     window.appendleft(None)
@@ -91,7 +91,7 @@ def create_loc_map(env):
 class Agent(nn.Module):
     def __init__(self,
                  env: gym.wrappers.time_limit.TimeLimit,
-                 hidden_size: int = 64) -> None:
+                 hidden_size: int = 256) -> None:
         super(Agent, self).__init__()
         self.env = env
         self.space_size = env.observation_space.shape[0] * window_size
@@ -99,16 +99,22 @@ class Agent(nn.Module):
         self.action_size = env.action_space.n
 
         self.fc1 = nn.Linear(self.space_size, self.hidden_size)
+        self.fc1_2 = nn.Linear(self.hidden_size, self.hidden_size)
+        self.fc1_3 = nn.Linear(self.hidden_size, self.hidden_size)
+        self.fc1_4 = nn.Linear(self.hidden_size, self.hidden_size)
+        self.fc1_5 = nn.Linear(self.hidden_size, self.hidden_size)
         self.fc2 = nn.Linear(self.hidden_size, self.action_size)
 
         self.eval_long = False
-        # create your optimizer
-
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         out = torch.relu(self.fc1(x))
+        out = torch.relu(self.fc1_2(out))
+        out = torch.relu(self.fc1_3(out))
+        out = torch.relu(self.fc1_4(out))
+        out = torch.relu(self.fc1_5(out))
         out = torch.tanh(self.fc2(out)) # try removing
-        out = out
+        #out = torch.softmax(out, dim=0)
         return out
 
     def set_weights(self, weights: np.ndarray) -> None:
@@ -117,55 +123,56 @@ class Agent(nn.Module):
         a = self.action_size
         # separate the weights for each layer
         fc1_end = (s * h) + h
+        fc1_2_end = fc1_end + (h * h) + h
+        fc1_3_end = fc1_2_end + (h * h) + h
+        fc1_4_end = fc1_2_end + (h * h) + h
+        fc1_5_end = fc1_2_end + (h * h) + h
+
         fc1_W = torch.from_numpy(weights[:s * h].reshape(s, h))
         fc1_b = torch.from_numpy(weights[s * h:fc1_end])
-        fc2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*a)].reshape(h, a))
-        fc2_b = torch.from_numpy(weights[fc1_end+(h*a):])
+
+        fc1_2_W = torch.from_numpy(weights[fc1_end:fc1_end+(h*h)].reshape(h, h))
+        fc1_2_b = torch.from_numpy(weights[fc1_end + (h*h):fc1_2_end])
+
+        fc1_3_W = torch.from_numpy(weights[fc1_2_end:fc1_2_end+(h*h)].reshape(h, h))
+        fc1_3_b = torch.from_numpy(weights[fc1_2_end + (h*h):fc1_3_end])
+
+        fc1_3_W = torch.from_numpy(weights[fc1_3_end:fc1_3_end+(h*h)].reshape(h, h))
+        fc1_3_b = torch.from_numpy(weights[fc1_3_end + (h*h):fc1_4_end])
+
+        fc1_3_W = torch.from_numpy(weights[fc1_4_end:fc1_2_end+(h*h)].reshape(h, h))
+        fc1_3_b = torch.from_numpy(weights[fc1_4_end + (h*h):fc1_5_end])
+        
+        fc2_W = torch.from_numpy(weights[fc1_5_end:fc1_5_end+(h*a)].reshape(h, a))
+        fc2_b = torch.from_numpy(weights[fc1_5_end+(h*a):])
+
         # set the weights for each layer
         self.fc1.weight.data.copy_(fc1_W.view_as(self.fc1.weight.data))
         self.fc1.bias.data.copy_(fc1_b.view_as(self.fc1.bias.data))
+
+        self.fc1_2.weight.data.copy_(fc1_2_W.view_as(self.fc1_2.weight.data))
+        self.fc1_2.bias.data.copy_(fc1_2_b.view_as(self.fc1_2.bias.data))
+
+        self.fc1_3.weight.data.copy_(fc1_3_W.view_as(self.fc1_3.weight.data))
+        self.fc1_3.bias.data.copy_(fc1_3_b.view_as(self.fc1_3.bias.data))
+
+        self.fc1_4.weight.data.copy_(fc1_3_W.view_as(self.fc1_4.weight.data))
+        self.fc1_4.bias.data.copy_(fc1_3_b.view_as(self.fc1_4.bias.data))
+
+        self.fc1_5.weight.data.copy_(fc1_3_W.view_as(self.fc1_5.weight.data))
+        self.fc1_5.bias.data.copy_(fc1_3_b.view_as(self.fc1_5.bias.data))
+
         self.fc2.weight.data.copy_(fc2_W.view_as(self.fc2.weight.data))
         self.fc2.bias.data.copy_(fc2_b.view_as(self.fc2.bias.data))
 
     def get_weights_dim(self) -> int:
-        return (self.space_size + 1) * self.hidden_size + \
+        return (self.space_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + (self.hidden_size + 1) * self.hidden_size + \
             (self.hidden_size + 1) * self.action_size
-
-    def evaluate(self,
-                 weights: torch.Tensor,
-                 gamma: float = 1.0,
-                 max_t: float = 5000) -> float:
-        self.set_weights(weights)
-        episode_return = 0.0
-        num_episodes = num_eps # WARNING need to be small but not too small
-        if self.eval_long:
-            num_episodes = num_eps
-        rewards = []
-        for i in range(num_episodes):
-            state = self.env.reset()
-            for t in range(max_t):
-                state = torch.Tensor(state)
-                window.appendleft(state)
-                action_probs = self.forward(deque2state(env))
-                action = np.argmax(action_probs.detach().numpy())
-                a = (env.a_max - env.a_min)*((action)/(agent.action_size - 1)) + env.a_min
-                state, reward, done, _ = self.env.step(a)
-                episode_return += reward * gamma**t
-                if done:
-                    rewards.append(reward)
-                    break
-        if self.eval_long:
-            print('Long Eval: Average Score: {:.2f}\tSE Score: {:.2f}'.\
-                format(np.mean(rewards), np.std(rewards)/(len(rewards)**0.5)))
-            print('Long Eval: Median Score: {:.2f}'.\
-                format(np.median(rewards)))
-            print(len(rewards))
-        return episode_return/num_episodes
 
 data_loss = []
 data_acc = []
 def mimic_optimize(env,agent,Replay_Buffer,buffer_size):
-    optimizer = optim.SGD(agent.parameters(), lr=0.003)
+    optimizer = optim.Adagrad(agent.parameters(), lr=0.001)
     criterion = nn.MSELoss()
 
     if buffer_size == None:
@@ -249,7 +256,7 @@ if __name__ == "__main__":
                 Replay_Buffer.appendleft([window,a])
                 #print(v)
 
-                next_state, reward, done, _ = env.step(a)
+                next_state, reward, done, _ = env.step(a,human=True)
                 # For Graph
                 add2loc_map(env)
                 #

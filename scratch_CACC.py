@@ -1,4 +1,4 @@
-from CAVSimulator0910_old import Simulator
+from CAVSimulator0910 import Simulator
 import numpy as np
 from copy import deepcopy
 import matplotlib.pyplot as plt
@@ -71,7 +71,7 @@ for i in range(num_episodes):
         v, x, a = env.CACC(s,env.num_leading_cars)
         #print(v)
         #a = min(-2,max(a,2))
-        s, reward, done, info = env.step(a)
+        s, reward, done, info = env.step(a,controller="CACC")
         #print(reward)
         #print()
         i = i + 1

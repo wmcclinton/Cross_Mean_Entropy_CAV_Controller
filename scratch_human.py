@@ -1,4 +1,4 @@
-from CAVSimulator0910_old import Simulator
+from CAVSimulator0910 import Simulator
 import numpy as np
 from copy import deepcopy
 import matplotlib.pyplot as plt
