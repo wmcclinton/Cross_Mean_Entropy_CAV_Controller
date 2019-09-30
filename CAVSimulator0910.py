@@ -122,6 +122,8 @@ class Simulator():
         # Amoun of time steps to wait before using CACC again
         self.warmup_gap = 200
 
+        self.results = {"min_gap": 0, "max_gap": 0, "violates_a": 0, "violates_v": 0, "reward": 0, "reward_disp": 0, "reward_fuel": 0, "reward_penalty": 0}
+
     def get_state(self,t):
         s = []
         for car in data[t][0:self.num_vehicles]:
@@ -168,6 +170,7 @@ class Simulator():
         # penalty for violating constraint for acceleration
         if a > self.a_max: # or use rectify function
             rew = rew + pn_a_max*(a/self.a_max)**pn_a_max_power ###change penalty: continuous
+            self.results["violates_a"] += 1
             #if (not human) and controller == "OURS":
                 #a_ = self.a_max
             if(self.verbose):
@@ -176,6 +179,7 @@ class Simulator():
                 #quit()
         elif a < self.a_min:
             rew = rew + pn_a_min*(a/self.a_min)**pn_a_min_power ###change penalty: continuous
+            self.results["violates_a"] += 1
             #if (not human) and controller == "OURS":
                 #a_ = self.a_min
             if(self.verbose):
@@ -207,6 +211,7 @@ class Simulator():
         # penalty for violating constraint for velocity
         if v3 > self.v_max:
             rew = rew + pn_v_max*(v3-self.v_max)**pn_v_max_power###change penalty: continuous
+            self.results["violates_v"] += 1
             #if (not human) and controller == "OURS":
                 #v3 = self.v_max
                 #a_ = (v3-v_) / self.dt
@@ -216,6 +221,7 @@ class Simulator():
                 #quit()
         elif v3 < self.v_min:
             rew = rew + pn_v_min*(self.v_min-v3)**pn_v_max_power ###change penalty: continuous
+            self.results["violates_v"] += 1
             #if (not human) and controller == "OURS":
                 #v3 = self.v_min
                 #a_ = (v3-v_) / self.dt
@@ -250,6 +256,7 @@ class Simulator():
         #print(gap)
         if gap < -1e-10:
             rew = rew + pn_safe * abs(gap) ** pn_safe_power ### change penalty: continuous
+            self.results["min_gap"] += 1
             if(self.verbose):
                 print("#")
                 print(gap)
@@ -300,6 +307,7 @@ class Simulator():
 
         if gap > large_gap_threshold: ### change penalty: continuous
             rew = rew + 10000 * pn_safe * (gap-large_gap_threshold) ** pn_safe_power
+            self.results["max_gap"] += 1
             #print("BADBADBAD")
             #quit()
             if(self.verbose):
@@ -556,6 +564,11 @@ class Simulator():
 
         #return (reward)/self.rew_normalize
         #TODO #play with reward penalties in update state #Try DDPG
+        self.results["reward"] = (reward + sum(self.neg_rewards))/self.rew_normalize
+        self.results["reward_disp"] = sum_car_disp
+        self.results["reward_fuel"] = -1 * self.LAMBDA * ((sum_squared_acc)/((self.num_vehicles - self.num_leading_cars)*size))
+        self.results["reward_penalty"] = sum(self.neg_rewards)
+
         return (reward + sum(self.neg_rewards))/self.rew_normalize
 
     def reset(self):
@@ -570,6 +583,8 @@ class Simulator():
         self.t = 0
         self.neg_rewards = []
         self.is_crashed = False
+
+        self.results = {"min_gap": 0, "max_gap": 0, "violates_a": 0, "violates_v": 0, "reward": 0, "reward_disp": 0, "reward_fuel": 0, "reward_penalty": 0}
         return self.center_state(self.current_states[-1])
 
     def reset_from_state(self,t_start):

@@ -18,7 +18,7 @@ window_size = 1 # Plot running average
 #file_list = [["window_5_run.txt","g"],["cacc_start.txt","b"]]
 
 # Filename
-file_list = [["output_good.log","g"]]
+file_list = [["output_1_1.log","g"],["output_3_5.log","k"]]
 
 for file_name in file_list:
 
@@ -46,6 +46,8 @@ for file_name in file_list:
                         #m_train_data.append(float(line.replace("Long Eval: Median Score:","").replace(" ","")))
 
         plt.plot(moving_average(train_data,window_size)[window_size:-window_size],file_name[1])
+        ax = plt.subplot(111)
+        ax.set_yscale('log')         
         #plt.plot(moving_average(m_train_data,window_size)[window_size:-window_size] * 55,color=file_name[1],linestyle="--")
 
 # Compare with Human

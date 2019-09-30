@@ -109,9 +109,9 @@ def create_loc_map(env):
 
 env = Simulator(num_leading_vehicle,num_following_vehicle)
 env.normalize = False
-env.verbose = True
+#env.verbose = True
 num_episodes = num_eps
-rewards = []
+results = []
 
 for i in range(num_episodes):
     #
@@ -143,27 +143,27 @@ for i in range(num_episodes):
         #print()
         i = i + 1
 
-    print(reward)
-    rewards.append(reward)
-    print(i)
+    #print(reward)
+    results.append(env.results)
+    #print(i)
 
 # For CACC
 #create_loc_map(env)
 
-rewards_CACC = rewards
+results_CACC = results
 
 print("DONE with CACC")
 #################################
 
 #########################
 env.normalize = True
-env.verbose = True
+#env.verbose = True
 
 data_t = []
 data_d = []
 start_disp = None
 
-rewards = []
+results = []
 
 agent = Agent(env)
 
@@ -186,7 +186,7 @@ for i in range(num_episodes):
 
     state = env.reset()
     # For Graph
-    env.verbose = True
+    #env.verbose = True
     start_disp = env.center_state(env.current_states[0])
     #
 
@@ -213,23 +213,23 @@ for i in range(num_episodes):
             t = t + 1
             if done:
                 break
-    print(t)
-    print(reward)
-    rewards.append(reward)
+    #print(t)
+    #print(reward)
+    results.append(env.results)
 
-rewards_ours = rewards
+results_ours = results
 
 print("DONE with Ours")
 
 ##############################
 env.normalize = False
-env.verbose = True
+#env.verbose = True
 
 data_t = []
 data_d = []
 start_disp = None
 
-rewards = []
+results = []
 
 for i in range(num_episodes):
     #
@@ -266,13 +266,18 @@ for i in range(num_episodes):
         #print()
         i = i + 1
 
-    print(reward)
-    rewards.append(reward)
-    print(i)
-rewards_human = rewards
+    #print(reward)
+    results.append(env.results)
+    #print(i)
+
+results_human = results
 
 print("DONE with Human")
 ##############################
+
+rewards_human = [i["reward"] for i in results_human]
+rewards_CACC = [i["reward"] for i in results_CACC]
+rewards_ours = [i["reward"] for i in results_ours]
 
 np.savetxt("rew_human.csv", rewards_human, delimiter=",")
 np.savetxt("rew_cacc.csv", rewards_CACC, delimiter=",")
@@ -281,15 +286,45 @@ np.savetxt("rew_ours.csv", rewards_ours, delimiter=",")
 print("HUMAN")
 print("Average Reward:",np.mean(rewards_human))
 print("SE Reward:",np.std(rewards_human)/(len(rewards_human))**0.5)
+print("Average Reward for Disp:",np.mean([i["reward_disp"] for i in results_human]))
+print("SE Reward for Disp:",np.std([i["reward_disp"] for i in results_human])/(len([i["reward_disp"] for i in results_human]))**0.5)
+print("Average Neg Reward for Fuel:",np.mean([i["reward_fuel"] for i in results_human]))
+print("SE Neg Reward for Fuel:",np.std([i["reward_fuel"] for i in results_human])/(len([i["reward_fuel"] for i in results_human]))**0.5)
+print("Average Reward Penalty:",np.mean([i["reward_penalty"] for i in results_human]))
+print("SE Reward Penalty:",np.std([i["reward_penalty"] for i in results_human])/(len([i["reward_penalty"] for i in results_human]))**0.5)
+print("Average Violates Min Gap:",np.sum([i["min_gap"] for i in results_human])/(len([i["min_gap"] for i in results_human])))
+print("Average Violates Max Gap:",np.sum([i["max_gap"] for i in results_human])/(len([i["max_gap"] for i in results_human])))
+print("Average Violates Acc:",np.sum([i["violates_a"] for i in results_human])/(len([i["violates_a"] for i in results_human])))
+print("Average Violates Vel:",np.sum([i["violates_v"] for i in results_human])/(len([i["violates_v"] for i in results_human])))
 print()
 print("CACC")
 print("Average Reward:",np.mean(rewards_CACC))
 print("SE Reward:",np.std(rewards_CACC)/(len(rewards_CACC))**0.5)
+print("Average Reward for Disp:",np.mean([i["reward_disp"] for i in results_CACC]))
+print("SE Reward for Disp:",np.std([i["reward_disp"] for i in results_CACC])/(len([i["reward_disp"] for i in results_CACC]))**0.5)
+print("Average Neg Reward for Fuel:",np.mean([i["reward_fuel"] for i in results_CACC]))
+print("SE Neg Reward for Fuel:",np.std([i["reward_fuel"] for i in results_CACC])/(len([i["reward_fuel"] for i in results_CACC]))**0.5)
+print("Average Reward Penalty:",np.mean([i["reward_penalty"] for i in results_CACC]))
+print("SE Reward Penalty:",np.std([i["reward_penalty"] for i in results_CACC])/(len([i["reward_penalty"] for i in results_CACC]))**0.5)
+print("Average Violates Min Gap:",np.sum([i["min_gap"] for i in results_CACC])/(len([i["min_gap"] for i in results_CACC])))
+print("Average Violates Max Gap:",np.sum([i["max_gap"] for i in results_CACC])/(len([i["max_gap"] for i in results_CACC])))
+print("Average Violates Acc:",np.sum([i["violates_a"] for i in results_CACC])/(len([i["violates_a"] for i in results_CACC])))
+print("Average Violates Vel:",np.sum([i["violates_v"] for i in results_CACC])/(len([i["violates_v"] for i in results_CACC])))
 #print(np.sort(rewards_CACC))
 print()
 print("OURS")
 print("Average Reward:",np.mean(rewards_ours))
 print("SE Reward:",np.std(rewards_ours)/(len(rewards_ours))**0.5)
+print("Average Reward for Disp:",np.mean([i["reward_disp"] for i in results_ours]))
+print("SE Reward for Disp:",np.std([i["reward_disp"] for i in results_ours])/(len([i["reward_disp"] for i in results_ours]))**0.5)
+print("Average Neg Reward for Fuel:",np.mean([i["reward_fuel"] for i in results_ours]))
+print("SE Neg Reward for Fuel:",np.std([i["reward_fuel"] for i in results_ours])/(len([i["reward_fuel"] for i in results_ours]))**0.5)
+print("Average Reward Penalty:",np.mean([i["reward_penalty"] for i in results_ours]))
+print("SE Reward Penalty:",np.std([i["reward_penalty"] for i in results_ours])/(len([i["reward_penalty"] for i in results_ours]))**0.5)
+print("Average Violates Min Gap:",np.sum([i["min_gap"] for i in results_ours])/(len([i["min_gap"] for i in results_ours])))
+print("Average Violates Macx Gap:",np.sum([i["max_gap"] for i in results_ours])/(len([i["max_gap"] for i in results_ours])))
+print("Average Violates Acc:",np.sum([i["violates_a"] for i in results_ours])/(len([i["violates_a"] for i in results_ours])))
+print("Average Violates Vel:",np.sum([i["violates_v"] for i in results_ours])/(len([i["violates_v"] for i in results_ours])))
 
 ############
 # For normalization #
