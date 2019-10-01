@@ -17,11 +17,14 @@ num_leading_vehicle = 3
 num_following_vehicle = 0
 num_eps = 300
 
+num_iterations = 500
 
 print("Controller Hyperparameters")
 print()
 print("#"*30)
 ######
+
+global current_best_reward
 
 window_size = 1
 window = deque(maxlen=window_size)
@@ -159,11 +162,15 @@ def cem(agent: Agent,
         elite_frac: percentage of top performers to use in update (0.2)
         std: standard deviation of additive noise (0.5)
     """
+    global current_best_reward
+    current_best_reward = 110
+
     n_elite=int(pop_size * elite_frac)
     scores_deque = deque(maxlen=10)
     scores = []
     best_weight = std * np.random.randn(agent.get_weights_dim())
     elite_weights = [std * np.random.randn(agent.get_weights_dim()) for i in range(n_elite)]
+    n_iters = num_iterations
 
     for i_iter in range(n_iters):
         weights_pop = [best_weight +
@@ -183,7 +190,11 @@ def cem(agent: Agent,
         scores_deque.append(reward)
         scores.append(reward)
 
-        torch.save(agent.state_dict(), './cem_cartpole.pth') # Path to save model to
+        if reward > current_best_reward:
+            print("Saved")
+            print(current_best_reward)
+            current_best_reward = reward
+            torch.save(agent.state_dict(), './cem_cartpole_best.pth') # Path to save model to
 
         print('Episode {}\tBest Average Score: {:.2f}'.\
               format(i_iter, np.mean(scores_deque)))
@@ -210,6 +221,8 @@ if __name__ == "__main__":
     #
     if train:
         agent, scores = cem(agent)
+
+    quit()
 
     # evaluate
     # load the weights from file

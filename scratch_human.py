@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 start_from_init = True
 num_leading_vehicle = 3
 num_following_vehicle = 0
-num_eps = 100
+num_eps = 1000
 
 print("Controller Hyperparameters")
 print()

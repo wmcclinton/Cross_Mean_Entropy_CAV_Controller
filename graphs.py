@@ -171,7 +171,7 @@ agent = Agent(env)
 # load the weights from file
 
 # Path to controller
-agent.load_state_dict(torch.load('./cem_cartpole_ep117.pth'))
+agent.load_state_dict(torch.load('./cem_cartpole_ep498_100.pth'))
 
 
 #agent.load_state_dict(torch.load('./cem_cartpole_5.pth')) # Path to load model from
