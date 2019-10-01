@@ -99,7 +99,7 @@ class Simulator():
 
         # Parameters for reward
         # For weighting acceleration cost
-        self.LAMBDA = 100 #1
+        self.LAMBDA = 1 #1
         # To prevent division by zero in acceleration avg.
         self.EPSILON = 0.0001
         # To scale reward to be smaller (Helps with learning)
